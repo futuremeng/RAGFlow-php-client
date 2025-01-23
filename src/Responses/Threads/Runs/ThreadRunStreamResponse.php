@@ -30,7 +30,7 @@ class ThreadRunStreamResponse implements ResponseContract
      * Acts as static factory, and returns a new Response instance.
      *
      *  Maps the appropriate classes onto each event from the assistants streaming api
-     *  https://ragflow-server/docs/api-reference/assistants-streaming/events
+     *  https://ragflow.server/docs/api-reference/assistants-streaming/events
      *
      * @param  array<string, mixed>  $attributes
      */

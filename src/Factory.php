@@ -142,7 +142,7 @@ final class Factory
     }
 
     /**
-     * Creates a new Open AI Client.
+     * Creates a new RAGFlow Client.
      */
     public function make(): Client
     {

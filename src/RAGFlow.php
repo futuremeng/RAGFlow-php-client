@@ -8,7 +8,7 @@ use RAGFlow\Factory;
 final class RAGFlow
 {
     /**
-     * Creates a new Open AI Client with the given API token.
+     * Creates a new RAGFlow Client with the given API token.
      */
     public static function client(string $apiKey, ?string $organization = null, ?string $project = null): Client
     {
@@ -21,7 +21,7 @@ final class RAGFlow
     }
 
     /**
-     * Creates a new factory instance to configure a custom Open AI Client
+     * Creates a new factory instance to configure a custom RAGFlow Client
      */
     public static function factory(): Factory
     {

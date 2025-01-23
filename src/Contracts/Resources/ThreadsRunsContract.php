@@ -12,7 +12,7 @@ interface ThreadsRunsContract
     /**
      * Create a run.
      *
-     * @see https://ragflow-server/docs/api-reference/runs/createRun
+     * @see https://ragflow.server/docs/api-reference/runs/createRun
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -21,7 +21,7 @@ interface ThreadsRunsContract
     /**
      * Create a streamed run.
      *
-     * @see https://ragflow-server/docs/api-reference/runs/createRun
+     * @see https://ragflow.server/docs/api-reference/runs/createRun
      *
      * @param  array<string, mixed>  $parameters
      * @return StreamResponse<ThreadRunStreamResponse>
@@ -31,14 +31,14 @@ interface ThreadsRunsContract
     /**
      * Retrieves a run.
      *
-     * @see https://ragflow-server/docs/api-reference/runs/getRun
+     * @see https://ragflow.server/docs/api-reference/runs/getRun
      */
     public function retrieve(string $threadId, string $runId): ThreadRunResponse;
 
     /**
      * Modifies a run.
      *
-     * @see https://ragflow-server/docs/api-reference/runs/modifyRun
+     * @see https://ragflow.server/docs/api-reference/runs/modifyRun
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -47,7 +47,7 @@ interface ThreadsRunsContract
     /**
      * This endpoint can be used to submit the outputs from the tool calls once they're all completed.
      *
-     * @see https://ragflow-server/docs/api-reference/runs/submitToolOutputs
+     * @see https://ragflow.server/docs/api-reference/runs/submitToolOutputs
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -57,7 +57,7 @@ interface ThreadsRunsContract
      * This endpoint can be used to submit the outputs from the tool calls once they're all completed.
      * And stream back the response
      *
-     * @see https://ragflow-server/docs/api-reference/runs/submitToolOutputs
+     * @see https://ragflow.server/docs/api-reference/runs/submitToolOutputs
      *
      * @param  array<string, mixed>  $parameters
      * @return StreamResponse<ThreadRunStreamResponse>
@@ -67,14 +67,14 @@ interface ThreadsRunsContract
     /**
      * Cancels a run that is `in_progress`.
      *
-     * @see https://ragflow-server/docs/api-reference/runs/cancelRun
+     * @see https://ragflow.server/docs/api-reference/runs/cancelRun
      */
     public function cancel(string $threadId, string $runId): ThreadRunResponse;
 
     /**
      * Returns a list of runs belonging to a thread.
      *
-     * @see https://ragflow-server/docs/api-reference/runs/listRuns
+     * @see https://ragflow.server/docs/api-reference/runs/listRuns
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -83,7 +83,7 @@ interface ThreadsRunsContract
     /**
      * Get steps attached to a run.
      *
-     * @see https://ragflow-server/docs/api-reference/runs/step-object
+     * @see https://ragflow.server/docs/api-reference/runs/step-object
      */
     public function steps(): ThreadsRunsStepsContract;
 }

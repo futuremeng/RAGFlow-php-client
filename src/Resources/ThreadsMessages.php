@@ -18,7 +18,7 @@ final class ThreadsMessages implements ThreadsMessagesContract
     /**
      * Create a message.
      *
-     * @see https://ragflow-server/docs/api-reference/messages/createMessage
+     * @see https://ragflow.server/docs/api-reference/messages/createMessage
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -35,7 +35,7 @@ final class ThreadsMessages implements ThreadsMessagesContract
     /**
      * Retrieve a message.
      *
-     * @see https://ragflow-server/docs/api-reference/messages/getMessage
+     * @see https://ragflow.server/docs/api-reference/messages/getMessage
      */
     public function retrieve(string $threadId, string $messageId): ThreadMessageResponse
     {
@@ -50,7 +50,7 @@ final class ThreadsMessages implements ThreadsMessagesContract
     /**
      * Modifies a message.
      *
-     * @see https://ragflow-server/docs/api-reference/messages/modifyMessage
+     * @see https://ragflow.server/docs/api-reference/messages/modifyMessage
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -67,7 +67,7 @@ final class ThreadsMessages implements ThreadsMessagesContract
     /**
      * Deletes a message.
      *
-     * @see https://ragflow-server/docs/api-reference/messages/deleteMessage
+     * @see https://ragflow.server/docs/api-reference/messages/deleteMessage
      */
     public function delete(string $threadId, string $messageId): ThreadMessageDeleteResponse
     {
@@ -82,7 +82,7 @@ final class ThreadsMessages implements ThreadsMessagesContract
     /**
      * Returns a list of messages for a given thread.
      *
-     * @see https://ragflow-server/docs/api-reference/messages/listMessages
+     * @see https://ragflow.server/docs/api-reference/messages/listMessages
      *
      * @param  array<string, mixed>  $parameters
      */

@@ -10,7 +10,7 @@ interface BatchesContract
     /**
      * Creates and executes a batch from an uploaded file of requests
      *
-     * @see https://ragflow-server/docs/api-reference/batch/create
+     * @see https://ragflow.server/docs/api-reference/batch/create
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -19,21 +19,21 @@ interface BatchesContract
     /**
      * Retrieves a batch.
      * *
-     * @see https://ragflow-server/docs/api-reference/batch/retrieve
+     * @see https://ragflow.server/docs/api-reference/batch/retrieve
      */
     public function retrieve(string $id): BatchResponse;
 
     /**
      * Cancels an in-progress batch.
      * *
-     * @see https://ragflow-server/docs/api-reference/batch/cancel
+     * @see https://ragflow.server/docs/api-reference/batch/cancel
      */
     public function cancel(string $id): BatchResponse;
 
     /**
      * List your organization's batches.
      *
-     * @see https://ragflow-server/docs/api-reference/batch/list
+     * @see https://ragflow.server/docs/api-reference/batch/list
      *
      * @param  array<string, mixed>  $parameters
      */

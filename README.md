@@ -9,7 +9,7 @@
 </p>
 
 ------
-**RAGFlow PHP** is a community-maintained PHP API client that allows you to interact with the [Open AI API](https://ragflow-server/docs/api-reference/introduction). If you or your business relies on this package, it's important to support the developers who have contributed their time and effort to create and maintain this valuable tool:
+**RAGFlow PHP** is a community-maintained PHP API client that allows you to interact with the [RAGFlow API](https://ragflow.server/docs/api-reference/introduction). If you or your business relies on this package, it's important to support the developers who have contributed their time and effort to create and maintain this valuable tool:
 
 - Nuno Maduro: **[github.com/sponsors/nunomaduro](https://github.com/sponsors/nunomaduro)**
 - Sandro Gehri: **[github.com/sponsors/gehrisandro](https://github.com/sponsors/gehrisandro)**
@@ -1395,7 +1395,7 @@ $response->toArray(); // ['id' => 'run_4RCYyYzX9m41WQicoJtUQAb8', ...]
 
 Creates a streamed run.
 
-[RAGFlow Assistant Events](https://ragflow-server/docs/api-reference/assistants-streaming/events)
+[RAGFlow Assistant Events](https://ragflow.server/docs/api-reference/assistants-streaming/events)
 
 ```php
 $stream = $client->threads()->runs()->createStreamed(
@@ -1417,7 +1417,7 @@ foreach($stream as $response){
 
 Creates a streamed run with function calls
 
-[RAGFlow Assistant Events](https://ragflow-server/docs/api-reference/assistants-streaming/events)
+[RAGFlow Assistant Events](https://ragflow.server/docs/api-reference/assistants-streaming/events)
 
 ```php
 $stream = $client->threads()->runs()->createStreamed(
@@ -2268,7 +2268,7 @@ $stream = $client->completions()->createStreamed([
 $stream->meta(); 
 ```
 
-For further details about the rates limits and what to do if you hit them visit the [RAGFlow documentation](https://ragflow-server/docs/guides/rate-limits/rate-limits).
+For further details about the rates limits and what to do if you hit them visit the [RAGFlow documentation](https://ragflow.server/docs/guides/rate-limits/rate-limits).
 
 ## Troubleshooting
 

@@ -13,7 +13,7 @@ interface FineTuningContract
      *
      * Response includes details of the enqueued job including job status and the name of the fine-tuned models once complete.
      *
-     * @see https://ragflow-server/docs/api-reference/fine-tuning/create
+     * @see https://ragflow.server/docs/api-reference/fine-tuning/create
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -22,7 +22,7 @@ interface FineTuningContract
     /**
      * List your organization's fine-tuning jobs.
      *
-     * @see https://ragflow-server/docs/api-reference/fine-tuning/undefined
+     * @see https://ragflow.server/docs/api-reference/fine-tuning/undefined
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -31,21 +31,21 @@ interface FineTuningContract
     /**
      * Get info about a fine-tuning job.
      *
-     * @see https://ragflow-server/docs/api-reference/fine-tuning/retrieve
+     * @see https://ragflow.server/docs/api-reference/fine-tuning/retrieve
      */
     public function retrieveJob(string $jobId): RetrieveJobResponse;
 
     /**
      * Immediately cancel a fine-tune job.
      *
-     * @see https://ragflow-server/docs/api-reference/fine-tuning/cancel
+     * @see https://ragflow.server/docs/api-reference/fine-tuning/cancel
      */
     public function cancelJob(string $jobId): RetrieveJobResponse;
 
     /**
      * Get status updates for a fine-tuning job.
      *
-     * @see https://ragflow-server/docs/api-reference/fine-tuning/list-events
+     * @see https://ragflow.server/docs/api-reference/fine-tuning/list-events
      *
      * @param  array<string, mixed>  $parameters
      */

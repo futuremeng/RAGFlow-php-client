@@ -8,7 +8,7 @@ body:
       value: |
         Please fill out the following information to help us resolve your issue.
         
-        Keep in mind that this package is a PHP wrapper for the RAGFlow API. If you have a question about the API itself, please refer to the [RAGFlow API Documentation](https://ragflow-server/docs/introduction) or reach out to the [RAGFlow Community Forum](https://community.ragflow.com/categories).
+        Keep in mind that this package is a PHP wrapper for the RAGFlow API. If you have a question about the API itself, please refer to the [RAGFlow API Documentation](https://ragflow.server/docs/introduction) or reach out to the [RAGFlow Community Forum](https://community.ragflow.com/categories).
   - type: textarea
     attributes:
       label: Description

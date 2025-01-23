@@ -11,7 +11,7 @@ interface AudioContract
     /**
      * Generates audio from the input text.
      *
-     * @see https://ragflow-server/docs/api-reference/audio/createSpeech
+     * @see https://ragflow.server/docs/api-reference/audio/createSpeech
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -20,7 +20,7 @@ interface AudioContract
     /**
      * Generates streamed audio from the input text.
      *
-     * @see https://ragflow-server/docs/api-reference/audio/createSpeech
+     * @see https://ragflow.server/docs/api-reference/audio/createSpeech
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -29,7 +29,7 @@ interface AudioContract
     /**
      * Transcribes audio into the input language.
      *
-     * @see https://ragflow-server/docs/api-reference/audio/createTranscription
+     * @see https://ragflow.server/docs/api-reference/audio/createTranscription
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -38,7 +38,7 @@ interface AudioContract
     /**
      * Translates audio into English.
      *
-     * @see https://ragflow-server/docs/api-reference/audio/createTranslation
+     * @see https://ragflow.server/docs/api-reference/audio/createTranslation
      *
      * @param  array<string, mixed>  $parameters
      */

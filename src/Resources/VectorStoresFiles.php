@@ -18,7 +18,7 @@ final class VectorStoresFiles implements VectorStoresFilesContract
     /**
      * Create a file on a vector store
      *
-     * @see https://ragflow-server/docs/api-reference/vector-stores-files/createFile
+     * @see https://ragflow.server/docs/api-reference/vector-stores-files/createFile
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -35,7 +35,7 @@ final class VectorStoresFiles implements VectorStoresFilesContract
     /**
      * Returns a list of files within a vector store.
      *
-     * @see https://ragflow-server/docs/api-reference/vector-stores-files/listFiles
+     * @see https://ragflow.server/docs/api-reference/vector-stores-files/listFiles
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -52,7 +52,7 @@ final class VectorStoresFiles implements VectorStoresFilesContract
     /**
      * Retrieves a file within a vector store.
      *
-     * @see https://ragflow-server/docs/api-reference/vector-stores-files/getFile
+     * @see https://ragflow.server/docs/api-reference/vector-stores-files/getFile
      */
     public function retrieve(string $vectorStoreId, string $fileId): VectorStoreFileResponse
     {
@@ -67,7 +67,7 @@ final class VectorStoresFiles implements VectorStoresFilesContract
     /**
      * Delete a file within a vector store.
      *
-     * https://ragflow-server/docs/api-reference/vector-stores/delete
+     * https://ragflow.server/docs/api-reference/vector-stores/delete
      */
     public function delete(string $vectorStoreId, string $fileId): VectorStoreFileDeleteResponse
     {

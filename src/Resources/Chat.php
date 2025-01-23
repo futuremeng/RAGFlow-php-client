@@ -19,7 +19,7 @@ final class Chat implements ChatContract
     /**
      * Creates a completion for the chat message
      *
-     * @see https://ragflow-server/docs/api-reference/chat/create
+     * @see https://ragflow.server/docs/api-reference/chat/create
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -38,7 +38,7 @@ final class Chat implements ChatContract
     /**
      * Creates a streamed completion for the chat message
      *
-     * @see https://ragflow-server/docs/api-reference/chat/create
+     * @see https://ragflow.server/docs/api-reference/chat/create
      *
      * @param  array<string, mixed>  $parameters
      * @return StreamResponse<CreateStreamedResponse>

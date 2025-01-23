@@ -9,7 +9,7 @@ interface ModerationsContract
     /**
      * Classifies if text violates RAGFlow's Content Policy.
      *
-     * @see https://ragflow-server/docs/api-reference/moderations/create
+     * @see https://ragflow.server/docs/api-reference/moderations/create
      *
      * @param  array<string, mixed>  $parameters
      */

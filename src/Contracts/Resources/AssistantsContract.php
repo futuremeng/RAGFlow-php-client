@@ -11,7 +11,7 @@ interface AssistantsContract
     /**
      * Create an assistant with a model and instructions.
      *
-     * @see https://ragflow-server/docs/api-reference/assistants/createAssistant
+     * @see https://ragflow.server/docs/api-reference/assistants/createAssistant
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -20,14 +20,14 @@ interface AssistantsContract
     /**
      * Retrieves an assistant.
      *
-     * @see https://ragflow-server/docs/api-reference/assistants/getAssistant
+     * @see https://ragflow.server/docs/api-reference/assistants/getAssistant
      */
     public function retrieve(string $id): AssistantResponse;
 
     /**
      * Modifies an assistant.
      *
-     * @see https://ragflow-server/docs/api-reference/assistants/modifyAssistant
+     * @see https://ragflow.server/docs/api-reference/assistants/modifyAssistant
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -36,14 +36,14 @@ interface AssistantsContract
     /**
      * Delete an assistant.
      *
-     * @see https://ragflow-server/docs/api-reference/assistants/deleteAssistant
+     * @see https://ragflow.server/docs/api-reference/assistants/deleteAssistant
      */
     public function delete(string $id): AssistantDeleteResponse;
 
     /**
      * Returns a list of assistants.
      *
-     * @see https://ragflow-server/docs/api-reference/assistants/listAssistants
+     * @see https://ragflow.server/docs/api-reference/assistants/listAssistants
      *
      * @param  array<string, mixed>  $parameters
      */

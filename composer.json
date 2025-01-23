@@ -1,6 +1,6 @@
 {
     "name": "futuremeng/ragflow-php-client",
-    "description": "RAGFlow PHP is a supercharged PHP API client that allows you to interact with the Open AI API",
+    "description": "RAGFlow PHP is a supercharged PHP API client that allows you to interact with the RAGFlow API",
     "keywords": ["php", "ragflow", "sdk", "codex", "GPT-3", "DALL-E", "api", "client", "natural", "language", "processing"],
     "license": "MIT",
     "authors": [

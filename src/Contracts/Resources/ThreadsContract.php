@@ -13,7 +13,7 @@ interface ThreadsContract
     /**
      * Create a thread.
      *
-     * @see https://ragflow-server/docs/api-reference/threads/createThread
+     * @see https://ragflow.server/docs/api-reference/threads/createThread
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -22,7 +22,7 @@ interface ThreadsContract
     /**
      * Create a thread and run it in one request.
      *
-     * @see https://ragflow-server/docs/api-reference/runs/createThreadAndRun
+     * @see https://ragflow.server/docs/api-reference/runs/createThreadAndRun
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -31,7 +31,7 @@ interface ThreadsContract
     /**
      * Create a thread and run it in one request, returning a stream.
      *
-     * @see https://ragflow-server/docs/api-reference/runs/createThreadAndRun
+     * @see https://ragflow.server/docs/api-reference/runs/createThreadAndRun
      *
      * @param  array<string, mixed>  $parameters
      * @return StreamResponse<ThreadRunStreamResponse>
@@ -41,14 +41,14 @@ interface ThreadsContract
     /**
      * Retrieves a thread.
      *
-     * @see https://ragflow-server/docs/api-reference/threads/getThread
+     * @see https://ragflow.server/docs/api-reference/threads/getThread
      */
     public function retrieve(string $id): ThreadResponse;
 
     /**
      * Modifies a thread.
      *
-     * @see https://ragflow-server/docs/api-reference/threads/modifyThread
+     * @see https://ragflow.server/docs/api-reference/threads/modifyThread
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -57,21 +57,21 @@ interface ThreadsContract
     /**
      * Delete a thread.
      *
-     * @see https://ragflow-server/docs/api-reference/threads/deleteThread
+     * @see https://ragflow.server/docs/api-reference/threads/deleteThread
      */
     public function delete(string $id): ThreadDeleteResponse;
 
     /**
      * Manage messages attached to a thread.
      *
-     * @see https://ragflow-server/docs/api-reference/messages
+     * @see https://ragflow.server/docs/api-reference/messages
      */
     public function messages(): ThreadsMessagesContract;
 
     /**
      * Represents an execution run on a thread.
      *
-     * @see https://ragflow-server/docs/api-reference/runs
+     * @see https://ragflow.server/docs/api-reference/runs
      */
     public function runs(): ThreadsRunsContract;
 }
