@@ -1,9 +1,9 @@
 <?php
 
-use OpenAI\Resources\ThreadsMessages;
-use OpenAI\Responses\Threads\Messages\ThreadMessageListResponse;
-use OpenAI\Responses\Threads\Messages\ThreadMessageResponse;
-use OpenAI\Testing\ClientFake;
+use RAGFlow\Resources\ThreadsMessages;
+use RAGFlow\Responses\Threads\Messages\ThreadMessageListResponse;
+use RAGFlow\Responses\Threads\Messages\ThreadMessageResponse;
+use RAGFlow\Testing\ClientFake;
 
 it('records a thread message create request', function () {
     $fake = new ClientFake([
@@ -67,7 +67,7 @@ it('records a thread message modify request', function () {
 
 it('records a thread message delete request', function () {
     $fake = new ClientFake([
-        \OpenAI\Responses\Threads\Messages\ThreadMessageDeleteResponse::fake(),
+        \RAGFlow\Responses\Threads\Messages\ThreadMessageDeleteResponse::fake(),
     ]);
 
     $fake->threads()->messages()->delete('thread_tKFLqzRN9n7MnyKKvc1Q7868', 'msg_KNsDDwE41BUAHhcPNpDkdHWZ');

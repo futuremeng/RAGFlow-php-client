@@ -1,8 +1,8 @@
 <?php
 
-use OpenAI\Responses\Assistants\AssistantListResponse;
-use OpenAI\Responses\Assistants\AssistantResponse;
-use OpenAI\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\Assistants\AssistantListResponse;
+use RAGFlow\Responses\Assistants\AssistantResponse;
+use RAGFlow\Responses\Meta\MetaInformation;
 
 test('from', function () {
     $response = AssistantListResponse::from(assistantListResource(), meta());

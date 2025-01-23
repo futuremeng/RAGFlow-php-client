@@ -1,8 +1,8 @@
 <?php
 
-use OpenAI\Resources\Embeddings;
-use OpenAI\Responses\Embeddings\CreateResponse;
-use OpenAI\Testing\ClientFake;
+use RAGFlow\Resources\Embeddings;
+use RAGFlow\Responses\Embeddings\CreateResponse;
+use RAGFlow\Testing\ClientFake;
 
 it('records a embeddings create request', function () {
     $fake = new ClientFake([

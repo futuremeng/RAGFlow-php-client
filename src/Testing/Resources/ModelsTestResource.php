@@ -1,13 +1,13 @@
 <?php
 
-namespace OpenAI\Testing\Resources;
+namespace RAGFlow\Testing\Resources;
 
-use OpenAI\Contracts\Resources\ModelsContract;
-use OpenAI\Resources\Models;
-use OpenAI\Responses\Models\DeleteResponse;
-use OpenAI\Responses\Models\ListResponse;
-use OpenAI\Responses\Models\RetrieveResponse;
-use OpenAI\Testing\Resources\Concerns\Testable;
+use RAGFlow\Contracts\Resources\ModelsContract;
+use RAGFlow\Resources\Models;
+use RAGFlow\Responses\Models\DeleteResponse;
+use RAGFlow\Responses\Models\ListResponse;
+use RAGFlow\Responses\Models\RetrieveResponse;
+use RAGFlow\Testing\Resources\Concerns\Testable;
 
 final class ModelsTestResource implements ModelsContract
 {

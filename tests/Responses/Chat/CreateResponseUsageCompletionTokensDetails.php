@@ -1,6 +1,6 @@
 <?php
 
-use OpenAI\Responses\Chat\CreateResponseUsageCompletionTokensDetails;
+use RAGFlow\Responses\Chat\CreateResponseUsageCompletionTokensDetails;
 
 test('from', function () {
     $result = CreateResponseUsageCompletionTokensDetails::from(chatCompletion()['usage']['completion_tokens_details']);

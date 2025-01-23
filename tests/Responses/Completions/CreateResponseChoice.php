@@ -1,7 +1,7 @@
 <?php
 
-use OpenAI\Responses\Completions\CreateResponseChoice;
-use OpenAI\Responses\Completions\CreateResponseChoiceLogprobs;
+use RAGFlow\Responses\Completions\CreateResponseChoice;
+use RAGFlow\Responses\Completions\CreateResponseChoiceLogprobs;
 
 test('from', function () {
     $result = CreateResponseChoice::from(completion()['choices'][0]);

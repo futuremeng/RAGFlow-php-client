@@ -1,12 +1,12 @@
 <?php
 
-namespace OpenAI\Responses;
+namespace RAGFlow\Responses;
 
 use Generator;
-use OpenAI\Contracts\ResponseHasMetaInformationContract;
-use OpenAI\Contracts\ResponseStreamContract;
-use OpenAI\Exceptions\ErrorException;
-use OpenAI\Responses\Meta\MetaInformation;
+use RAGFlow\Contracts\ResponseHasMetaInformationContract;
+use RAGFlow\Contracts\ResponseStreamContract;
+use RAGFlow\Exceptions\ErrorException;
+use RAGFlow\Responses\Meta\MetaInformation;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\StreamInterface;
 

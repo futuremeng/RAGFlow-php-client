@@ -1,11 +1,11 @@
 <?php
 
-namespace OpenAI\Testing\Resources;
+namespace RAGFlow\Testing\Resources;
 
-use OpenAI\Contracts\Resources\ModerationsContract;
-use OpenAI\Resources\Moderations;
-use OpenAI\Responses\Moderations\CreateResponse;
-use OpenAI\Testing\Resources\Concerns\Testable;
+use RAGFlow\Contracts\Resources\ModerationsContract;
+use RAGFlow\Resources\Moderations;
+use RAGFlow\Responses\Moderations\CreateResponse;
+use RAGFlow\Testing\Resources\Concerns\Testable;
 
 final class ModerationsTestResource implements ModerationsContract
 {

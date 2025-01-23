@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace OpenAI\Responses\Batches;
+namespace RAGFlow\Responses\Batches;
 
-use OpenAI\Contracts\ResponseContract;
-use OpenAI\Responses\Concerns\ArrayAccessible;
+use RAGFlow\Contracts\ResponseContract;
+use RAGFlow\Responses\Concerns\ArrayAccessible;
 
 /**
  * @implements ResponseContract<array{total: int, completed: int, failed: int}>

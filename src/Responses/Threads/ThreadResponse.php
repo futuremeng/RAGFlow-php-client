@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace OpenAI\Responses\Threads;
+namespace RAGFlow\Responses\Threads;
 
-use OpenAI\Contracts\ResponseContract;
-use OpenAI\Contracts\ResponseHasMetaInformationContract;
-use OpenAI\Responses\Assistants\AssistantResponseToolResources;
-use OpenAI\Responses\Concerns\ArrayAccessible;
-use OpenAI\Responses\Concerns\HasMetaInformation;
-use OpenAI\Responses\Meta\MetaInformation;
-use OpenAI\Testing\Responses\Concerns\Fakeable;
+use RAGFlow\Contracts\ResponseContract;
+use RAGFlow\Contracts\ResponseHasMetaInformationContract;
+use RAGFlow\Responses\Assistants\AssistantResponseToolResources;
+use RAGFlow\Responses\Concerns\ArrayAccessible;
+use RAGFlow\Responses\Concerns\HasMetaInformation;
+use RAGFlow\Responses\Meta\MetaInformation;
+use RAGFlow\Testing\Responses\Concerns\Fakeable;
 
 /**
  * @implements ResponseContract<array{id: string, object: string, created_at: int, tool_resources: ?array{code_interpreter?: array{file_ids: array<int,string>}, file_search?: array{vector_store_ids: array<int,string>}}, metadata: array<string, string>}>

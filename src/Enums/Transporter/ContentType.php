@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace OpenAI\Enums\Transporter;
+namespace RAGFlow\Enums\Transporter;
 
 /**
  * @internal

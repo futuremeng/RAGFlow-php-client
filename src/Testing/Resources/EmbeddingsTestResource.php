@@ -1,11 +1,11 @@
 <?php
 
-namespace OpenAI\Testing\Resources;
+namespace RAGFlow\Testing\Resources;
 
-use OpenAI\Contracts\Resources\EmbeddingsContract;
-use OpenAI\Resources\Embeddings;
-use OpenAI\Responses\Embeddings\CreateResponse;
-use OpenAI\Testing\Resources\Concerns\Testable;
+use RAGFlow\Contracts\Resources\EmbeddingsContract;
+use RAGFlow\Resources\Embeddings;
+use RAGFlow\Responses\Embeddings\CreateResponse;
+use RAGFlow\Testing\Resources\Concerns\Testable;
 
 final class EmbeddingsTestResource implements EmbeddingsContract
 {

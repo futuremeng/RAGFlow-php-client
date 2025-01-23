@@ -1,12 +1,12 @@
 <?php
 
-namespace OpenAI\Testing\Resources;
+namespace RAGFlow\Testing\Resources;
 
-use OpenAI\Contracts\Resources\ThreadsRunsStepsContract;
-use OpenAI\Resources\ThreadsRunsSteps;
-use OpenAI\Responses\Threads\Runs\Steps\ThreadRunStepListResponse;
-use OpenAI\Responses\Threads\Runs\Steps\ThreadRunStepResponse;
-use OpenAI\Testing\Resources\Concerns\Testable;
+use RAGFlow\Contracts\Resources\ThreadsRunsStepsContract;
+use RAGFlow\Resources\ThreadsRunsSteps;
+use RAGFlow\Responses\Threads\Runs\Steps\ThreadRunStepListResponse;
+use RAGFlow\Responses\Threads\Runs\Steps\ThreadRunStepResponse;
+use RAGFlow\Testing\Resources\Concerns\Testable;
 
 class ThreadsRunsStepsTestResource implements ThreadsRunsStepsContract
 {

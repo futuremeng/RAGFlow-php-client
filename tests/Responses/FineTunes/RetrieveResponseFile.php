@@ -1,6 +1,6 @@
 <?php
 
-use OpenAI\Responses\FineTunes\RetrieveResponseFile;
+use RAGFlow\Responses\FineTunes\RetrieveResponseFile;
 
 test('from', function () {
     $result = RetrieveResponseFile::from(fileResource());

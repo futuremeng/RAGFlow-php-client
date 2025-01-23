@@ -1,6 +1,6 @@
 <?php
 
-use OpenAI\Responses\Batches\BatchResponseErrorsData;
+use RAGFlow\Responses\Batches\BatchResponseErrorsData;
 
 test('from', function () {
     $response = BatchResponseErrorsData::from(batchResourceWithErrors()['errors']['data'][0]);

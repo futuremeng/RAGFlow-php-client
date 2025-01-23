@@ -1,8 +1,8 @@
 <?php
 
-use OpenAI\Responses\Chat\CreateResponseUsage;
-use OpenAI\Responses\Chat\CreateStreamedResponse;
-use OpenAI\Responses\Chat\CreateStreamedResponseChoice;
+use RAGFlow\Responses\Chat\CreateResponseUsage;
+use RAGFlow\Responses\Chat\CreateStreamedResponse;
+use RAGFlow\Responses\Chat\CreateStreamedResponseChoice;
 
 test('from', function () {
     $completion = CreateStreamedResponse::from(chatCompletionStreamFirstChunk());

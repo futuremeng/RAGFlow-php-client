@@ -1,15 +1,15 @@
 <?php
 
-namespace OpenAI\Responses\Threads\Runs;
+namespace RAGFlow\Responses\Threads\Runs;
 
-use OpenAI\Contracts\ResponseContract;
-use OpenAI\Exceptions\UnknownEventException;
-use OpenAI\Responses\Concerns\ArrayAccessible;
-use OpenAI\Responses\Threads\Messages\Delta\ThreadMessageDeltaResponse;
-use OpenAI\Responses\Threads\Messages\ThreadMessageResponse;
-use OpenAI\Responses\Threads\Runs\Steps\Delta\ThreadRunStepDeltaResponse;
-use OpenAI\Responses\Threads\Runs\Steps\ThreadRunStepResponse;
-use OpenAI\Responses\Threads\ThreadResponse;
+use RAGFlow\Contracts\ResponseContract;
+use RAGFlow\Exceptions\UnknownEventException;
+use RAGFlow\Responses\Concerns\ArrayAccessible;
+use RAGFlow\Responses\Threads\Messages\Delta\ThreadMessageDeltaResponse;
+use RAGFlow\Responses\Threads\Messages\ThreadMessageResponse;
+use RAGFlow\Responses\Threads\Runs\Steps\Delta\ThreadRunStepDeltaResponse;
+use RAGFlow\Responses\Threads\Runs\Steps\ThreadRunStepResponse;
+use RAGFlow\Responses\Threads\ThreadResponse;
 
 /**
  * @implements ResponseContract<array{event: string, data: array<string, mixed>}>
@@ -30,7 +30,7 @@ class ThreadRunStreamResponse implements ResponseContract
      * Acts as static factory, and returns a new Response instance.
      *
      *  Maps the appropriate classes onto each event from the assistants streaming api
-     *  https://platform.openai.com/docs/api-reference/assistants-streaming/events
+     *  https://ragflow-server/docs/api-reference/assistants-streaming/events
      *
      * @param  array<string, mixed>  $attributes
      */

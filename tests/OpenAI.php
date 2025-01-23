@@ -1,30 +1,30 @@
 <?php
 
 use GuzzleHttp\Client as GuzzleClient;
-use OpenAI\Client;
+use RAGFlow\Client;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
 it('may create a client', function () {
-    $openAI = OpenAI::client('foo');
+    $openAI = RAGFlow::client('foo');
 
     expect($openAI)->toBeInstanceOf(Client::class);
 });
 
 it('sets organization when provided', function () {
-    $openAI = OpenAI::client('foo', 'nunomaduro');
+    $openAI = RAGFlow::client('foo', 'nunomaduro');
 
     expect($openAI)->toBeInstanceOf(Client::class);
 });
 
 it('sets project when provided', function () {
-    $openAI = OpenAI::client('foo', 'nunomaduro', 'openai_proj');
+    $openAI = RAGFlow::client('foo', 'nunomaduro', 'ragflow_proj');
 
     expect($openAI)->toBeInstanceOf(Client::class);
 });
 
 it('may create a client via factory', function () {
-    $openAI = OpenAI::factory()
+    $openAI = RAGFlow::factory()
         ->withApiKey('foo')
         ->make();
 
@@ -32,7 +32,7 @@ it('may create a client via factory', function () {
 });
 
 it('sets an organization via factory', function () {
-    $openAI = OpenAI::factory()
+    $openAI = RAGFlow::factory()
         ->withOrganization('nunomaduro')
         ->make();
 
@@ -40,16 +40,16 @@ it('sets an organization via factory', function () {
 });
 
 it('sets an project via factory', function () {
-    $openAI = OpenAI::factory()
+    $openAI = RAGFlow::factory()
         ->withOrganization('nunomaduro')
-        ->withProject('openai_proj')
+        ->withProject('ragflow_proj')
         ->make();
 
     expect($openAI)->toBeInstanceOf(Client::class);
 });
 
 it('sets a custom client via factory', function () {
-    $openAI = OpenAI::factory()
+    $openAI = RAGFlow::factory()
         ->withHttpClient(new GuzzleClient)
         ->make();
 
@@ -57,15 +57,15 @@ it('sets a custom client via factory', function () {
 });
 
 it('sets a custom base url via factory', function () {
-    $openAI = OpenAI::factory()
-        ->withBaseUri('https://openai.example.com/v1')
+    $openAI = RAGFlow::factory()
+        ->withBaseUri('https://ragflow.example.com/v1')
         ->make();
 
     expect($openAI)->toBeInstanceOf(Client::class);
 });
 
 it('sets a custom header via factory', function () {
-    $openAI = OpenAI::factory()
+    $openAI = RAGFlow::factory()
         ->withHttpHeader('X-My-Header', 'foo')
         ->make();
 
@@ -73,7 +73,7 @@ it('sets a custom header via factory', function () {
 });
 
 it('sets a custom query parameter via factory', function () {
-    $openAI = OpenAI::factory()
+    $openAI = RAGFlow::factory()
         ->withQueryParam('my-param', 'bar')
         ->make();
 
@@ -81,7 +81,7 @@ it('sets a custom query parameter via factory', function () {
 });
 
 it('sets a custom stream handler via factory', function () {
-    $openAI = OpenAI::factory()
+    $openAI = RAGFlow::factory()
         ->withHttpClient($client = new GuzzleClient)
         ->withStreamHandler(fn (RequestInterface $request): ResponseInterface => $client->send($request, ['stream' => true]))
         ->make();

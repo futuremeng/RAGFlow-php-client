@@ -1,10 +1,10 @@
 <?php
 
-use OpenAI\Resources\Assistants;
-use OpenAI\Responses\Assistants\AssistantDeleteResponse;
-use OpenAI\Responses\Assistants\AssistantListResponse;
-use OpenAI\Responses\Assistants\AssistantResponse;
-use OpenAI\Testing\ClientFake;
+use RAGFlow\Resources\Assistants;
+use RAGFlow\Responses\Assistants\AssistantDeleteResponse;
+use RAGFlow\Responses\Assistants\AssistantListResponse;
+use RAGFlow\Responses\Assistants\AssistantResponse;
+use RAGFlow\Testing\ClientFake;
 
 it('records an assistant create request', function () {
     $fake = new ClientFake([

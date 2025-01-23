@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace OpenAI\Contracts;
+namespace RAGFlow\Contracts;
 
 use IteratorAggregate;
 

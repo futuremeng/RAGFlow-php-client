@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenAI\Responses\Meta;
+namespace RAGFlow\Responses\Meta;
 
 final class MetaInformationRateLimit
 {

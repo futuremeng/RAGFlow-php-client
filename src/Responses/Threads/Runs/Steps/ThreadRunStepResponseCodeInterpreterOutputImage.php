@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace OpenAI\Responses\Threads\Runs\Steps;
+namespace RAGFlow\Responses\Threads\Runs\Steps;
 
-use OpenAI\Contracts\ResponseContract;
-use OpenAI\Responses\Concerns\ArrayAccessible;
-use OpenAI\Testing\Responses\Concerns\Fakeable;
+use RAGFlow\Contracts\ResponseContract;
+use RAGFlow\Responses\Concerns\ArrayAccessible;
+use RAGFlow\Testing\Responses\Concerns\Fakeable;
 
 /**
  * @implements ResponseContract<array{type: 'image', image: array{file_id: string}}>

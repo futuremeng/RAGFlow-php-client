@@ -1,12 +1,12 @@
 <?php
 
-use OpenAI\Responses\Images\EditResponseData;
+use RAGFlow\Responses\Images\EditResponseData;
 
 test('from with url', function () {
     $response = EditResponseData::from(imageEditWithUrl()['data'][0]);
 
     expect($response)
-        ->url->toBe('https://openai.com/image.png')
+        ->url->toBe('https://ragflow.com/image.png')
         ->b64_json->toBeEmpty();
 });
 

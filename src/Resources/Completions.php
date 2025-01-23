@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace OpenAI\Resources;
+namespace RAGFlow\Resources;
 
-use OpenAI\Contracts\Resources\CompletionsContract;
-use OpenAI\Responses\Completions\CreateResponse;
-use OpenAI\Responses\Completions\CreateStreamedResponse;
-use OpenAI\Responses\StreamResponse;
-use OpenAI\ValueObjects\Transporter\Payload;
-use OpenAI\ValueObjects\Transporter\Response;
+use RAGFlow\Contracts\Resources\CompletionsContract;
+use RAGFlow\Responses\Completions\CreateResponse;
+use RAGFlow\Responses\Completions\CreateStreamedResponse;
+use RAGFlow\Responses\StreamResponse;
+use RAGFlow\ValueObjects\Transporter\Payload;
+use RAGFlow\ValueObjects\Transporter\Response;
 
 final class Completions implements CompletionsContract
 {
@@ -19,7 +19,7 @@ final class Completions implements CompletionsContract
     /**
      * Creates a completion for the provided prompt and parameters
      *
-     * @see https://platform.openai.com/docs/api-reference/completions/create-completion
+     * @see https://ragflow-server/docs/api-reference/completions/create-completion
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -38,7 +38,7 @@ final class Completions implements CompletionsContract
     /**
      * Creates a streamed completion for the provided prompt and parameters
      *
-     * @see https://platform.openai.com/docs/api-reference/completions/create-completion
+     * @see https://ragflow-server/docs/api-reference/completions/create-completion
      *
      * @param  array<string, mixed>  $parameters
      * @return StreamResponse<CreateStreamedResponse>

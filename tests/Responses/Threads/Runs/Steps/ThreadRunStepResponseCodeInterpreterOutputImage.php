@@ -1,7 +1,7 @@
 <?php
 
-use OpenAI\Responses\Threads\Runs\Steps\ThreadRunStepResponseCodeInterpreterOutputImage;
-use OpenAI\Responses\Threads\Runs\Steps\ThreadRunStepResponseCodeInterpreterOutputImageImage;
+use RAGFlow\Responses\Threads\Runs\Steps\ThreadRunStepResponseCodeInterpreterOutputImage;
+use RAGFlow\Responses\Threads\Runs\Steps\ThreadRunStepResponseCodeInterpreterOutputImageImage;
 
 test('from', function () {
     $result = ThreadRunStepResponseCodeInterpreterOutputImage::from(threadRunStepWithCodeInterpreterOutputResource()['step_details']['tool_calls'][0]['code_interpreter']['outputs'][0]);

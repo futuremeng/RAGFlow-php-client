@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace OpenAI\Testing\Responses\Concerns;
+namespace RAGFlow\Testing\Responses\Concerns;
 
-use OpenAI\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\Meta\MetaInformation;
 
 trait Fakeable
 {
@@ -46,10 +46,10 @@ trait Fakeable
     public static function fakeResponseMetaInformation(): MetaInformation
     {
         return MetaInformation::from([
-            'openai-model' => ['gpt-3.5-turbo-instruct'],
-            'openai-organization' => ['org-1234'],
-            'openai-processing-ms' => ['410'],
-            'openai-version' => ['2020-10-01'],
+            'ragflow-model' => ['gpt-3.5-turbo-instruct'],
+            'ragflow-organization' => ['org-1234'],
+            'ragflow-processing-ms' => ['410'],
+            'ragflow-version' => ['2020-10-01'],
             'x-ratelimit-limit-requests' => ['3000'],
             'x-ratelimit-limit-tokens' => ['250000'],
             'x-ratelimit-remaining-requests' => ['2999'],

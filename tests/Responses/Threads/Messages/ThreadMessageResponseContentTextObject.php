@@ -1,7 +1,7 @@
 <?php
 
-use OpenAI\Responses\Threads\Messages\ThreadMessageResponseContentText;
-use OpenAI\Responses\Threads\Messages\ThreadMessageResponseContentTextObject;
+use RAGFlow\Responses\Threads\Messages\ThreadMessageResponseContentText;
+use RAGFlow\Responses\Threads\Messages\ThreadMessageResponseContentTextObject;
 
 test('from', function () {
     $result = ThreadMessageResponseContentTextObject::from(threadMessageResource()['content'][0]);

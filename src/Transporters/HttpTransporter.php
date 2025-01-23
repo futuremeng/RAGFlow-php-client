@@ -2,21 +2,21 @@
 
 declare(strict_types=1);
 
-namespace OpenAI\Transporters;
+namespace RAGFlow\Transporters;
 
 use Closure;
 use GuzzleHttp\Exception\ClientException;
 use JsonException;
-use OpenAI\Contracts\TransporterContract;
-use OpenAI\Enums\Transporter\ContentType;
-use OpenAI\Exceptions\ErrorException;
-use OpenAI\Exceptions\TransporterException;
-use OpenAI\Exceptions\UnserializableResponse;
-use OpenAI\ValueObjects\Transporter\BaseUri;
-use OpenAI\ValueObjects\Transporter\Headers;
-use OpenAI\ValueObjects\Transporter\Payload;
-use OpenAI\ValueObjects\Transporter\QueryParams;
-use OpenAI\ValueObjects\Transporter\Response;
+use RAGFlow\Contracts\TransporterContract;
+use RAGFlow\Enums\Transporter\ContentType;
+use RAGFlow\Exceptions\ErrorException;
+use RAGFlow\Exceptions\TransporterException;
+use RAGFlow\Exceptions\UnserializableResponse;
+use RAGFlow\ValueObjects\Transporter\BaseUri;
+use RAGFlow\ValueObjects\Transporter\Headers;
+use RAGFlow\ValueObjects\Transporter\Payload;
+use RAGFlow\ValueObjects\Transporter\QueryParams;
+use RAGFlow\ValueObjects\Transporter\Response;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\ResponseInterface;

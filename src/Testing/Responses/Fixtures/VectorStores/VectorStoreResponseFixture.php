@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenAI\Testing\Responses\Fixtures\VectorStores;
+namespace RAGFlow\Testing\Responses\Fixtures\VectorStores;
 
 final class VectorStoreResponseFixture
 {

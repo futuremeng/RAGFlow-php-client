@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace OpenAI\Resources;
+namespace RAGFlow\Resources;
 
-use OpenAI\Contracts\Resources\ChatContract;
-use OpenAI\Responses\Chat\CreateResponse;
-use OpenAI\Responses\Chat\CreateStreamedResponse;
-use OpenAI\Responses\StreamResponse;
-use OpenAI\ValueObjects\Transporter\Payload;
-use OpenAI\ValueObjects\Transporter\Response;
+use RAGFlow\Contracts\Resources\ChatContract;
+use RAGFlow\Responses\Chat\CreateResponse;
+use RAGFlow\Responses\Chat\CreateStreamedResponse;
+use RAGFlow\Responses\StreamResponse;
+use RAGFlow\ValueObjects\Transporter\Payload;
+use RAGFlow\ValueObjects\Transporter\Response;
 
 final class Chat implements ChatContract
 {
@@ -19,7 +19,7 @@ final class Chat implements ChatContract
     /**
      * Creates a completion for the chat message
      *
-     * @see https://platform.openai.com/docs/api-reference/chat/create
+     * @see https://ragflow-server/docs/api-reference/chat/create
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -38,7 +38,7 @@ final class Chat implements ChatContract
     /**
      * Creates a streamed completion for the chat message
      *
-     * @see https://platform.openai.com/docs/api-reference/chat/create
+     * @see https://ragflow-server/docs/api-reference/chat/create
      *
      * @param  array<string, mixed>  $parameters
      * @return StreamResponse<CreateStreamedResponse>

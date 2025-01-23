@@ -1,8 +1,8 @@
 <?php
 
-use OpenAI\Responses\Images\CreateResponse;
-use OpenAI\Responses\Images\CreateResponseData;
-use OpenAI\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\Images\CreateResponse;
+use RAGFlow\Responses\Images\CreateResponseData;
+use RAGFlow\Responses\Meta\MetaInformation;
 
 test('from with url', function () {
     $response = CreateResponse::from(imageCreateWithUrl(), meta());
@@ -58,21 +58,21 @@ test('fake', function () {
     $response = CreateResponse::fake();
 
     expect($response['data'][0])
-        ->url->toBe('https://openai.com/fake-image.png');
+        ->url->toBe('https://ragflow.com/fake-image.png');
 });
 
 test('fake with override', function () {
     $response = CreateResponse::fake([
         'data' => [
             [
-                'url' => 'https://openai.com/new-image.png',
+                'url' => 'https://ragflow.com/new-image.png',
                 'revised_prompt' => 'the revised prompt',
             ],
         ],
     ]);
 
     expect($response['data'][0])
-        ->url->toBe('https://openai.com/new-image.png')
+        ->url->toBe('https://ragflow.com/new-image.png')
         ->revised_prompt->toBe('the revised prompt');
 });
 

@@ -1,8 +1,8 @@
 <?php
 
-use OpenAI\Responses\Batches\BatchListResponse;
-use OpenAI\Responses\Batches\BatchResponse;
-use OpenAI\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\Batches\BatchListResponse;
+use RAGFlow\Responses\Batches\BatchResponse;
+use RAGFlow\Responses\Meta\MetaInformation;
 
 test('from', function () {
     $response = BatchListResponse::from(batchListResource(), meta());

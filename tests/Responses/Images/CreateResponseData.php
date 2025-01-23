@@ -1,12 +1,12 @@
 <?php
 
-use OpenAI\Responses\Images\CreateResponseData;
+use RAGFlow\Responses\Images\CreateResponseData;
 
 test('from with url', function () {
     $response = CreateResponseData::from(imageCreateWithUrl()['data'][0]);
 
     expect($response)
-        ->url->toBe('https://openai.com/image.png')
+        ->url->toBe('https://ragflow.com/image.png')
         ->b64_json->toBeEmpty();
 });
 
@@ -21,7 +21,7 @@ test('from with url from dall-e 3', function () {
     $response = CreateResponseData::from(imageCreateWithUrlDallE3()['data'][0]);
 
     expect($response)
-        ->url->toBe('https://openai.com/image.png')
+        ->url->toBe('https://ragflow.com/image.png')
         ->revisedPrompt->toBe('This is a revised prompt.')
         ->b64_json->toBeEmpty();
 });

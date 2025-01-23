@@ -1,12 +1,12 @@
 <?php
 
-use OpenAI\Responses\Images\CreateResponse;
-use OpenAI\Responses\Images\CreateResponseData;
-use OpenAI\Responses\Images\EditResponse;
-use OpenAI\Responses\Images\EditResponseData;
-use OpenAI\Responses\Images\VariationResponse;
-use OpenAI\Responses\Images\VariationResponseData;
-use OpenAI\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\Images\CreateResponse;
+use RAGFlow\Responses\Images\CreateResponseData;
+use RAGFlow\Responses\Images\EditResponse;
+use RAGFlow\Responses\Images\EditResponseData;
+use RAGFlow\Responses\Images\VariationResponse;
+use RAGFlow\Responses\Images\VariationResponseData;
+use RAGFlow\Responses\Meta\MetaInformation;
 
 test('create', function () {
     $client = mockClient('POST', 'images/generations', [
@@ -14,7 +14,7 @@ test('create', function () {
         'n' => 1,
         'size' => '256x256',
         'response_format' => 'url',
-    ], \OpenAI\ValueObjects\Transporter\Response::from(imageCreateWithUrl(), metaHeaders()));
+    ], \RAGFlow\ValueObjects\Transporter\Response::from(imageCreateWithUrl(), metaHeaders()));
 
     $result = $client->images()->create([
         'prompt' => 'A cute baby sea otter',
@@ -30,7 +30,7 @@ test('create', function () {
         ->data->each->toBeInstanceOf(CreateResponseData::class);
 
     expect($result->data[0])
-        ->url->toBe('https://openai.com/image.png');
+        ->url->toBe('https://ragflow.com/image.png');
 
     expect($result->meta())
         ->toBeInstanceOf(MetaInformation::class);
@@ -44,7 +44,7 @@ test('edit', function () {
         'n' => 1,
         'size' => '256x256',
         'response_format' => 'url',
-    ], \OpenAI\ValueObjects\Transporter\Response::from(imageEditWithUrl(), metaHeaders()), validateParams: false);
+    ], \RAGFlow\ValueObjects\Transporter\Response::from(imageEditWithUrl(), metaHeaders()), validateParams: false);
 
     $result = $client->images()->edit([
         'image' => fileResourceResource(),
@@ -62,7 +62,7 @@ test('edit', function () {
         ->data->each->toBeInstanceOf(EditResponseData::class);
 
     expect($result->data[0])
-        ->url->toBe('https://openai.com/image.png');
+        ->url->toBe('https://ragflow.com/image.png');
 
     expect($result->meta())
         ->toBeInstanceOf(MetaInformation::class);
@@ -74,7 +74,7 @@ test('variation', function () {
         'n' => 1,
         'size' => '256x256',
         'response_format' => 'url',
-    ], \OpenAI\ValueObjects\Transporter\Response::from(imageVariationWithUrl(), metaHeaders()), validateParams: false);
+    ], \RAGFlow\ValueObjects\Transporter\Response::from(imageVariationWithUrl(), metaHeaders()), validateParams: false);
 
     $result = $client->images()->variation([
         'image' => fileResourceResource(),
@@ -90,7 +90,7 @@ test('variation', function () {
         ->data->each->toBeInstanceOf(VariationResponseData::class);
 
     expect($result->data[0])
-        ->url->toBe('https://openai.com/image.png');
+        ->url->toBe('https://ragflow.com/image.png');
 
     expect($result->meta())
         ->toBeInstanceOf(MetaInformation::class);

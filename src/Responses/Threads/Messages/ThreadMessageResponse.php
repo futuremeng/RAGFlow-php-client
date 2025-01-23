@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace OpenAI\Responses\Threads\Messages;
+namespace RAGFlow\Responses\Threads\Messages;
 
-use OpenAI\Contracts\ResponseContract;
-use OpenAI\Contracts\ResponseHasMetaInformationContract;
-use OpenAI\Responses\Concerns\ArrayAccessible;
-use OpenAI\Responses\Concerns\HasMetaInformation;
-use OpenAI\Responses\Meta\MetaInformation;
-use OpenAI\Testing\Responses\Concerns\Fakeable;
+use RAGFlow\Contracts\ResponseContract;
+use RAGFlow\Contracts\ResponseHasMetaInformationContract;
+use RAGFlow\Responses\Concerns\ArrayAccessible;
+use RAGFlow\Responses\Concerns\HasMetaInformation;
+use RAGFlow\Responses\Meta\MetaInformation;
+use RAGFlow\Testing\Responses\Concerns\Fakeable;
 
 /**
  * @implements ResponseContract<array{id: string, object: string, created_at: int, thread_id: string, role: string, content: array<int, array{type: 'text', text: array{value: string, annotations: array<int, array{type: 'file_citation', text: string, file_citation: array{file_id: string, quote?: string}, start_index: int, end_index: int}|array{type: 'file_path', text: string, file_path: array{file_id: string}, start_index: int, end_index: int}>}}|array{type: string, image_file: array{file_id: string, detail?: string}}|array{type: 'image_url', image_url: array{url: string, detail?: string}}>, assistant_id: ?string, run_id: ?string, attachments: array<int, array{file_id: string, tools: array<int, array{type: string}>}>, metadata: array<string, string>}>

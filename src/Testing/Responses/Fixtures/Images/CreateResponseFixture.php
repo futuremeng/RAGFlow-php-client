@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenAI\Testing\Responses\Fixtures\Images;
+namespace RAGFlow\Testing\Responses\Fixtures\Images;
 
 final class CreateResponseFixture
 {
@@ -8,7 +8,7 @@ final class CreateResponseFixture
         'created' => 1_664_136_088,
         'data' => [
             [
-                'url' => 'https://openai.com/fake-image.png',
+                'url' => 'https://ragflow.com/fake-image.png',
             ],
         ],
     ];

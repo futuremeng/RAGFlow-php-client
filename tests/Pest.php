@@ -1,13 +1,13 @@
 <?php
 
-use OpenAI\Client;
-use OpenAI\Contracts\TransporterContract;
-use OpenAI\ValueObjects\ApiKey;
-use OpenAI\ValueObjects\Transporter\BaseUri;
-use OpenAI\ValueObjects\Transporter\Headers;
-use OpenAI\ValueObjects\Transporter\Payload;
-use OpenAI\ValueObjects\Transporter\QueryParams;
-use OpenAI\ValueObjects\Transporter\Response;
+use RAGFlow\Client;
+use RAGFlow\Contracts\TransporterContract;
+use RAGFlow\ValueObjects\ApiKey;
+use RAGFlow\ValueObjects\Transporter\BaseUri;
+use RAGFlow\ValueObjects\Transporter\Headers;
+use RAGFlow\ValueObjects\Transporter\Payload;
+use RAGFlow\ValueObjects\Transporter\QueryParams;
+use RAGFlow\ValueObjects\Transporter\Response;
 use Psr\Http\Message\ResponseInterface;
 
 function mockClient(string $method, string $resource, array $params, Response|ResponseInterface|string $response, $methodName = 'requestObject', bool $validateParams = true)
@@ -18,7 +18,7 @@ function mockClient(string $method, string $resource, array $params, Response|Re
         ->shouldReceive($methodName)
         ->once()
         ->withArgs(function (Payload $payload) use ($validateParams, $method, $resource, $params) {
-            $baseUri = BaseUri::from('api.openai.com/v1');
+            $baseUri = BaseUri::from('api.ragflow.server/v1');
             $headers = Headers::withAuthorization(ApiKey::from('foo'));
             $queryParams = QueryParams::create();
 

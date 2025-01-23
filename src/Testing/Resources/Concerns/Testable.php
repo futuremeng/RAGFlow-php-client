@@ -1,11 +1,11 @@
 <?php
 
-namespace OpenAI\Testing\Resources\Concerns;
+namespace RAGFlow\Testing\Resources\Concerns;
 
-use OpenAI\Contracts\ResponseContract;
-use OpenAI\Contracts\ResponseStreamContract;
-use OpenAI\Testing\ClientFake;
-use OpenAI\Testing\Requests\TestRequest;
+use RAGFlow\Contracts\ResponseContract;
+use RAGFlow\Contracts\ResponseStreamContract;
+use RAGFlow\Testing\ClientFake;
+use RAGFlow\Testing\Requests\TestRequest;
 
 trait Testable
 {

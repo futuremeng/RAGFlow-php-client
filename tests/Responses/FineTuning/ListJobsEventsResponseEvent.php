@@ -1,8 +1,8 @@
 <?php
 
-use OpenAI\Enums\FineTuning\FineTuningEventLevel;
-use OpenAI\Responses\FineTuning\ListJobEventsResponseEvent;
-use OpenAI\Responses\FineTuning\ListJobEventsResponseEventData;
+use RAGFlow\Enums\FineTuning\FineTuningEventLevel;
+use RAGFlow\Responses\FineTuning\ListJobEventsResponseEvent;
+use RAGFlow\Responses\FineTuning\ListJobEventsResponseEventData;
 
 test('from message event', function () {
     $result = ListJobEventsResponseEvent::from(fineTuningJobMessageEventResource());

@@ -1,16 +1,16 @@
 <?php
 
-use OpenAI\Enums\Transporter\ContentType;
-use OpenAI\ValueObjects\ApiKey;
-use OpenAI\ValueObjects\Transporter\BaseUri;
-use OpenAI\ValueObjects\Transporter\Headers;
-use OpenAI\ValueObjects\Transporter\Payload;
-use OpenAI\ValueObjects\Transporter\QueryParams;
+use RAGFlow\Enums\Transporter\ContentType;
+use RAGFlow\ValueObjects\ApiKey;
+use RAGFlow\ValueObjects\Transporter\BaseUri;
+use RAGFlow\ValueObjects\Transporter\Headers;
+use RAGFlow\ValueObjects\Transporter\Payload;
+use RAGFlow\ValueObjects\Transporter\QueryParams;
 
 it('has a method', function () {
     $payload = Payload::create('models', []);
 
-    $baseUri = BaseUri::from('api.openai.com/v1');
+    $baseUri = BaseUri::from('api.ragflow.server/v1');
     $headers = Headers::withAuthorization(ApiKey::from('foo'))->withContentType(ContentType::JSON);
     $queryParams = QueryParams::create();
 
@@ -20,7 +20,7 @@ it('has a method', function () {
 it('has a uri', function () {
     $payload = Payload::list('models');
 
-    $baseUri = BaseUri::from('api.openai.com/v1');
+    $baseUri = BaseUri::from('api.ragflow.server/v1');
     $headers = Headers::withAuthorization(ApiKey::from('foo'))->withContentType(ContentType::JSON);
     $queryParams = QueryParams::create()
         ->withParam('foo', 'bar')
@@ -28,7 +28,7 @@ it('has a uri', function () {
 
     $uri = $payload->toRequest($baseUri, $headers, $queryParams)->getUri();
 
-    expect($uri->getHost())->toBe('api.openai.com')
+    expect($uri->getHost())->toBe('api.ragflow.server')
         ->and($uri->getScheme())->toBe('https')
         ->and($uri->getPath())->toBe('/v1/models')
         ->and($uri->getQuery())->toBe('foo=bar&baz=qux');
@@ -37,7 +37,7 @@ it('has a uri', function () {
 test('get verb does not have a body', function () {
     $payload = Payload::list('models');
 
-    $baseUri = BaseUri::from('api.openai.com/v1');
+    $baseUri = BaseUri::from('api.ragflow.server/v1');
     $headers = Headers::withAuthorization(ApiKey::from('foo'))->withContentType(ContentType::JSON);
     $queryParams = QueryParams::create();
 
@@ -49,7 +49,7 @@ test('post verb has a body', function () {
         'name' => 'test',
     ]);
 
-    $baseUri = BaseUri::from('api.openai.com/v1');
+    $baseUri = BaseUri::from('api.ragflow.server/v1');
     $headers = Headers::withAuthorization(ApiKey::from('foo'))->withContentType(ContentType::JSON);
     $queryParams = QueryParams::create();
 
@@ -64,7 +64,7 @@ test('builds upload request', function () {
         'file' => fileResourceResource(),
     ]);
 
-    $baseUri = BaseUri::from('api.openai.com/v1');
+    $baseUri = BaseUri::from('api.ragflow.server/v1');
     $headers = Headers::withAuthorization(ApiKey::from('foo'));
     $queryParams = QueryParams::create();
 

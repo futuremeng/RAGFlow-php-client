@@ -3,16 +3,16 @@
 use GuzzleHttp\Exception\ConnectException;
 use GuzzleHttp\Psr7\Request as Psr7Request;
 use GuzzleHttp\Psr7\Response;
-use OpenAI\Enums\Transporter\ContentType;
-use OpenAI\Exceptions\ErrorException;
-use OpenAI\Exceptions\TransporterException;
-use OpenAI\Exceptions\UnserializableResponse;
-use OpenAI\Transporters\HttpTransporter;
-use OpenAI\ValueObjects\ApiKey;
-use OpenAI\ValueObjects\Transporter\BaseUri;
-use OpenAI\ValueObjects\Transporter\Headers;
-use OpenAI\ValueObjects\Transporter\Payload;
-use OpenAI\ValueObjects\Transporter\QueryParams;
+use RAGFlow\Enums\Transporter\ContentType;
+use RAGFlow\Exceptions\ErrorException;
+use RAGFlow\Exceptions\TransporterException;
+use RAGFlow\Exceptions\UnserializableResponse;
+use RAGFlow\Transporters\HttpTransporter;
+use RAGFlow\ValueObjects\ApiKey;
+use RAGFlow\ValueObjects\Transporter\BaseUri;
+use RAGFlow\ValueObjects\Transporter\Headers;
+use RAGFlow\ValueObjects\Transporter\Payload;
+use RAGFlow\ValueObjects\Transporter\QueryParams;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -24,7 +24,7 @@ beforeEach(function () {
 
     $this->http = new HttpTransporter(
         $this->client,
-        BaseUri::from('api.openai.com/v1'),
+        BaseUri::from('api.ragflow.server/v1'),
         Headers::withAuthorization($apiKey)->withContentType(ContentType::JSON),
         QueryParams::create()->withParam('foo', 'bar'),
         fn (RequestInterface $request): ResponseInterface => $this->client->sendAsyncRequest($request, ['stream' => true]),
@@ -44,7 +44,7 @@ test('request object', function () {
         ->withArgs(function (Psr7Request $request) {
             expect($request->getMethod())->toBe('GET')
                 ->and($request->getUri())
-                ->getHost()->toBe('api.openai.com')
+                ->getHost()->toBe('api.ragflow.server')
                 ->getScheme()->toBe('https')
                 ->getPath()->toBe('/v1/models');
 
@@ -88,7 +88,7 @@ test('request object server user errors', function () {
 
     $response = new Response(401, ['Content-Type' => 'application/json; charset=utf-8'], json_encode([
         'error' => [
-            'message' => 'Incorrect API key provided: foo. You can find your API key at https://platform.openai.com.',
+            'message' => 'Incorrect API key provided: foo. You can find your API key at https://ragflow-server.',
             'type' => 'invalid_request_error',
             'param' => null,
             'code' => 'invalid_api_key',
@@ -102,8 +102,8 @@ test('request object server user errors', function () {
 
     expect(fn () => $this->http->requestObject($payload))
         ->toThrow(function (ErrorException $e) {
-            expect($e->getMessage())->toBe('Incorrect API key provided: foo. You can find your API key at https://platform.openai.com.')
-                ->and($e->getErrorMessage())->toBe('Incorrect API key provided: foo. You can find your API key at https://platform.openai.com.')
+            expect($e->getMessage())->toBe('Incorrect API key provided: foo. You can find your API key at https://ragflow-server.')
+                ->and($e->getErrorMessage())->toBe('Incorrect API key provided: foo. You can find your API key at https://ragflow-server.')
                 ->and($e->getErrorCode())->toBe('invalid_api_key')
                 ->and($e->getErrorType())->toBe('invalid_request_error')
                 ->and($e->getStatusCode())->toBe(401);
@@ -324,7 +324,7 @@ test('error message and code may be empty', function () {
 test('request object client errors', function () {
     $payload = Payload::list('models');
 
-    $baseUri = BaseUri::from('api.openai.com');
+    $baseUri = BaseUri::from('api.ragflow.server');
     $headers = Headers::withAuthorization(ApiKey::from('foo'));
     $queryParams = QueryParams::create();
 
@@ -343,7 +343,7 @@ test('request object client errors', function () {
 test('request object client error in response', function () {
     $payload = Payload::list('models');
 
-    $baseUri = BaseUri::from('api.openai.com');
+    $baseUri = BaseUri::from('api.ragflow.server');
     $headers = Headers::withAuthorization(ApiKey::from('foo'));
     $queryParams = QueryParams::create();
 
@@ -355,7 +355,7 @@ test('request object client error in response', function () {
             request: $payload->toRequest($baseUri, $headers, $queryParams),
             response: new Response(401, ['Content-Type' => 'application/json; charset=utf-8'], json_encode([
                 'error' => [
-                    'message' => 'Incorrect API key provided: foo. You can find your API key at https://platform.openai.com.',
+                    'message' => 'Incorrect API key provided: foo. You can find your API key at https://ragflow-server.',
                     'type' => 'invalid_request_error',
                     'param' => null,
                     'code' => 'invalid_api_key',
@@ -365,7 +365,7 @@ test('request object client error in response', function () {
 
     expect(fn () => $this->http->requestObject($payload))->toThrow(function (ErrorException $e) {
         expect($e->getMessage())
-            ->toBe('Incorrect API key provided: foo. You can find your API key at https://platform.openai.com.');
+            ->toBe('Incorrect API key provided: foo. You can find your API key at https://ragflow-server.');
     });
 });
 
@@ -410,7 +410,7 @@ test('request content', function () {
         ->withArgs(function (Psr7Request $request) {
             expect($request->getMethod())->toBe('GET')
                 ->and($request->getUri())
-                ->getHost()->toBe('api.openai.com')
+                ->getHost()->toBe('api.ragflow.server')
                 ->getScheme()->toBe('https')
                 ->getPath()->toBe('/v1/models');
 
@@ -438,7 +438,7 @@ test('request content response', function () {
 test('request content client errors', function () {
     $payload = Payload::list('models');
 
-    $baseUri = BaseUri::from('api.openai.com');
+    $baseUri = BaseUri::from('api.ragflow.server');
     $headers = Headers::withAuthorization(ApiKey::from('foo'));
     $queryParams = QueryParams::create();
 
@@ -459,7 +459,7 @@ test('request content server errors', function () {
 
     $response = new Response(401, ['Content-Type' => 'application/json; charset=utf-8'], json_encode([
         'error' => [
-            'message' => 'Incorrect API key provided: foo. You can find your API key at https://platform.openai.com.',
+            'message' => 'Incorrect API key provided: foo. You can find your API key at https://ragflow-server.',
             'type' => 'invalid_request_error',
             'param' => null,
             'code' => 'invalid_api_key',
@@ -473,8 +473,8 @@ test('request content server errors', function () {
 
     expect(fn () => $this->http->requestContent($payload))
         ->toThrow(function (ErrorException $e) {
-            expect($e->getMessage())->toBe('Incorrect API key provided: foo. You can find your API key at https://platform.openai.com.')
-                ->and($e->getErrorMessage())->toBe('Incorrect API key provided: foo. You can find your API key at https://platform.openai.com.')
+            expect($e->getMessage())->toBe('Incorrect API key provided: foo. You can find your API key at https://ragflow-server.')
+                ->and($e->getErrorMessage())->toBe('Incorrect API key provided: foo. You can find your API key at https://ragflow-server.')
                 ->and($e->getErrorCode())->toBe('invalid_api_key')
                 ->and($e->getErrorType())->toBe('invalid_request_error');
         });
@@ -493,7 +493,7 @@ test('request stream', function () {
         ->withArgs(function (Psr7Request $request) {
             expect($request->getMethod())->toBe('POST')
                 ->and($request->getUri())
-                ->getHost()->toBe('api.openai.com')
+                ->getHost()->toBe('api.ragflow.server')
                 ->getScheme()->toBe('https')
                 ->getPath()->toBe('/v1/completions');
 
@@ -511,7 +511,7 @@ test('request stream server errors', function () {
 
     $response = new Response(401, ['Content-Type' => 'application/json; charset=utf-8'], json_encode([
         'error' => [
-            'message' => 'Incorrect API key provided: foo. You can find your API key at https://platform.openai.com.',
+            'message' => 'Incorrect API key provided: foo. You can find your API key at https://ragflow-server.',
             'type' => 'invalid_request_error',
             'param' => null,
             'code' => 'invalid_api_key',
@@ -525,8 +525,8 @@ test('request stream server errors', function () {
 
     expect(fn () => $this->http->requestStream($payload))
         ->toThrow(function (ErrorException $e) {
-            expect($e->getMessage())->toBe('Incorrect API key provided: foo. You can find your API key at https://platform.openai.com.')
-                ->and($e->getErrorMessage())->toBe('Incorrect API key provided: foo. You can find your API key at https://platform.openai.com.')
+            expect($e->getMessage())->toBe('Incorrect API key provided: foo. You can find your API key at https://ragflow-server.')
+                ->and($e->getErrorMessage())->toBe('Incorrect API key provided: foo. You can find your API key at https://ragflow-server.')
                 ->and($e->getErrorCode())->toBe('invalid_api_key')
                 ->and($e->getErrorType())->toBe('invalid_request_error');
         });

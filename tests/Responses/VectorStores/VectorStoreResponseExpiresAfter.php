@@ -1,6 +1,6 @@
 <?php
 
-use OpenAI\Responses\VectorStores\VectorStoreResponseExpiresAfter;
+use RAGFlow\Responses\VectorStores\VectorStoreResponseExpiresAfter;
 
 test('from', function () {
     $result = VectorStoreResponseExpiresAfter::from(vectorStoreWithExpiresAfterResource()['expires_after']);

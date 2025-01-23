@@ -1,13 +1,13 @@
 <?php
 
-namespace OpenAI\Testing\Resources;
+namespace RAGFlow\Testing\Resources;
 
-use OpenAI\Contracts\Resources\AudioContract;
-use OpenAI\Resources\Audio;
-use OpenAI\Responses\Audio\SpeechStreamResponse;
-use OpenAI\Responses\Audio\TranscriptionResponse;
-use OpenAI\Responses\Audio\TranslationResponse;
-use OpenAI\Testing\Resources\Concerns\Testable;
+use RAGFlow\Contracts\Resources\AudioContract;
+use RAGFlow\Resources\Audio;
+use RAGFlow\Responses\Audio\SpeechStreamResponse;
+use RAGFlow\Responses\Audio\TranscriptionResponse;
+use RAGFlow\Responses\Audio\TranslationResponse;
+use RAGFlow\Testing\Resources\Concerns\Testable;
 
 final class AudioTestResource implements AudioContract
 {

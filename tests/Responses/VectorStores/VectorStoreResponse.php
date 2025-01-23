@@ -1,7 +1,7 @@
 <?php
 
-use OpenAI\Responses\VectorStores\VectorStoreResponse;
-use OpenAI\Responses\VectorStores\VectorStoreResponseFileCounts;
+use RAGFlow\Responses\VectorStores\VectorStoreResponse;
+use RAGFlow\Responses\VectorStores\VectorStoreResponseFileCounts;
 
 test('from', function () {
     $result = VectorStoreResponse::from(vectorStoreResource(), meta());

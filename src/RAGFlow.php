@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-use OpenAI\Client;
-use OpenAI\Factory;
+use RAGFlow\Client;
+use RAGFlow\Factory;
 
-final class OpenAI
+final class RAGFlow
 {
     /**
      * Creates a new Open AI Client with the given API token.
@@ -16,7 +16,7 @@ final class OpenAI
             ->withApiKey($apiKey)
             ->withOrganization($organization)
             ->withProject($project)
-            ->withHttpHeader('OpenAI-Beta', 'assistants=v2')
+            ->withHttpHeader('RAGFlow-Beta', 'assistants=v2')
             ->make();
     }
 

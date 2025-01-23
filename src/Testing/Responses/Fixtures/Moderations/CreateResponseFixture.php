@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenAI\Testing\Responses\Fixtures\Moderations;
+namespace RAGFlow\Testing\Responses\Fixtures\Moderations;
 
 final class CreateResponseFixture
 {

@@ -1,9 +1,9 @@
 <?php
 
-use OpenAI\Responses\Completions\CreateResponse;
-use OpenAI\Responses\Completions\CreateResponseChoice;
-use OpenAI\Responses\Completions\CreateResponseUsage;
-use OpenAI\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\Completions\CreateResponse;
+use RAGFlow\Responses\Completions\CreateResponseChoice;
+use RAGFlow\Responses\Completions\CreateResponseUsage;
+use RAGFlow\Responses\Meta\MetaInformation;
 
 test('from', function () {
     $completion = CreateResponse::from(completion(), meta());

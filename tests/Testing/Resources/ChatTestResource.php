@@ -1,9 +1,9 @@
 <?php
 
-use OpenAI\Resources\Chat;
-use OpenAI\Responses\Chat\CreateResponse;
-use OpenAI\Responses\Chat\CreateStreamedResponse;
-use OpenAI\Testing\ClientFake;
+use RAGFlow\Resources\Chat;
+use RAGFlow\Responses\Chat\CreateResponse;
+use RAGFlow\Responses\Chat\CreateStreamedResponse;
+use RAGFlow\Testing\ClientFake;
 
 it('records a chat create request', function () {
     $fake = new ClientFake([

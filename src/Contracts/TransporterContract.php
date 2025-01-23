@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace OpenAI\Contracts;
+namespace RAGFlow\Contracts;
 
-use OpenAI\Exceptions\ErrorException;
-use OpenAI\Exceptions\TransporterException;
-use OpenAI\Exceptions\UnserializableResponse;
-use OpenAI\ValueObjects\Transporter\Payload;
-use OpenAI\ValueObjects\Transporter\Response;
+use RAGFlow\Exceptions\ErrorException;
+use RAGFlow\Exceptions\TransporterException;
+use RAGFlow\Exceptions\UnserializableResponse;
+use RAGFlow\ValueObjects\Transporter\Payload;
+use RAGFlow\ValueObjects\Transporter\Response;
 use Psr\Http\Message\ResponseInterface;
 
 /**

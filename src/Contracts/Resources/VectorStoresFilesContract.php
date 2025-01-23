@@ -1,17 +1,17 @@
 <?php
 
-namespace OpenAI\Contracts\Resources;
+namespace RAGFlow\Contracts\Resources;
 
-use OpenAI\Responses\VectorStores\Files\VectorStoreFileDeleteResponse;
-use OpenAI\Responses\VectorStores\Files\VectorStoreFileListResponse;
-use OpenAI\Responses\VectorStores\Files\VectorStoreFileResponse;
+use RAGFlow\Responses\VectorStores\Files\VectorStoreFileDeleteResponse;
+use RAGFlow\Responses\VectorStores\Files\VectorStoreFileListResponse;
+use RAGFlow\Responses\VectorStores\Files\VectorStoreFileResponse;
 
 interface VectorStoresFilesContract
 {
     /**
      * Create a file on a vector store
      *
-     * @see https://platform.openai.com/docs/api-reference/vector-stores-files/createFile
+     * @see https://ragflow-server/docs/api-reference/vector-stores-files/createFile
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -20,7 +20,7 @@ interface VectorStoresFilesContract
     /**
      * Returns a list of files within a vector store.
      *
-     * @see https://platform.openai.com/docs/api-reference/vector-stores-files/listFiles
+     * @see https://ragflow-server/docs/api-reference/vector-stores-files/listFiles
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -29,14 +29,14 @@ interface VectorStoresFilesContract
     /**
      * Retrieves a file within a vector store.
      *
-     * @see https://platform.openai.com/docs/api-reference/vector-stores-files/getFile
+     * @see https://ragflow-server/docs/api-reference/vector-stores-files/getFile
      */
     public function retrieve(string $vectorStoreId, string $fileId): VectorStoreFileResponse;
 
     /**
      * Delete a file within a vector store.
      *
-     * https://platform.openai.com/docs/api-reference/vector-stores/delete
+     * https://ragflow-server/docs/api-reference/vector-stores/delete
      */
     public function delete(string $vectorStoreId, string $fileId): VectorStoreFileDeleteResponse;
 }

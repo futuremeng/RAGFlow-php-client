@@ -1,12 +1,12 @@
 <?php
 
-namespace OpenAI\Testing\Resources;
+namespace RAGFlow\Testing\Resources;
 
-use OpenAI\Contracts\Resources\BatchesContract;
-use OpenAI\Resources\Batches;
-use OpenAI\Responses\Batches\BatchListResponse;
-use OpenAI\Responses\Batches\BatchResponse;
-use OpenAI\Testing\Resources\Concerns\Testable;
+use RAGFlow\Contracts\Resources\BatchesContract;
+use RAGFlow\Resources\Batches;
+use RAGFlow\Responses\Batches\BatchListResponse;
+use RAGFlow\Responses\Batches\BatchResponse;
+use RAGFlow\Testing\Resources\Concerns\Testable;
 
 final class BatchesTestResource implements BatchesContract
 {

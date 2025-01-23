@@ -1,11 +1,11 @@
 <?php
 
-use OpenAI\Resources\Files;
-use OpenAI\Responses\Files\CreateResponse;
-use OpenAI\Responses\Files\DeleteResponse;
-use OpenAI\Responses\Files\ListResponse;
-use OpenAI\Responses\Files\RetrieveResponse;
-use OpenAI\Testing\ClientFake;
+use RAGFlow\Resources\Files;
+use RAGFlow\Responses\Files\CreateResponse;
+use RAGFlow\Responses\Files\DeleteResponse;
+use RAGFlow\Responses\Files\ListResponse;
+use RAGFlow\Responses\Files\RetrieveResponse;
+use RAGFlow\Testing\ClientFake;
 
 it('records a files retrieve request', function () {
     $fake = new ClientFake([

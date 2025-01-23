@@ -1,8 +1,8 @@
 <?php
 
-use OpenAI\Resources\Edits;
-use OpenAI\Responses\Edits\CreateResponse;
-use OpenAI\Testing\ClientFake;
+use RAGFlow\Resources\Edits;
+use RAGFlow\Responses\Edits\CreateResponse;
+use RAGFlow\Testing\ClientFake;
 
 it('records a edits create request', function () {
     $fake = new ClientFake([

@@ -1,7 +1,7 @@
 <?php
 
-use OpenAI\Responses\Meta\MetaInformation;
-use OpenAI\Responses\Models\RetrieveResponse;
+use RAGFlow\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\Models\RetrieveResponse;
 
 test('from', function () {
     $result = RetrieveResponse::from(model(), meta());
@@ -11,7 +11,7 @@ test('from', function () {
         ->id->toBe('text-babbage:001')
         ->object->toBe('model')
         ->created->toBe(1642018370)
-        ->ownedBy->toBe('openai')
+        ->ownedBy->toBe('ragflow')
         ->meta()->toBeInstanceOf(MetaInformation::class);
 });
 
@@ -33,7 +33,7 @@ test('fake', function () {
 
     expect($response)
         ->id->toBe('text-babbage:001')
-        ->ownedBy->toBe('openai');
+        ->ownedBy->toBe('ragflow');
 });
 
 test('fake with override', function () {

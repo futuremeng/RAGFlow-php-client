@@ -1,6 +1,6 @@
 <?php
 
-use OpenAI\Responses\Threads\Runs\Steps\ThreadRunStepResponseUsage;
+use RAGFlow\Responses\Threads\Runs\Steps\ThreadRunStepResponseUsage;
 
 test('from', function () {
     $result = ThreadRunStepResponseUsage::from(threadRunStepResource()['usage']);

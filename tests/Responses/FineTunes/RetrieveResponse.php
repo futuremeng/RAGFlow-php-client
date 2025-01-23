@@ -1,10 +1,10 @@
 <?php
 
-use OpenAI\Responses\FineTunes\RetrieveResponse;
-use OpenAI\Responses\FineTunes\RetrieveResponseEvent;
-use OpenAI\Responses\FineTunes\RetrieveResponseFile;
-use OpenAI\Responses\FineTunes\RetrieveResponseHyperparams;
-use OpenAI\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\FineTunes\RetrieveResponse;
+use RAGFlow\Responses\FineTunes\RetrieveResponseEvent;
+use RAGFlow\Responses\FineTunes\RetrieveResponseFile;
+use RAGFlow\Responses\FineTunes\RetrieveResponseHyperparams;
+use RAGFlow\Responses\Meta\MetaInformation;
 
 test('from', function () {
     $result = RetrieveResponse::from(fineTuneResource(), meta());

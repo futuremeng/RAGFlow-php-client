@@ -1,6 +1,6 @@
 <?php
 
-use OpenAI\Responses\Threads\Messages\ThreadMessageResponseAttachmentFileSearchTool;
+use RAGFlow\Responses\Threads\Messages\ThreadMessageResponseAttachmentFileSearchTool;
 
 test('from', function () {
     $result = ThreadMessageResponseAttachmentFileSearchTool::from(threadMessageResource()['attachments'][0]['tools'][0]);

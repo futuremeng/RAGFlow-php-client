@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace OpenAI\ValueObjects\Transporter;
+namespace RAGFlow\ValueObjects\Transporter;
 
-use OpenAI\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\Meta\MetaInformation;
 
 /**
  * @template-covariant TData of array|string

@@ -1,14 +1,14 @@
 <?php
 
-namespace OpenAI\Testing\Resources;
+namespace RAGFlow\Testing\Resources;
 
-use OpenAI\Contracts\Resources\ThreadsContract;
-use OpenAI\Resources\Threads;
-use OpenAI\Responses\StreamResponse;
-use OpenAI\Responses\Threads\Runs\ThreadRunResponse;
-use OpenAI\Responses\Threads\ThreadDeleteResponse;
-use OpenAI\Responses\Threads\ThreadResponse;
-use OpenAI\Testing\Resources\Concerns\Testable;
+use RAGFlow\Contracts\Resources\ThreadsContract;
+use RAGFlow\Resources\Threads;
+use RAGFlow\Responses\StreamResponse;
+use RAGFlow\Responses\Threads\Runs\ThreadRunResponse;
+use RAGFlow\Responses\Threads\ThreadDeleteResponse;
+use RAGFlow\Responses\Threads\ThreadResponse;
+use RAGFlow\Testing\Resources\Concerns\Testable;
 
 final class ThreadsTestResource implements ThreadsContract
 {

@@ -1,13 +1,13 @@
 <?php
 
-use OpenAI\Responses\Meta\MetaInformation;
-use OpenAI\Responses\Threads\Messages\ThreadMessageDeleteResponse;
-use OpenAI\Responses\Threads\Messages\ThreadMessageListResponse;
-use OpenAI\Responses\Threads\Messages\ThreadMessageResponse;
-use OpenAI\Responses\Threads\Messages\ThreadMessageResponseAttachment;
-use OpenAI\Responses\Threads\Messages\ThreadMessageResponseContentImageFileObject;
-use OpenAI\Responses\Threads\Messages\ThreadMessageResponseContentTextObject;
-use OpenAI\ValueObjects\Transporter\Response;
+use RAGFlow\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\Threads\Messages\ThreadMessageDeleteResponse;
+use RAGFlow\Responses\Threads\Messages\ThreadMessageListResponse;
+use RAGFlow\Responses\Threads\Messages\ThreadMessageResponse;
+use RAGFlow\Responses\Threads\Messages\ThreadMessageResponseAttachment;
+use RAGFlow\Responses\Threads\Messages\ThreadMessageResponseContentImageFileObject;
+use RAGFlow\Responses\Threads\Messages\ThreadMessageResponseContentTextObject;
+use RAGFlow\ValueObjects\Transporter\Response;
 
 test('list', function () {
     $client = mockClient('GET', 'threads/thread_agvtHUGezjTCt4SKgQg0NJ2Y/messages', [], Response::from(threadMessageListResource(), metaHeaders()));

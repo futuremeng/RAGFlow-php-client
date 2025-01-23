@@ -1,8 +1,8 @@
 <?php
 
-use OpenAI\Responses\FineTunes\ListResponse;
-use OpenAI\Responses\FineTunes\RetrieveResponse;
-use OpenAI\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\FineTunes\ListResponse;
+use RAGFlow\Responses\FineTunes\RetrieveResponse;
+use RAGFlow\Responses\Meta\MetaInformation;
 
 test('from', function () {
     $response = ListResponse::from(fineTuneListResource(), meta());

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace OpenAI\Resources;
+namespace RAGFlow\Resources;
 
-use OpenAI\Contracts\Resources\EmbeddingsContract;
-use OpenAI\Responses\Embeddings\CreateResponse;
-use OpenAI\ValueObjects\Transporter\Payload;
-use OpenAI\ValueObjects\Transporter\Response;
+use RAGFlow\Contracts\Resources\EmbeddingsContract;
+use RAGFlow\Responses\Embeddings\CreateResponse;
+use RAGFlow\ValueObjects\Transporter\Payload;
+use RAGFlow\ValueObjects\Transporter\Response;
 
 final class Embeddings implements EmbeddingsContract
 {
@@ -16,7 +16,7 @@ final class Embeddings implements EmbeddingsContract
     /**
      * Creates an embedding vector representing the input text.
      *
-     * @see https://platform.openai.com/docs/api-reference/embeddings/create
+     * @see https://ragflow-server/docs/api-reference/embeddings/create
      *
      * @param  array<string, mixed>  $parameters
      */

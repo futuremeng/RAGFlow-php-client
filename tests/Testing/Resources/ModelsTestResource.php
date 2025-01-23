@@ -1,10 +1,10 @@
 <?php
 
-use OpenAI\Resources\Models;
-use OpenAI\Responses\Models\DeleteResponse;
-use OpenAI\Responses\Models\ListResponse;
-use OpenAI\Responses\Models\RetrieveResponse;
-use OpenAI\Testing\ClientFake;
+use RAGFlow\Resources\Models;
+use RAGFlow\Responses\Models\DeleteResponse;
+use RAGFlow\Responses\Models\ListResponse;
+use RAGFlow\Responses\Models\RetrieveResponse;
+use RAGFlow\Testing\ClientFake;
 
 it('records a model retrieve request', function () {
     $fake = new ClientFake([

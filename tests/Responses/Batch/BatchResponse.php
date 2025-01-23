@@ -1,9 +1,9 @@
 <?php
 
-use OpenAI\Responses\Batches\BatchResponse;
-use OpenAI\Responses\Batches\BatchResponseErrors;
-use OpenAI\Responses\Batches\BatchResponseRequestCounts;
-use OpenAI\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\Batches\BatchResponse;
+use RAGFlow\Responses\Batches\BatchResponseErrors;
+use RAGFlow\Responses\Batches\BatchResponseRequestCounts;
+use RAGFlow\Responses\Meta\MetaInformation;
 
 test('from', function () {
     $result = BatchResponse::from(batchResource(), meta());

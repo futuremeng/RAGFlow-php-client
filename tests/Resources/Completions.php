@@ -2,19 +2,19 @@
 
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Psr7\Stream;
-use OpenAI\Exceptions\InvalidArgumentException;
-use OpenAI\Responses\Completions\CreateResponse;
-use OpenAI\Responses\Completions\CreateResponseChoice;
-use OpenAI\Responses\Completions\CreateResponseUsage;
-use OpenAI\Responses\Completions\CreateStreamedResponse;
-use OpenAI\Responses\Meta\MetaInformation;
-use OpenAI\Responses\StreamResponse;
+use RAGFlow\Exceptions\InvalidArgumentException;
+use RAGFlow\Responses\Completions\CreateResponse;
+use RAGFlow\Responses\Completions\CreateResponseChoice;
+use RAGFlow\Responses\Completions\CreateResponseUsage;
+use RAGFlow\Responses\Completions\CreateStreamedResponse;
+use RAGFlow\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\StreamResponse;
 
 test('create', function () {
     $client = mockClient('POST', 'completions', [
         'model' => 'da-vince',
         'prompt' => 'hi',
-    ], \OpenAI\ValueObjects\Transporter\Response::from(completion(), metaHeaders()));
+    ], \RAGFlow\ValueObjects\Transporter\Response::from(completion(), metaHeaders()));
 
     $result = $client->completions()->create([
         'model' => 'da-vince',
@@ -47,7 +47,7 @@ test('create', function () {
 });
 
 test('create throws an exception if stream option is true', function () {
-    OpenAI::client('foo')->completions()->create([
+    RAGFlow::client('foo')->completions()->create([
         'model' => 'da-vince',
         'prompt' => 'hi',
         'stream' => true,

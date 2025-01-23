@@ -1,6 +1,6 @@
 <?php
 
-use OpenAI\Responses\Threads\Runs\ThreadRunResponseIncompleteDetails;
+use RAGFlow\Responses\Threads\Runs\ThreadRunResponseIncompleteDetails;
 
 test('from', function () {
     $result = ThreadRunResponseIncompleteDetails::from(threadRunWithIncompleteDetails()['incomplete_details']);

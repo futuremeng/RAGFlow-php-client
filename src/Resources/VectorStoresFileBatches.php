@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace OpenAI\Resources;
+namespace RAGFlow\Resources;
 
-use OpenAI\Contracts\Resources\VectorStoresFileBatchesContract;
-use OpenAI\Responses\VectorStores\FileBatches\VectorStoreFileBatchResponse;
-use OpenAI\Responses\VectorStores\Files\VectorStoreFileListResponse;
-use OpenAI\ValueObjects\Transporter\Payload;
-use OpenAI\ValueObjects\Transporter\Response;
+use RAGFlow\Contracts\Resources\VectorStoresFileBatchesContract;
+use RAGFlow\Responses\VectorStores\FileBatches\VectorStoreFileBatchResponse;
+use RAGFlow\Responses\VectorStores\Files\VectorStoreFileListResponse;
+use RAGFlow\ValueObjects\Transporter\Payload;
+use RAGFlow\ValueObjects\Transporter\Response;
 
 final class VectorStoresFileBatches implements VectorStoresFileBatchesContract
 {
@@ -17,7 +17,7 @@ final class VectorStoresFileBatches implements VectorStoresFileBatchesContract
     /**
      * Create a file batch on a vector store
      *
-     * @see https://platform.openai.com/docs/api-reference/vector-stores-file-batches/createBatch
+     * @see https://ragflow-server/docs/api-reference/vector-stores-file-batches/createBatch
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -34,7 +34,7 @@ final class VectorStoresFileBatches implements VectorStoresFileBatchesContract
     /**
      * Retrieves a file batch within a vector store.
      *
-     * @see https://platform.openai.com/docs/api-reference/vector-stores-file-batches/getBatch
+     * @see https://ragflow-server/docs/api-reference/vector-stores-file-batches/getBatch
      */
     public function retrieve(string $vectorStoreId, string $fileBatchId): VectorStoreFileBatchResponse
     {
@@ -49,7 +49,7 @@ final class VectorStoresFileBatches implements VectorStoresFileBatchesContract
     /**
      * Lists the files within a file batch within a vector store
      *
-     * @see https://platform.openai.com/docs/api-reference/vector-stores-file-batches/listBatchFiles
+     * @see https://ragflow-server/docs/api-reference/vector-stores-file-batches/listBatchFiles
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -66,7 +66,7 @@ final class VectorStoresFileBatches implements VectorStoresFileBatchesContract
     /**
      * Cancel a vector store file batch
      *
-     * @see https://platform.openai.com/docs/api-reference/vector-stores-file-batches/cancelBatch
+     * @see https://ragflow-server/docs/api-reference/vector-stores-file-batches/cancelBatch
      */
     public function cancel(string $vectorStoreId, string $fileBatchId): VectorStoreFileBatchResponse
     {

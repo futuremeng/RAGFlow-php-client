@@ -2,21 +2,21 @@
 
 declare(strict_types=1);
 
-namespace OpenAI\Resources;
+namespace RAGFlow\Resources;
 
-use OpenAI\Contracts\Resources\ModerationsContract;
-use OpenAI\Responses\Moderations\CreateResponse;
-use OpenAI\ValueObjects\Transporter\Payload;
-use OpenAI\ValueObjects\Transporter\Response;
+use RAGFlow\Contracts\Resources\ModerationsContract;
+use RAGFlow\Responses\Moderations\CreateResponse;
+use RAGFlow\ValueObjects\Transporter\Payload;
+use RAGFlow\ValueObjects\Transporter\Response;
 
 final class Moderations implements ModerationsContract
 {
     use Concerns\Transportable;
 
     /**
-     * Classifies if text violates OpenAI's Content Policy.
+     * Classifies if text violates RAGFlow's Content Policy.
      *
-     * @see https://platform.openai.com/docs/api-reference/moderations/create
+     * @see https://ragflow-server/docs/api-reference/moderations/create
      *
      * @param  array<string, mixed>  $parameters
      */

@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenAI\Testing\Responses\Fixtures\Embeddings;
+namespace RAGFlow\Testing\Responses\Fixtures\Embeddings;
 
 final class CreateResponseFixture
 {

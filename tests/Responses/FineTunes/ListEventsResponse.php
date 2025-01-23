@@ -1,8 +1,8 @@
 <?php
 
-use OpenAI\Responses\FineTunes\ListEventsResponse;
-use OpenAI\Responses\FineTunes\RetrieveResponseEvent;
-use OpenAI\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\FineTunes\ListEventsResponse;
+use RAGFlow\Responses\FineTunes\RetrieveResponseEvent;
+use RAGFlow\Responses\Meta\MetaInformation;
 
 test('from', function () {
     $response = ListEventsResponse::from(fineTuneListEventsResource(), meta());

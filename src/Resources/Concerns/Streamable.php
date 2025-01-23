@@ -1,8 +1,8 @@
 <?php
 
-namespace OpenAI\Resources\Concerns;
+namespace RAGFlow\Resources\Concerns;
 
-use OpenAI\Exceptions\InvalidArgumentException;
+use RAGFlow\Exceptions\InvalidArgumentException;
 
 trait Streamable
 {

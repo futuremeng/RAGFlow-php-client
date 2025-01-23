@@ -1,12 +1,12 @@
 <?php
 
-use OpenAI\Responses\Images\VariationResponseData;
+use RAGFlow\Responses\Images\VariationResponseData;
 
 test('from with url', function () {
     $response = VariationResponseData::from(imageVariationWithUrl()['data'][0]);
 
     expect($response)
-        ->url->toBe('https://openai.com/image.png')
+        ->url->toBe('https://ragflow.com/image.png')
         ->b64_json->toBeEmpty();
 });
 

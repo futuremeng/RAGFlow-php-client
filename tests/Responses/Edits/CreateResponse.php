@@ -1,9 +1,9 @@
 <?php
 
-use OpenAI\Responses\Edits\CreateResponse;
-use OpenAI\Responses\Edits\CreateResponseChoice;
-use OpenAI\Responses\Edits\CreateResponseUsage;
-use OpenAI\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\Edits\CreateResponse;
+use RAGFlow\Responses\Edits\CreateResponseChoice;
+use RAGFlow\Responses\Edits\CreateResponseUsage;
+use RAGFlow\Responses\Meta\MetaInformation;
 
 test('from', function () {
     $response = CreateResponse::from(edit(), meta());

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace OpenAI\Responses\Moderations;
+namespace RAGFlow\Responses\Moderations;
 
-use OpenAI\Enums\Moderations\Category;
+use RAGFlow\Enums\Moderations\Category;
 
 final class CreateResponseResult
 {

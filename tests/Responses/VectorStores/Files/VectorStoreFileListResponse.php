@@ -1,7 +1,7 @@
 <?php
 
-use OpenAI\Responses\VectorStores\Files\VectorStoreFileListResponse;
-use OpenAI\Responses\VectorStores\Files\VectorStoreFileResponse;
+use RAGFlow\Responses\VectorStores\Files\VectorStoreFileListResponse;
+use RAGFlow\Responses\VectorStores\Files\VectorStoreFileResponse;
 
 test('from', function () {
     $result = VectorStoreFileListResponse::from(vectorStoreFileListResource(), meta());

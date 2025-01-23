@@ -1,17 +1,17 @@
 <?php
 
-namespace OpenAI\Contracts\Resources;
+namespace RAGFlow\Contracts\Resources;
 
-use OpenAI\Responses\VectorStores\VectorStoreDeleteResponse;
-use OpenAI\Responses\VectorStores\VectorStoreListResponse;
-use OpenAI\Responses\VectorStores\VectorStoreResponse;
+use RAGFlow\Responses\VectorStores\VectorStoreDeleteResponse;
+use RAGFlow\Responses\VectorStores\VectorStoreListResponse;
+use RAGFlow\Responses\VectorStores\VectorStoreResponse;
 
 interface VectorStoresContract
 {
     /**
      * Create a vector store
      *
-     * @see https://platform.openai.com/docs/api-reference/vector-stores/create
+     * @see https://ragflow-server/docs/api-reference/vector-stores/create
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -20,7 +20,7 @@ interface VectorStoresContract
     /**
      * Returns a list of vector stores.
      *
-     * @see https://platform.openai.com/docs/api-reference/vector-stores/list
+     * @see https://ragflow-server/docs/api-reference/vector-stores/list
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -29,14 +29,14 @@ interface VectorStoresContract
     /**
      * Retrieves a vector store.
      *
-     * @see https://platform.openai.com/docs/api-reference/vector-stores/retrieve
+     * @see https://ragflow-server/docs/api-reference/vector-stores/retrieve
      */
     public function retrieve(string $vectorStoreId): VectorStoreResponse;
 
     /**
      * Modify a vector store
      *
-     * @see https://platform.openai.com/docs/api-reference/vector-stores/modify
+     * @see https://ragflow-server/docs/api-reference/vector-stores/modify
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -45,21 +45,21 @@ interface VectorStoresContract
     /**
      * Delete a vector store.
      *
-     * https://platform.openai.com/docs/api-reference/vector-stores/delete
+     * https://ragflow-server/docs/api-reference/vector-stores/delete
      */
     public function delete(string $vectorStoreId): VectorStoreDeleteResponse;
 
     /**
      * Manage the files related to the vector store
      *
-     * @see https://platform.openai.com/docs/api-reference/vector-stores-files
+     * @see https://ragflow-server/docs/api-reference/vector-stores-files
      */
     public function files(): VectorStoresFilesContract;
 
     /**
      * Manage the file batches related to the vector store
      *
-     * @see https://platform.openai.com/docs/api-reference/vector-stores-file-batches
+     * @see https://ragflow-server/docs/api-reference/vector-stores-file-batches
      */
     public function batches(): VectorStoresFileBatchesContract;
 }

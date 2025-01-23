@@ -1,8 +1,8 @@
 <?php
 
-namespace OpenAI\Responses\Meta;
+namespace RAGFlow\Responses\Meta;
 
-final class MetaInformationOpenAI
+final class MetaInformationRAGFlow
 {
     private function __construct(
         public readonly ?string $model,

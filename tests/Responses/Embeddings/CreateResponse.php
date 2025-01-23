@@ -1,8 +1,8 @@
 <?php
 
-use OpenAI\Responses\Embeddings\CreateResponse;
-use OpenAI\Responses\Embeddings\CreateResponseEmbedding;
-use OpenAI\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\Embeddings\CreateResponse;
+use RAGFlow\Responses\Embeddings\CreateResponseEmbedding;
+use RAGFlow\Responses\Meta\MetaInformation;
 
 test('from', function () {
     $response = CreateResponse::from(embeddingList(), meta());

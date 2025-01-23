@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenAI\Testing\Responses\Fixtures\Models;
+namespace RAGFlow\Testing\Responses\Fixtures\Models;
 
 final class DeleteResponseFixture
 {

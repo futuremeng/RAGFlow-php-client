@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace OpenAI\ValueObjects\Transporter;
+namespace RAGFlow\ValueObjects\Transporter;
 
-use OpenAI\Enums\Transporter\ContentType;
-use OpenAI\ValueObjects\ApiKey;
+use RAGFlow\Enums\Transporter\ContentType;
+use RAGFlow\ValueObjects\ApiKey;
 
 /**
  * @internal
@@ -58,7 +58,7 @@ final class Headers
     {
         return new self([
             ...$this->headers,
-            'OpenAI-Organization' => $organization,
+            'RAGFlow-Organization' => $organization,
         ]);
     }
 
@@ -69,7 +69,7 @@ final class Headers
     {
         return new self([
             ...$this->headers,
-            'OpenAI-Project' => $project,
+            'RAGFlow-Project' => $project,
         ]);
     }
 

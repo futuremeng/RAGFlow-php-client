@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace OpenAI\ValueObjects\Transporter;
+namespace RAGFlow\ValueObjects\Transporter;
 
-use OpenAI\Contracts\StringableContract;
+use RAGFlow\Contracts\StringableContract;
 
 /**
  * @internal

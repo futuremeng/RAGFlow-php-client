@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace OpenAI\Resources;
+namespace RAGFlow\Resources;
 
-use OpenAI\Contracts\Resources\BatchesContract;
-use OpenAI\Responses\Batches\BatchListResponse;
-use OpenAI\Responses\Batches\BatchResponse;
-use OpenAI\ValueObjects\Transporter\Payload;
-use OpenAI\ValueObjects\Transporter\Response;
+use RAGFlow\Contracts\Resources\BatchesContract;
+use RAGFlow\Responses\Batches\BatchListResponse;
+use RAGFlow\Responses\Batches\BatchResponse;
+use RAGFlow\ValueObjects\Transporter\Payload;
+use RAGFlow\ValueObjects\Transporter\Response;
 
 final class Batches implements BatchesContract
 {
@@ -17,7 +17,7 @@ final class Batches implements BatchesContract
     /**
      * Creates and executes a batch from an uploaded file of requests
      *
-     * @see https://platform.openai.com/docs/api-reference/batch/create
+     * @see https://ragflow-server/docs/api-reference/batch/create
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -34,7 +34,7 @@ final class Batches implements BatchesContract
     /**
      * Retrieves a batch.
      * *
-     * @see https://platform.openai.com/docs/api-reference/batch/retrieve
+     * @see https://ragflow-server/docs/api-reference/batch/retrieve
      */
     public function retrieve(string $id): BatchResponse
     {
@@ -49,7 +49,7 @@ final class Batches implements BatchesContract
     /**
      * Cancels an in-progress batch.
      * *
-     * @see https://platform.openai.com/docs/api-reference/batch/cancel
+     * @see https://ragflow-server/docs/api-reference/batch/cancel
      */
     public function cancel(string $id): BatchResponse
     {
@@ -64,7 +64,7 @@ final class Batches implements BatchesContract
     /**
      * List your organization's batches.
      *
-     * @see https://platform.openai.com/docs/api-reference/batch/list
+     * @see https://ragflow-server/docs/api-reference/batch/list
      *
      * @param  array<string, mixed>  $parameters
      */

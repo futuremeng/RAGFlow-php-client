@@ -1,12 +1,12 @@
 <?php
 
-namespace OpenAI\Testing\Resources;
+namespace RAGFlow\Testing\Resources;
 
-use OpenAI\Contracts\Resources\CompletionsContract;
-use OpenAI\Resources\Completions;
-use OpenAI\Responses\Completions\CreateResponse;
-use OpenAI\Responses\StreamResponse;
-use OpenAI\Testing\Resources\Concerns\Testable;
+use RAGFlow\Contracts\Resources\CompletionsContract;
+use RAGFlow\Resources\Completions;
+use RAGFlow\Responses\Completions\CreateResponse;
+use RAGFlow\Responses\StreamResponse;
+use RAGFlow\Testing\Resources\Concerns\Testable;
 
 final class CompletionsTestResource implements CompletionsContract
 {

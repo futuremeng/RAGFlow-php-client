@@ -1,9 +1,9 @@
 <?php
 
-use OpenAI\Responses\Chat\CreateResponse;
-use OpenAI\Responses\Chat\CreateResponseChoice;
-use OpenAI\Responses\Chat\CreateResponseUsage;
-use OpenAI\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\Chat\CreateResponse;
+use RAGFlow\Responses\Chat\CreateResponseChoice;
+use RAGFlow\Responses\Chat\CreateResponseUsage;
+use RAGFlow\Responses\Meta\MetaInformation;
 
 test('from', function () {
     $completion = CreateResponse::from(chatCompletion(), meta());

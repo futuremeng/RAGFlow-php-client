@@ -1,9 +1,9 @@
 <?php
 
-use OpenAI\Resources\Batches;
-use OpenAI\Responses\Batches\BatchListResponse;
-use OpenAI\Responses\Batches\BatchResponse;
-use OpenAI\Testing\ClientFake;
+use RAGFlow\Resources\Batches;
+use RAGFlow\Responses\Batches\BatchListResponse;
+use RAGFlow\Responses\Batches\BatchResponse;
+use RAGFlow\Testing\ClientFake;
 
 it('records an batch create request', function () {
     $fake = new ClientFake([

@@ -1,8 +1,8 @@
 <?php
 
-use OpenAI\Responses\Meta\MetaInformation;
-use OpenAI\Responses\Moderations\CreateResponse;
-use OpenAI\Responses\Moderations\CreateResponseResult;
+use RAGFlow\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\Moderations\CreateResponse;
+use RAGFlow\Responses\Moderations\CreateResponseResult;
 
 test('from', function () {
     $moderation = CreateResponse::from(moderationResource(), meta());

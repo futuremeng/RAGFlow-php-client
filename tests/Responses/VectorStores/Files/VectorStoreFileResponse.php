@@ -1,7 +1,7 @@
 <?php
 
-use OpenAI\Responses\VectorStores\Files\VectorStoreFileResponse;
-use OpenAI\Responses\VectorStores\Files\VectorStoreFileResponseChunkingStrategyStatic;
+use RAGFlow\Responses\VectorStores\Files\VectorStoreFileResponse;
+use RAGFlow\Responses\VectorStores\Files\VectorStoreFileResponseChunkingStrategyStatic;
 
 test('from', function () {
     $result = VectorStoreFileResponse::from(vectorStoreFileResource(), meta());

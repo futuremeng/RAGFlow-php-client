@@ -1,8 +1,8 @@
 <?php
 
-use OpenAI\Resources\Completions;
-use OpenAI\Responses\Completions\CreateResponse;
-use OpenAI\Testing\ClientFake;
+use RAGFlow\Resources\Completions;
+use RAGFlow\Responses\Completions\CreateResponse;
+use RAGFlow\Testing\ClientFake;
 use PHPUnit\Framework\ExpectationFailedException;
 
 it('returns a fake response', function () {
@@ -36,10 +36,10 @@ it('returns fake meta data', function () {
 
     expect($completion->meta())
         ->requestId->toBe('3813fa4fa3f17bdf0d7654f0f49ebab4')
-        ->openai->model->toBe('gpt-3.5-turbo-instruct')
-        ->openai->organization->toBe('org-1234')
-        ->openai->processingMs->toBe(410)
-        ->openai->version->toBe('2020-10-01')
+        ->ragflow->model->toBe('gpt-3.5-turbo-instruct')
+        ->ragflow->organization->toBe('org-1234')
+        ->ragflow->processingMs->toBe(410)
+        ->ragflow->version->toBe('2020-10-01')
         ->requestLimit->limit->toBe(3000)
         ->requestLimit->remaining->toBe(2999)
         ->requestLimit->reset->toBe('20ms')
@@ -50,7 +50,7 @@ it('returns fake meta data', function () {
 
 it('throws fake exceptions', function () {
     $fake = new ClientFake([
-        new \OpenAI\Exceptions\ErrorException([
+        new \RAGFlow\Exceptions\ErrorException([
             'message' => 'The model `gpt-1` does not exist',
             'type' => 'invalid_request_error',
             'code' => null,

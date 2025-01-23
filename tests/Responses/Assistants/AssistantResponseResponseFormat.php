@@ -1,6 +1,6 @@
 <?php
 
-use OpenAI\Responses\Assistants\AssistantResponseResponseFormat;
+use RAGFlow\Responses\Assistants\AssistantResponseResponseFormat;
 
 test('from', function () {
     $result = AssistantResponseResponseFormat::from(assistantWithJsonObjectResponseFormat()['response_format']);

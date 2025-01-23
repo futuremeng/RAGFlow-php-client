@@ -1,6 +1,6 @@
 <?php
 
-use OpenAI\Responses\Batches\BatchResponseRequestCounts;
+use RAGFlow\Responses\Batches\BatchResponseRequestCounts;
 
 test('from', function () {
     $response = BatchResponseRequestCounts::from(batchResource()['request_counts']);

@@ -1,9 +1,9 @@
 <?php
 
-use OpenAI\Responses\Batches\BatchListResponse;
-use OpenAI\Responses\Batches\BatchResponse;
-use OpenAI\Responses\Meta\MetaInformation;
-use OpenAI\ValueObjects\Transporter\Response;
+use RAGFlow\Responses\Batches\BatchListResponse;
+use RAGFlow\Responses\Batches\BatchResponse;
+use RAGFlow\Responses\Meta\MetaInformation;
+use RAGFlow\ValueObjects\Transporter\Response;
 
 test('list', function () {
     $client = mockClient('GET', 'batches', [], Response::from(batchListResource(), metaHeaders()));
@@ -44,7 +44,7 @@ test('create', function () {
         ->errors->toBeNull()
         ->status->toBe('completed')
         ->completionWindow->toBe('24h')
-        ->requestCounts->toBeInstanceOf(\OpenAI\Responses\Batches\BatchResponseRequestCounts::class)
+        ->requestCounts->toBeInstanceOf(\RAGFlow\Responses\Batches\BatchResponseRequestCounts::class)
         ->requestCounts->total->toBe(100)
         ->metadata->toBeArray()->toHaveCount(2);
 
@@ -65,7 +65,7 @@ test('retrieve', function () {
         ->errors->toBeNull()
         ->status->toBe('completed')
         ->completionWindow->toBe('24h')
-        ->requestCounts->toBeInstanceOf(\OpenAI\Responses\Batches\BatchResponseRequestCounts::class)
+        ->requestCounts->toBeInstanceOf(\RAGFlow\Responses\Batches\BatchResponseRequestCounts::class)
         ->requestCounts->total->toBe(100)
         ->metadata->toBeArray()->toHaveCount(2);
 
@@ -86,7 +86,7 @@ test('cancel', function () {
         ->errors->toBeNull()
         ->status->toBe('completed')
         ->completionWindow->toBe('24h')
-        ->requestCounts->toBeInstanceOf(\OpenAI\Responses\Batches\BatchResponseRequestCounts::class)
+        ->requestCounts->toBeInstanceOf(\RAGFlow\Responses\Batches\BatchResponseRequestCounts::class)
         ->requestCounts->total->toBe(100)
         ->metadata->toBeArray()->toHaveCount(2);
 

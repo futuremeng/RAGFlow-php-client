@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace OpenAI\Resources;
+namespace RAGFlow\Resources;
 
-use OpenAI\Contracts\Resources\ThreadsMessagesContract;
-use OpenAI\Responses\Threads\Messages\ThreadMessageDeleteResponse;
-use OpenAI\Responses\Threads\Messages\ThreadMessageListResponse;
-use OpenAI\Responses\Threads\Messages\ThreadMessageResponse;
-use OpenAI\ValueObjects\Transporter\Payload;
-use OpenAI\ValueObjects\Transporter\Response;
+use RAGFlow\Contracts\Resources\ThreadsMessagesContract;
+use RAGFlow\Responses\Threads\Messages\ThreadMessageDeleteResponse;
+use RAGFlow\Responses\Threads\Messages\ThreadMessageListResponse;
+use RAGFlow\Responses\Threads\Messages\ThreadMessageResponse;
+use RAGFlow\ValueObjects\Transporter\Payload;
+use RAGFlow\ValueObjects\Transporter\Response;
 
 final class ThreadsMessages implements ThreadsMessagesContract
 {
@@ -18,7 +18,7 @@ final class ThreadsMessages implements ThreadsMessagesContract
     /**
      * Create a message.
      *
-     * @see https://platform.openai.com/docs/api-reference/messages/createMessage
+     * @see https://ragflow-server/docs/api-reference/messages/createMessage
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -35,7 +35,7 @@ final class ThreadsMessages implements ThreadsMessagesContract
     /**
      * Retrieve a message.
      *
-     * @see https://platform.openai.com/docs/api-reference/messages/getMessage
+     * @see https://ragflow-server/docs/api-reference/messages/getMessage
      */
     public function retrieve(string $threadId, string $messageId): ThreadMessageResponse
     {
@@ -50,7 +50,7 @@ final class ThreadsMessages implements ThreadsMessagesContract
     /**
      * Modifies a message.
      *
-     * @see https://platform.openai.com/docs/api-reference/messages/modifyMessage
+     * @see https://ragflow-server/docs/api-reference/messages/modifyMessage
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -67,7 +67,7 @@ final class ThreadsMessages implements ThreadsMessagesContract
     /**
      * Deletes a message.
      *
-     * @see https://platform.openai.com/docs/api-reference/messages/deleteMessage
+     * @see https://ragflow-server/docs/api-reference/messages/deleteMessage
      */
     public function delete(string $threadId, string $messageId): ThreadMessageDeleteResponse
     {
@@ -82,7 +82,7 @@ final class ThreadsMessages implements ThreadsMessagesContract
     /**
      * Returns a list of messages for a given thread.
      *
-     * @see https://platform.openai.com/docs/api-reference/messages/listMessages
+     * @see https://ragflow-server/docs/api-reference/messages/listMessages
      *
      * @param  array<string, mixed>  $parameters
      */

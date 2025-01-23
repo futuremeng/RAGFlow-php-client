@@ -1,8 +1,8 @@
 <?php
 
-use OpenAI\Responses\Meta\MetaInformation;
-use OpenAI\Responses\Models\ListResponse;
-use OpenAI\Responses\Models\RetrieveResponse;
+use RAGFlow\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\Models\ListResponse;
+use RAGFlow\Responses\Models\RetrieveResponse;
 
 test('from', function () {
     $response = ListResponse::from(modelList(), meta());

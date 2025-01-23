@@ -1,8 +1,8 @@
 <?php
 
-use OpenAI\Responses\FineTuning\ListJobsResponse;
-use OpenAI\Responses\FineTuning\RetrieveJobResponse;
-use OpenAI\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\FineTuning\ListJobsResponse;
+use RAGFlow\Responses\FineTuning\RetrieveJobResponse;
+use RAGFlow\Responses\Meta\MetaInformation;
 
 test('from', function () {
     $response = ListJobsResponse::from(fineTuningJobListResource(), meta());

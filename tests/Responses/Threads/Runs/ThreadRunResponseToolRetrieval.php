@@ -1,6 +1,6 @@
 <?php
 
-use OpenAI\Responses\Threads\Runs\ThreadRunResponseFileSearch;
+use RAGFlow\Responses\Threads\Runs\ThreadRunResponseFileSearch;
 
 test('from', function () {
     $result = ThreadRunResponseFileSearch::from(threadRunWithRetrievalToolResource()['tools'][0]);

@@ -1,8 +1,8 @@
 <?php
 
-use OpenAI\Responses\Images\VariationResponse;
-use OpenAI\Responses\Images\VariationResponseData;
-use OpenAI\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\Images\VariationResponse;
+use RAGFlow\Responses\Images\VariationResponseData;
+use RAGFlow\Responses\Meta\MetaInformation;
 
 test('from with url', function () {
     $response = VariationResponse::from(imageVariationWithUrl(), meta());
@@ -58,18 +58,18 @@ test('fake', function () {
     $response = VariationResponse::fake();
 
     expect($response['data'][0])
-        ->url->toBe('https://openai.com/fake-image.png');
+        ->url->toBe('https://ragflow.com/fake-image.png');
 });
 
 test('fake with override', function () {
     $response = VariationResponse::fake([
         'data' => [
             [
-                'url' => 'https://openai.com/new-image.png',
+                'url' => 'https://ragflow.com/new-image.png',
             ],
         ],
     ]);
 
     expect($response['data'][0])
-        ->url->toBe('https://openai.com/new-image.png');
+        ->url->toBe('https://ragflow.com/new-image.png');
 });

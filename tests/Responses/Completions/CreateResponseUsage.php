@@ -1,6 +1,6 @@
 <?php
 
-use OpenAI\Responses\Completions\CreateResponseUsage;
+use RAGFlow\Responses\Completions\CreateResponseUsage;
 
 test('from', function () {
     $result = CreateResponseUsage::from(completion()['usage']);

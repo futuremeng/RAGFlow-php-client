@@ -1,8 +1,8 @@
 <?php
 
-use OpenAI\Responses\Chat\CreateResponseUsage;
-use OpenAI\Responses\Chat\CreateResponseUsageCompletionTokensDetails;
-use OpenAI\Responses\Chat\CreateResponseUsagePromptTokensDetails;
+use RAGFlow\Responses\Chat\CreateResponseUsage;
+use RAGFlow\Responses\Chat\CreateResponseUsageCompletionTokensDetails;
+use RAGFlow\Responses\Chat\CreateResponseUsagePromptTokensDetails;
 
 test('from', function () {
     $result = CreateResponseUsage::from(chatCompletion()['usage']);

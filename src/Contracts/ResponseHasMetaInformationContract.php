@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace OpenAI\Contracts;
+namespace RAGFlow\Contracts;
 
-use OpenAI\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\Meta\MetaInformation;
 
 interface ResponseHasMetaInformationContract
 {

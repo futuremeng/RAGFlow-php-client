@@ -1,6 +1,6 @@
 <?php
 
-use OpenAI\Responses\Threads\Runs\ThreadRunResponseToolCodeInterpreter;
+use RAGFlow\Responses\Threads\Runs\ThreadRunResponseToolCodeInterpreter;
 
 test('from', function () {
     $result = ThreadRunResponseToolCodeInterpreter::from(threadRunResource()['tools'][0]);

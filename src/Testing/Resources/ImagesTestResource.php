@@ -1,13 +1,13 @@
 <?php
 
-namespace OpenAI\Testing\Resources;
+namespace RAGFlow\Testing\Resources;
 
-use OpenAI\Contracts\Resources\ImagesContract;
-use OpenAI\Resources\Images;
-use OpenAI\Responses\Images\CreateResponse;
-use OpenAI\Responses\Images\EditResponse;
-use OpenAI\Responses\Images\VariationResponse;
-use OpenAI\Testing\Resources\Concerns\Testable;
+use RAGFlow\Contracts\Resources\ImagesContract;
+use RAGFlow\Resources\Images;
+use RAGFlow\Responses\Images\CreateResponse;
+use RAGFlow\Responses\Images\EditResponse;
+use RAGFlow\Responses\Images\VariationResponse;
+use RAGFlow\Testing\Resources\Concerns\Testable;
 
 final class ImagesTestResource implements ImagesContract
 {

@@ -1,15 +1,15 @@
 <?php
 
-namespace OpenAI\Contracts\Resources;
+namespace RAGFlow\Contracts\Resources;
 
-use OpenAI\Responses\Moderations\CreateResponse;
+use RAGFlow\Responses\Moderations\CreateResponse;
 
 interface ModerationsContract
 {
     /**
-     * Classifies if text violates OpenAI's Content Policy.
+     * Classifies if text violates RAGFlow's Content Policy.
      *
-     * @see https://platform.openai.com/docs/api-reference/moderations/create
+     * @see https://ragflow-server/docs/api-reference/moderations/create
      *
      * @param  array<string, mixed>  $parameters
      */

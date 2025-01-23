@@ -1,6 +1,6 @@
 <?php
 
-use OpenAI\Responses\Threads\Messages\ThreadMessageResponseAttachmentCodeInterpreterTool;
+use RAGFlow\Responses\Threads\Messages\ThreadMessageResponseAttachmentCodeInterpreterTool;
 
 test('from', function () {
     $result = ThreadMessageResponseAttachmentCodeInterpreterTool::from(threadMessageResource()['attachments'][0]['tools'][1]);

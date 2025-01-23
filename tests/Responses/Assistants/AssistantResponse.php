@@ -1,11 +1,11 @@
 <?php
 
-use OpenAI\Responses\Assistants\AssistantResponse;
-use OpenAI\Responses\Assistants\AssistantResponseResponseFormat;
-use OpenAI\Responses\Assistants\AssistantResponseToolCodeInterpreter;
-use OpenAI\Responses\Assistants\AssistantResponseToolFileSearch;
-use OpenAI\Responses\Assistants\AssistantResponseToolResources;
-use OpenAI\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\Assistants\AssistantResponse;
+use RAGFlow\Responses\Assistants\AssistantResponseResponseFormat;
+use RAGFlow\Responses\Assistants\AssistantResponseToolCodeInterpreter;
+use RAGFlow\Responses\Assistants\AssistantResponseToolFileSearch;
+use RAGFlow\Responses\Assistants\AssistantResponseToolResources;
+use RAGFlow\Responses\Meta\MetaInformation;
 
 test('from', function () {
     $result = AssistantResponse::from(assistantWithAllToolsResource(), meta());

@@ -1,13 +1,13 @@
 <?php
 
-namespace OpenAI\Testing\Resources;
+namespace RAGFlow\Testing\Resources;
 
-use OpenAI\Contracts\Resources\ThreadsMessagesContract;
-use OpenAI\Resources\ThreadsMessages;
-use OpenAI\Responses\Threads\Messages\ThreadMessageDeleteResponse;
-use OpenAI\Responses\Threads\Messages\ThreadMessageListResponse;
-use OpenAI\Responses\Threads\Messages\ThreadMessageResponse;
-use OpenAI\Testing\Resources\Concerns\Testable;
+use RAGFlow\Contracts\Resources\ThreadsMessagesContract;
+use RAGFlow\Resources\ThreadsMessages;
+use RAGFlow\Responses\Threads\Messages\ThreadMessageDeleteResponse;
+use RAGFlow\Responses\Threads\Messages\ThreadMessageListResponse;
+use RAGFlow\Responses\Threads\Messages\ThreadMessageResponse;
+use RAGFlow\Testing\Resources\Concerns\Testable;
 
 final class ThreadsMessagesTestResource implements ThreadsMessagesContract
 {

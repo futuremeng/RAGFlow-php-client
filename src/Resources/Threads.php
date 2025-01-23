@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace OpenAI\Resources;
+namespace RAGFlow\Resources;
 
-use OpenAI\Contracts\Resources\ThreadsContract;
-use OpenAI\Contracts\Resources\ThreadsMessagesContract;
-use OpenAI\Contracts\Resources\ThreadsRunsContract;
-use OpenAI\Responses\StreamResponse;
-use OpenAI\Responses\Threads\Runs\ThreadRunResponse;
-use OpenAI\Responses\Threads\Runs\ThreadRunStreamResponse;
-use OpenAI\Responses\Threads\ThreadDeleteResponse;
-use OpenAI\Responses\Threads\ThreadResponse;
-use OpenAI\ValueObjects\Transporter\Payload;
-use OpenAI\ValueObjects\Transporter\Response;
+use RAGFlow\Contracts\Resources\ThreadsContract;
+use RAGFlow\Contracts\Resources\ThreadsMessagesContract;
+use RAGFlow\Contracts\Resources\ThreadsRunsContract;
+use RAGFlow\Responses\StreamResponse;
+use RAGFlow\Responses\Threads\Runs\ThreadRunResponse;
+use RAGFlow\Responses\Threads\Runs\ThreadRunStreamResponse;
+use RAGFlow\Responses\Threads\ThreadDeleteResponse;
+use RAGFlow\Responses\Threads\ThreadResponse;
+use RAGFlow\ValueObjects\Transporter\Payload;
+use RAGFlow\ValueObjects\Transporter\Response;
 
 final class Threads implements ThreadsContract
 {
@@ -23,7 +23,7 @@ final class Threads implements ThreadsContract
     /**
      * Create a thread.
      *
-     * @see https://platform.openai.com/docs/api-reference/threads/createThread
+     * @see https://ragflow-server/docs/api-reference/threads/createThread
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -40,7 +40,7 @@ final class Threads implements ThreadsContract
     /**
      * Create a thread and run it in one request.
      *
-     * @see https://platform.openai.com/docs/api-reference/runs/createThreadAndRun
+     * @see https://ragflow-server/docs/api-reference/runs/createThreadAndRun
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -57,7 +57,7 @@ final class Threads implements ThreadsContract
     /**
      * Create a thread and run it in one request, returning a stream.
      *
-     * @see https://platform.openai.com/docs/api-reference/runs/createThreadAndRun
+     * @see https://ragflow-server/docs/api-reference/runs/createThreadAndRun
      *
      * @param  array<string, mixed>  $parameters
      * @return StreamResponse<ThreadRunStreamResponse>
@@ -76,7 +76,7 @@ final class Threads implements ThreadsContract
     /**
      * Retrieves a thread.
      *
-     * @see https://platform.openai.com/docs/api-reference/threads/getThread
+     * @see https://ragflow-server/docs/api-reference/threads/getThread
      */
     public function retrieve(string $id): ThreadResponse
     {
@@ -91,7 +91,7 @@ final class Threads implements ThreadsContract
     /**
      * Modifies a thread.
      *
-     * @see https://platform.openai.com/docs/api-reference/threads/modifyThread
+     * @see https://ragflow-server/docs/api-reference/threads/modifyThread
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -108,7 +108,7 @@ final class Threads implements ThreadsContract
     /**
      * Delete a thread.
      *
-     * @see https://platform.openai.com/docs/api-reference/threads/deleteThread
+     * @see https://ragflow-server/docs/api-reference/threads/deleteThread
      */
     public function delete(string $id): ThreadDeleteResponse
     {
@@ -123,7 +123,7 @@ final class Threads implements ThreadsContract
     /**
      * Manage messages attached to a thread.
      *
-     * @see https://platform.openai.com/docs/api-reference/messages
+     * @see https://ragflow-server/docs/api-reference/messages
      */
     public function messages(): ThreadsMessagesContract
     {
@@ -133,7 +133,7 @@ final class Threads implements ThreadsContract
     /**
      * Represents an execution run on a thread.
      *
-     * @see https://platform.openai.com/docs/api-reference/runs
+     * @see https://ragflow-server/docs/api-reference/runs
      */
     public function runs(): ThreadsRunsContract
     {

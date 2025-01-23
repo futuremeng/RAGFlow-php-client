@@ -1,11 +1,11 @@
 <?php
 
-use OpenAI\Responses\Assistants\AssistantDeleteResponse;
-use OpenAI\Responses\Assistants\AssistantListResponse;
-use OpenAI\Responses\Assistants\AssistantResponse;
-use OpenAI\Responses\Assistants\AssistantResponseToolCodeInterpreter;
-use OpenAI\Responses\Meta\MetaInformation;
-use OpenAI\ValueObjects\Transporter\Response;
+use RAGFlow\Responses\Assistants\AssistantDeleteResponse;
+use RAGFlow\Responses\Assistants\AssistantListResponse;
+use RAGFlow\Responses\Assistants\AssistantResponse;
+use RAGFlow\Responses\Assistants\AssistantResponseToolCodeInterpreter;
+use RAGFlow\Responses\Meta\MetaInformation;
+use RAGFlow\ValueObjects\Transporter\Response;
 
 test('list', function () {
     $client = mockClient('GET', 'assistants', [], Response::from(assistantListResource(), metaHeaders()));

@@ -1,7 +1,7 @@
 <?php
 
-use OpenAI\Responses\Chat\CreateResponseChoice;
-use OpenAI\Responses\Chat\CreateResponseMessage;
+use RAGFlow\Responses\Chat\CreateResponseChoice;
+use RAGFlow\Responses\Chat\CreateResponseMessage;
 
 test('from', function () {
     $result = CreateResponseChoice::from(chatCompletion()['choices'][0]);

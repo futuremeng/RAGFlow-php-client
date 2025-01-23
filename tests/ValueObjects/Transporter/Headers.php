@@ -1,8 +1,8 @@
 <?php
 
-use OpenAI\Enums\Transporter\ContentType;
-use OpenAI\ValueObjects\ApiKey;
-use OpenAI\ValueObjects\Transporter\Headers;
+use RAGFlow\Enums\Transporter\ContentType;
+use RAGFlow\ValueObjects\ApiKey;
+use RAGFlow\ValueObjects\Transporter\Headers;
 
 it('can be created from an API Token', function () {
     $headers = Headers::withAuthorization(ApiKey::from('foo'));
@@ -40,19 +40,19 @@ it('can have organization', function () {
     expect($headers->toArray())->toBe([
         'Authorization' => 'Bearer foo',
         'Content-Type' => 'application/json',
-        'OpenAI-Organization' => 'nunomaduro',
+        'RAGFlow-Organization' => 'nunomaduro',
     ]);
 });
 
 it('can have project', function () {
     $headers = Headers::withAuthorization(ApiKey::from('foo'))
         ->withContentType(ContentType::JSON)
-        ->withProject('openai_proj');
+        ->withProject('ragflow_proj');
 
     expect($headers->toArray())->toBe([
         'Authorization' => 'Bearer foo',
         'Content-Type' => 'application/json',
-        'OpenAI-Project' => 'openai_proj',
+        'RAGFlow-Project' => 'ragflow_proj',
     ]);
 });
 

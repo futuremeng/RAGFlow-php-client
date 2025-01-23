@@ -1,7 +1,7 @@
 <?php
 
-use OpenAI\Responses\Chat\CreateStreamedResponseChoice;
-use OpenAI\Responses\Chat\CreateStreamedResponseDelta;
+use RAGFlow\Responses\Chat\CreateStreamedResponseChoice;
+use RAGFlow\Responses\Chat\CreateStreamedResponseDelta;
 
 test('from', function () {
     $result = CreateStreamedResponseChoice::from(chatCompletionStreamFirstChunk()['choices'][0]);

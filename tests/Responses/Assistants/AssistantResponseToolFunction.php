@@ -1,7 +1,7 @@
 <?php
 
-use OpenAI\Responses\Assistants\AssistantResponseToolFunction;
-use OpenAI\Responses\Assistants\AssistantResponseToolFunctionFunction;
+use RAGFlow\Responses\Assistants\AssistantResponseToolFunction;
+use RAGFlow\Responses\Assistants\AssistantResponseToolFunctionFunction;
 
 test('from', function () {
     $result = AssistantResponseToolFunction::from(assistantWithFunctionToolResource()['tools'][0]);

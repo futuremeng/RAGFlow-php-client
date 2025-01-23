@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace OpenAI\Resources;
+namespace RAGFlow\Resources;
 
-use OpenAI\Contracts\Resources\ThreadsRunsStepsContract;
-use OpenAI\Responses\Threads\Runs\Steps\ThreadRunStepListResponse;
-use OpenAI\Responses\Threads\Runs\Steps\ThreadRunStepResponse;
-use OpenAI\ValueObjects\Transporter\Payload;
-use OpenAI\ValueObjects\Transporter\Response;
+use RAGFlow\Contracts\Resources\ThreadsRunsStepsContract;
+use RAGFlow\Responses\Threads\Runs\Steps\ThreadRunStepListResponse;
+use RAGFlow\Responses\Threads\Runs\Steps\ThreadRunStepResponse;
+use RAGFlow\ValueObjects\Transporter\Payload;
+use RAGFlow\ValueObjects\Transporter\Response;
 
 final class ThreadsRunsSteps implements ThreadsRunsStepsContract
 {
@@ -17,7 +17,7 @@ final class ThreadsRunsSteps implements ThreadsRunsStepsContract
     /**
      * Retrieves a run step.
      *
-     * @see https://platform.openai.com/docs/api-reference/runs/getRunStep
+     * @see https://ragflow-server/docs/api-reference/runs/getRunStep
      */
     public function retrieve(string $threadId, string $runId, string $stepId): ThreadRunStepResponse
     {
@@ -32,7 +32,7 @@ final class ThreadsRunsSteps implements ThreadsRunsStepsContract
     /**
      * Returns a list of run steps belonging to a run.
      *
-     * @see https://platform.openai.com/docs/api-reference/runs/listRunSteps
+     * @see https://ragflow-server/docs/api-reference/runs/listRunSteps
      *
      * @param  array<string, mixed>  $parameters
      */

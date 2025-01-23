@@ -1,10 +1,10 @@
 <?php
 
-use OpenAI\Resources\FineTuning;
-use OpenAI\Responses\FineTuning\ListJobEventsResponse;
-use OpenAI\Responses\FineTuning\ListJobsResponse;
-use OpenAI\Responses\FineTuning\RetrieveJobResponse;
-use OpenAI\Testing\ClientFake;
+use RAGFlow\Resources\FineTuning;
+use RAGFlow\Responses\FineTuning\ListJobEventsResponse;
+use RAGFlow\Responses\FineTuning\ListJobsResponse;
+use RAGFlow\Responses\FineTuning\RetrieveJobResponse;
+use RAGFlow\Testing\ClientFake;
 
 it('records a fine tuning job create request', function () {
     $fake = new ClientFake([

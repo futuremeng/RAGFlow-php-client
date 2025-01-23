@@ -1,39 +1,39 @@
 <?php
 
-namespace OpenAI\Contracts\Resources;
+namespace RAGFlow\Contracts\Resources;
 
-use OpenAI\Responses\Files\CreateResponse;
-use OpenAI\Responses\Files\DeleteResponse;
-use OpenAI\Responses\Files\ListResponse;
-use OpenAI\Responses\Files\RetrieveResponse;
+use RAGFlow\Responses\Files\CreateResponse;
+use RAGFlow\Responses\Files\DeleteResponse;
+use RAGFlow\Responses\Files\ListResponse;
+use RAGFlow\Responses\Files\RetrieveResponse;
 
 interface FilesContract
 {
     /**
      * Returns a list of files that belong to the user's organization.
      *
-     * @see https://platform.openai.com/docs/api-reference/files/list
+     * @see https://ragflow-server/docs/api-reference/files/list
      */
     public function list(): ListResponse;
 
     /**
      * Returns information about a specific file.
      *
-     * @see https://platform.openai.com/docs/api-reference/files/retrieve
+     * @see https://ragflow-server/docs/api-reference/files/retrieve
      */
     public function retrieve(string $file): RetrieveResponse;
 
     /**
      * Returns the contents of the specified file.
      *
-     * @see https://platform.openai.com/docs/api-reference/files/retrieve-content
+     * @see https://ragflow-server/docs/api-reference/files/retrieve-content
      */
     public function download(string $file): string;
 
     /**
      * Upload a file that contains document(s) to be used across various endpoints/features.
      *
-     * @see https://platform.openai.com/docs/api-reference/files/upload
+     * @see https://ragflow-server/docs/api-reference/files/upload
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -42,7 +42,7 @@ interface FilesContract
     /**
      * Delete a file.
      *
-     * @see https://platform.openai.com/docs/api-reference/files/delete
+     * @see https://ragflow-server/docs/api-reference/files/delete
      */
     public function delete(string $file): DeleteResponse;
 }

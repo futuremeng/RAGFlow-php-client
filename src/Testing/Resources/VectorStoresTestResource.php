@@ -1,15 +1,15 @@
 <?php
 
-namespace OpenAI\Testing\Resources;
+namespace RAGFlow\Testing\Resources;
 
-use OpenAI\Contracts\Resources\VectorStoresContract;
-use OpenAI\Contracts\Resources\VectorStoresFileBatchesContract;
-use OpenAI\Contracts\Resources\VectorStoresFilesContract;
-use OpenAI\Resources\VectorStores;
-use OpenAI\Responses\VectorStores\VectorStoreDeleteResponse;
-use OpenAI\Responses\VectorStores\VectorStoreListResponse;
-use OpenAI\Responses\VectorStores\VectorStoreResponse;
-use OpenAI\Testing\Resources\Concerns\Testable;
+use RAGFlow\Contracts\Resources\VectorStoresContract;
+use RAGFlow\Contracts\Resources\VectorStoresFileBatchesContract;
+use RAGFlow\Contracts\Resources\VectorStoresFilesContract;
+use RAGFlow\Resources\VectorStores;
+use RAGFlow\Responses\VectorStores\VectorStoreDeleteResponse;
+use RAGFlow\Responses\VectorStores\VectorStoreListResponse;
+use RAGFlow\Responses\VectorStores\VectorStoreResponse;
+use RAGFlow\Testing\Resources\Concerns\Testable;
 
 final class VectorStoresTestResource implements VectorStoresContract
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenAI\Testing\Responses\Fixtures\Models;
+namespace RAGFlow\Testing\Responses\Fixtures\Models;
 
 final class RetrieveResponseFixture
 {
@@ -8,6 +8,6 @@ final class RetrieveResponseFixture
         'id' => 'text-babbage:001',
         'object' => 'model',
         'created' => 1_642_018_370,
-        'owned_by' => 'openai',
+        'owned_by' => 'ragflow',
     ];
 }

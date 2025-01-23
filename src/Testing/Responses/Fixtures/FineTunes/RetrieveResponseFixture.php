@@ -1,8 +1,8 @@
 <?php
 
-namespace OpenAI\Testing\Responses\Fixtures\FineTunes;
+namespace RAGFlow\Testing\Responses\Fixtures\FineTunes;
 
-use OpenAI\Testing\Responses\Fixtures\Files\CreateResponseFixture;
+use RAGFlow\Testing\Responses\Fixtures\Files\CreateResponseFixture;
 
 final class RetrieveResponseFixture
 {

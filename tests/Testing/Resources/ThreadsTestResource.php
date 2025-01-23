@@ -1,10 +1,10 @@
 <?php
 
-use OpenAI\Resources\Threads;
-use OpenAI\Responses\Threads\Runs\ThreadRunResponse;
-use OpenAI\Responses\Threads\ThreadDeleteResponse;
-use OpenAI\Responses\Threads\ThreadResponse;
-use OpenAI\Testing\ClientFake;
+use RAGFlow\Resources\Threads;
+use RAGFlow\Responses\Threads\Runs\ThreadRunResponse;
+use RAGFlow\Responses\Threads\ThreadDeleteResponse;
+use RAGFlow\Responses\Threads\ThreadResponse;
+use RAGFlow\Testing\ClientFake;
 
 it('records a thread create request', function () {
     $fake = new ClientFake([

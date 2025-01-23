@@ -1,14 +1,14 @@
 <?php
 
-namespace OpenAI\Testing\Resources;
+namespace RAGFlow\Testing\Resources;
 
-use OpenAI\Contracts\Resources\FineTunesContract;
-use OpenAI\Resources\FineTunes;
-use OpenAI\Responses\FineTunes\ListEventsResponse;
-use OpenAI\Responses\FineTunes\ListResponse;
-use OpenAI\Responses\FineTunes\RetrieveResponse;
-use OpenAI\Responses\StreamResponse;
-use OpenAI\Testing\Resources\Concerns\Testable;
+use RAGFlow\Contracts\Resources\FineTunesContract;
+use RAGFlow\Resources\FineTunes;
+use RAGFlow\Responses\FineTunes\ListEventsResponse;
+use RAGFlow\Responses\FineTunes\ListResponse;
+use RAGFlow\Responses\FineTunes\RetrieveResponse;
+use RAGFlow\Responses\StreamResponse;
+use RAGFlow\Testing\Resources\Concerns\Testable;
 
 final class FineTunesTestResource implements FineTunesContract
 {

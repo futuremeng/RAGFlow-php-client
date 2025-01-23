@@ -1,17 +1,17 @@
 <?php
 
-namespace OpenAI\Contracts\Resources;
+namespace RAGFlow\Contracts\Resources;
 
-use OpenAI\Responses\Completions\CreateResponse;
-use OpenAI\Responses\Completions\CreateStreamedResponse;
-use OpenAI\Responses\StreamResponse;
+use RAGFlow\Responses\Completions\CreateResponse;
+use RAGFlow\Responses\Completions\CreateStreamedResponse;
+use RAGFlow\Responses\StreamResponse;
 
 interface CompletionsContract
 {
     /**
      * Creates a completion for the provided prompt and parameters
      *
-     * @see https://platform.openai.com/docs/api-reference/completions/create-completion
+     * @see https://ragflow-server/docs/api-reference/completions/create-completion
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -20,7 +20,7 @@ interface CompletionsContract
     /**
      * Creates a streamed completion for the provided prompt and parameters
      *
-     * @see https://platform.openai.com/docs/api-reference/completions/create-completion
+     * @see https://ragflow-server/docs/api-reference/completions/create-completion
      *
      * @param  array<string, mixed>  $parameters
      * @return StreamResponse<CreateStreamedResponse>

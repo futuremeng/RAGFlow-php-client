@@ -1,17 +1,17 @@
 <?php
 
-namespace OpenAI\Contracts\Resources;
+namespace RAGFlow\Contracts\Resources;
 
-use OpenAI\Responses\Chat\CreateResponse;
-use OpenAI\Responses\Chat\CreateStreamedResponse;
-use OpenAI\Responses\StreamResponse;
+use RAGFlow\Responses\Chat\CreateResponse;
+use RAGFlow\Responses\Chat\CreateStreamedResponse;
+use RAGFlow\Responses\StreamResponse;
 
 interface ChatContract
 {
     /**
      * Creates a completion for the chat message
      *
-     * @see https://platform.openai.com/docs/api-reference/chat/create
+     * @see https://ragflow-server/docs/api-reference/chat/create
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -20,7 +20,7 @@ interface ChatContract
     /**
      * Creates a streamed completion for the chat message
      *
-     * @see https://platform.openai.com/docs/api-reference/chat/create
+     * @see https://ragflow-server/docs/api-reference/chat/create
      *
      * @param  array<string, mixed>  $parameters
      * @return StreamResponse<CreateStreamedResponse>

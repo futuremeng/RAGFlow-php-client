@@ -1,15 +1,15 @@
 <?php
 
-namespace OpenAI\Contracts\Resources;
+namespace RAGFlow\Contracts\Resources;
 
-use OpenAI\Responses\Embeddings\CreateResponse;
+use RAGFlow\Responses\Embeddings\CreateResponse;
 
 interface EmbeddingsContract
 {
     /**
      * Creates an embedding vector representing the input text.
      *
-     * @see https://platform.openai.com/docs/api-reference/embeddings/create
+     * @see https://ragflow-server/docs/api-reference/embeddings/create
      *
      * @param  array<string, mixed>  $parameters
      */

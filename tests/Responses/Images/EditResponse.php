@@ -1,8 +1,8 @@
 <?php
 
-use OpenAI\Responses\Images\EditResponse;
-use OpenAI\Responses\Images\EditResponseData;
-use OpenAI\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\Images\EditResponse;
+use RAGFlow\Responses\Images\EditResponseData;
+use RAGFlow\Responses\Meta\MetaInformation;
 
 test('from with url', function () {
     $response = EditResponse::from(imageEditWithUrl(), meta());
@@ -58,18 +58,18 @@ test('fake', function () {
     $response = EditResponse::fake();
 
     expect($response['data'][0])
-        ->url->toBe('https://openai.com/fake-image.png');
+        ->url->toBe('https://ragflow.com/fake-image.png');
 });
 
 test('fake with override', function () {
     $response = EditResponse::fake([
         'data' => [
             [
-                'url' => 'https://openai.com/new-image.png',
+                'url' => 'https://ragflow.com/new-image.png',
             ],
         ],
     ]);
 
     expect($response['data'][0])
-        ->url->toBe('https://openai.com/new-image.png');
+        ->url->toBe('https://ragflow.com/new-image.png');
 });

@@ -1,6 +1,6 @@
 <?php
 
-use OpenAI\Responses\Threads\Runs\ThreadRunResponseTruncationStrategy;
+use RAGFlow\Responses\Threads\Runs\ThreadRunResponseTruncationStrategy;
 
 test('from', function () {
     $result = ThreadRunResponseTruncationStrategy::from(threadRunResource()['truncation_strategy']);

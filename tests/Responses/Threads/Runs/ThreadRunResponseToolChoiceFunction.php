@@ -1,6 +1,6 @@
 <?php
 
-use OpenAI\Responses\Threads\Runs\ThreadRunResponseToolChoiceFunction;
+use RAGFlow\Responses\Threads\Runs\ThreadRunResponseToolChoiceFunction;
 
 test('from', function () {
     $result = ThreadRunResponseToolChoiceFunction::from(threadRunWithToolChoiceFunction()['tool_choice']['function']);

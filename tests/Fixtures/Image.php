@@ -9,7 +9,7 @@ function imageCreateWithUrl(): array
         'created' => 1664136088,
         'data' => [
             [
-                'url' => 'https://openai.com/image.png',
+                'url' => 'https://ragflow.com/image.png',
             ],
         ],
     ];
@@ -24,7 +24,7 @@ function imageCreateWithUrlDallE3(): array
         'created' => 1664136088,
         'data' => [
             [
-                'url' => 'https://openai.com/image.png',
+                'url' => 'https://ragflow.com/image.png',
                 'revised_prompt' => 'This is a revised prompt.',
             ],
         ],
@@ -55,7 +55,7 @@ function imageEditWithUrl(): array
         'created' => 1664136088,
         'data' => [
             [
-                'url' => 'https://openai.com/image.png',
+                'url' => 'https://ragflow.com/image.png',
             ],
         ],
     ];
@@ -85,7 +85,7 @@ function imageVariationWithUrl(): array
         'created' => 1664136088,
         'data' => [
             [
-                'url' => 'https://openai.com/image.png',
+                'url' => 'https://ragflow.com/image.png',
             ],
         ],
     ];

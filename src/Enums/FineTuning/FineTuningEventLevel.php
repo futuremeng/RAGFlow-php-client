@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenAI\Enums\FineTuning;
+namespace RAGFlow\Enums\FineTuning;
 
 enum FineTuningEventLevel: string
 {

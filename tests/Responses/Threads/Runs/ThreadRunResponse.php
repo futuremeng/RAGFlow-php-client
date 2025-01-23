@@ -1,13 +1,13 @@
 <?php
 
-use OpenAI\Responses\Assistants\AssistantResponseResponseFormat;
-use OpenAI\Responses\Meta\MetaInformation;
-use OpenAI\Responses\Threads\Runs\ThreadRunResponse;
-use OpenAI\Responses\Threads\Runs\ThreadRunResponseFileSearch;
-use OpenAI\Responses\Threads\Runs\ThreadRunResponseIncompleteDetails;
-use OpenAI\Responses\Threads\Runs\ThreadRunResponseToolCodeInterpreter;
-use OpenAI\Responses\Threads\Runs\ThreadRunResponseToolFunction;
-use OpenAI\Responses\Threads\Runs\ThreadRunResponseUsage;
+use RAGFlow\Responses\Assistants\AssistantResponseResponseFormat;
+use RAGFlow\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\Threads\Runs\ThreadRunResponse;
+use RAGFlow\Responses\Threads\Runs\ThreadRunResponseFileSearch;
+use RAGFlow\Responses\Threads\Runs\ThreadRunResponseIncompleteDetails;
+use RAGFlow\Responses\Threads\Runs\ThreadRunResponseToolCodeInterpreter;
+use RAGFlow\Responses\Threads\Runs\ThreadRunResponseToolFunction;
+use RAGFlow\Responses\Threads\Runs\ThreadRunResponseUsage;
 
 test('from', function () {
     $result = ThreadRunResponse::from(threadRunResource(), meta());

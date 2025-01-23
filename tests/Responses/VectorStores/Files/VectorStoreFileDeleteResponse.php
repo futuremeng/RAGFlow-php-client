@@ -1,7 +1,7 @@
 <?php
 
-use OpenAI\Responses\Meta\MetaInformation;
-use OpenAI\Responses\VectorStores\Files\VectorStoreFileDeleteResponse;
+use RAGFlow\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\VectorStores\Files\VectorStoreFileDeleteResponse;
 
 test('from', function () {
     $result = VectorStoreFileDeleteResponse::from(vectorStoreFileDeleteResource(), meta());

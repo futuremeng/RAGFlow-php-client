@@ -1,10 +1,10 @@
 <?php
 
-use OpenAI\Responses\Meta\MetaInformation;
-use OpenAI\Responses\VectorStores\Files\VectorStoreFileDeleteResponse;
-use OpenAI\Responses\VectorStores\Files\VectorStoreFileListResponse;
-use OpenAI\Responses\VectorStores\Files\VectorStoreFileResponse;
-use OpenAI\ValueObjects\Transporter\Response;
+use RAGFlow\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\VectorStores\Files\VectorStoreFileDeleteResponse;
+use RAGFlow\Responses\VectorStores\Files\VectorStoreFileListResponse;
+use RAGFlow\Responses\VectorStores\Files\VectorStoreFileResponse;
+use RAGFlow\ValueObjects\Transporter\Response;
 
 test('create', function () {
     $client = mockClient('POST', 'vector_stores/vs_xds05V7ep0QMGI5JmYnWsJwb/files', [], Response::from(vectorStoreFileResource(), metaHeaders()));

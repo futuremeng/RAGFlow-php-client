@@ -1,6 +1,6 @@
 <?php
 
-use OpenAI\Responses\Threads\Messages\ThreadMessageResponseContentImageUrl;
+use RAGFlow\Responses\Threads\Messages\ThreadMessageResponseContentImageUrl;
 
 test('from', function () {
     $result = ThreadMessageResponseContentImageUrl::from(threadMessageResource()['content'][2]['image_url']);

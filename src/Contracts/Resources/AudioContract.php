@@ -1,17 +1,17 @@
 <?php
 
-namespace OpenAI\Contracts\Resources;
+namespace RAGFlow\Contracts\Resources;
 
-use OpenAI\Responses\Audio\SpeechStreamResponse;
-use OpenAI\Responses\Audio\TranscriptionResponse;
-use OpenAI\Responses\Audio\TranslationResponse;
+use RAGFlow\Responses\Audio\SpeechStreamResponse;
+use RAGFlow\Responses\Audio\TranscriptionResponse;
+use RAGFlow\Responses\Audio\TranslationResponse;
 
 interface AudioContract
 {
     /**
      * Generates audio from the input text.
      *
-     * @see https://platform.openai.com/docs/api-reference/audio/createSpeech
+     * @see https://ragflow-server/docs/api-reference/audio/createSpeech
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -20,7 +20,7 @@ interface AudioContract
     /**
      * Generates streamed audio from the input text.
      *
-     * @see https://platform.openai.com/docs/api-reference/audio/createSpeech
+     * @see https://ragflow-server/docs/api-reference/audio/createSpeech
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -29,7 +29,7 @@ interface AudioContract
     /**
      * Transcribes audio into the input language.
      *
-     * @see https://platform.openai.com/docs/api-reference/audio/createTranscription
+     * @see https://ragflow-server/docs/api-reference/audio/createTranscription
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -38,7 +38,7 @@ interface AudioContract
     /**
      * Translates audio into English.
      *
-     * @see https://platform.openai.com/docs/api-reference/audio/createTranslation
+     * @see https://ragflow-server/docs/api-reference/audio/createTranslation
      *
      * @param  array<string, mixed>  $parameters
      */

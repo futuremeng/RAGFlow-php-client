@@ -2,8 +2,8 @@
 
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Psr7\Stream;
-use OpenAI\Responses\Audio\SpeechStreamResponse;
-use OpenAI\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\Audio\SpeechStreamResponse;
+use RAGFlow\Responses\Meta\MetaInformation;
 
 test('from response', function () {
     $response = new Response(

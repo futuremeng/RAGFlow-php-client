@@ -1,6 +1,6 @@
 <?php
 
-use OpenAI\Responses\Assistants\AssistantResponseToolResourceCodeInterpreter;
+use RAGFlow\Responses\Assistants\AssistantResponseToolResourceCodeInterpreter;
 
 test('from', function () {
     $result = AssistantResponseToolResourceCodeInterpreter::from(assistantWithToolResources()['tool_resources']['code_interpreter']);

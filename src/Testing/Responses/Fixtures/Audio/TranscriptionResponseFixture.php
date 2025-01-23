@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenAI\Testing\Responses\Fixtures\Audio;
+namespace RAGFlow\Testing\Responses\Fixtures\Audio;
 
 final class TranscriptionResponseFixture
 {

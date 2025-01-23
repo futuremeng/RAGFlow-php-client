@@ -1,69 +1,69 @@
 <?php
 
 test('contracts')
-    ->expect('OpenAI\Contracts')
+    ->expect('RAGFlow\Contracts')
     ->toOnlyUse([
-        'OpenAI\ValueObjects',
-        'OpenAI\Exceptions',
-        'OpenAI\Resources',
+        'RAGFlow\ValueObjects',
+        'RAGFlow\Exceptions',
+        'RAGFlow\Resources',
         'Psr\Http\Message\ResponseInterface',
-        'OpenAI\Responses',
+        'RAGFlow\Responses',
     ])
     ->toBeInterfaces();
 
 test('enums')
-    ->expect('OpenAI\Enums')
+    ->expect('RAGFlow\Enums')
     ->toBeEnums();
 
 test('exceptions')
-    ->expect('OpenAI\Exceptions')
+    ->expect('RAGFlow\Exceptions')
     ->toOnlyUse([
         'Psr\Http\Client',
     ])->toImplement(Throwable::class);
 
-test('resources')->expect('OpenAI\Resources')->toOnlyUse([
-    'OpenAI\Contracts',
-    'OpenAI\ValueObjects',
-    'OpenAI\Exceptions',
-    'OpenAI\Responses',
+test('resources')->expect('RAGFlow\Resources')->toOnlyUse([
+    'RAGFlow\Contracts',
+    'RAGFlow\ValueObjects',
+    'RAGFlow\Exceptions',
+    'RAGFlow\Responses',
 ]);
 
-test('responses')->expect('OpenAI\Responses')->toOnlyUse([
+test('responses')->expect('RAGFlow\Responses')->toOnlyUse([
     'Http\Discovery\Psr17Factory',
-    'OpenAI\Enums',
-    'OpenAI\Exceptions\ErrorException',
-    'OpenAI\Exceptions\UnknownEventException',
-    'OpenAI\Contracts',
-    'OpenAI\Testing\Responses\Concerns',
+    'RAGFlow\Enums',
+    'RAGFlow\Exceptions\ErrorException',
+    'RAGFlow\Exceptions\UnknownEventException',
+    'RAGFlow\Contracts',
+    'RAGFlow\Testing\Responses\Concerns',
     'Psr\Http\Message\ResponseInterface',
     'Psr\Http\Message\StreamInterface',
 ]);
 
-test('value objects')->expect('OpenAI\ValueObjects')->toOnlyUse([
+test('value objects')->expect('RAGFlow\ValueObjects')->toOnlyUse([
     'Http\Discovery\Psr17Factory',
     'Http\Message\MultipartStream\MultipartStreamBuilder',
     'Psr\Http\Message\RequestInterface',
     'Psr\Http\Message\StreamInterface',
-    'OpenAI\Enums',
-    'OpenAI\Contracts',
-    'OpenAI\Responses\Meta\MetaInformation',
+    'RAGFlow\Enums',
+    'RAGFlow\Contracts',
+    'RAGFlow\Responses\Meta\MetaInformation',
 ]);
 
-test('client')->expect('OpenAI\Client')->toOnlyUse([
-    'OpenAI\Resources',
-    'OpenAI\Contracts',
+test('client')->expect('RAGFlow\Client')->toOnlyUse([
+    'RAGFlow\Resources',
+    'RAGFlow\Contracts',
 ]);
 
-test('openai')->expect('OpenAI')->toOnlyUse([
+test('ragflow')->expect('RAGFlow')->toOnlyUse([
     'GuzzleHttp\Client',
     'GuzzleHttp\Exception\ClientException',
     'Http\Discovery\Psr17Factory',
     'Http\Discovery\Psr18ClientDiscovery',
     'Http\Message\MultipartStream\MultipartStreamBuilder',
-    'OpenAI\Contracts',
-    'OpenAI\Resources',
+    'RAGFlow\Contracts',
+    'RAGFlow\Resources',
     'Psr\Http\Client',
     'Psr\Http\Message\RequestInterface',
     'Psr\Http\Message\ResponseInterface',
     'Psr\Http\Message\StreamInterface',
-])->ignoring('OpenAI\Testing');
+])->ignoring('RAGFlow\Testing');

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace OpenAI\Resources\Concerns;
+namespace RAGFlow\Resources\Concerns;
 
-use OpenAI\Contracts\TransporterContract;
+use RAGFlow\Contracts\TransporterContract;
 
 trait Transportable
 {

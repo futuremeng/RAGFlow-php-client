@@ -1,8 +1,8 @@
 <?php
 
-use OpenAI\Responses\Audio\TranslationResponse;
-use OpenAI\Responses\Audio\TranslationResponseSegment;
-use OpenAI\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\Audio\TranslationResponse;
+use RAGFlow\Responses\Audio\TranslationResponseSegment;
+use RAGFlow\Responses\Meta\MetaInformation;
 
 test('from json', function () {
     $Translation = TranslationResponse::from(audioTranslationJson(), meta());

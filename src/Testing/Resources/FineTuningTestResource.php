@@ -1,13 +1,13 @@
 <?php
 
-namespace OpenAI\Testing\Resources;
+namespace RAGFlow\Testing\Resources;
 
-use OpenAI\Contracts\Resources\FineTuningContract;
-use OpenAI\Resources\FineTuning;
-use OpenAI\Responses\FineTuning\ListJobEventsResponse;
-use OpenAI\Responses\FineTuning\ListJobsResponse;
-use OpenAI\Responses\FineTuning\RetrieveJobResponse;
-use OpenAI\Testing\Resources\Concerns\Testable;
+use RAGFlow\Contracts\Resources\FineTuningContract;
+use RAGFlow\Resources\FineTuning;
+use RAGFlow\Responses\FineTuning\ListJobEventsResponse;
+use RAGFlow\Responses\FineTuning\ListJobsResponse;
+use RAGFlow\Responses\FineTuning\RetrieveJobResponse;
+use RAGFlow\Testing\Resources\Concerns\Testable;
 
 final class FineTuningTestResource implements FineTuningContract
 {

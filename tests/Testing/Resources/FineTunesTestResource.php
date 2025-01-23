@@ -1,11 +1,11 @@
 <?php
 
-use OpenAI\Resources\FineTunes;
-use OpenAI\Responses\FineTunes\ListEventsResponse;
-use OpenAI\Responses\FineTunes\ListResponse;
-use OpenAI\Responses\FineTunes\RetrieveResponse;
-use OpenAI\Responses\FineTunes\RetrieveStreamedResponseEvent;
-use OpenAI\Testing\ClientFake;
+use RAGFlow\Resources\FineTunes;
+use RAGFlow\Responses\FineTunes\ListEventsResponse;
+use RAGFlow\Responses\FineTunes\ListResponse;
+use RAGFlow\Responses\FineTunes\RetrieveResponse;
+use RAGFlow\Responses\FineTunes\RetrieveStreamedResponseEvent;
+use RAGFlow\Testing\ClientFake;
 
 it('records a fine tunes create request', function () {
     $fake = new ClientFake([

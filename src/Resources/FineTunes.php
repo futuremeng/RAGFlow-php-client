@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace OpenAI\Resources;
+namespace RAGFlow\Resources;
 
-use OpenAI\Contracts\Resources\FineTunesContract;
-use OpenAI\Responses\FineTunes\ListEventsResponse;
-use OpenAI\Responses\FineTunes\ListResponse;
-use OpenAI\Responses\FineTunes\RetrieveResponse;
-use OpenAI\Responses\FineTunes\RetrieveStreamedResponseEvent;
-use OpenAI\Responses\StreamResponse;
-use OpenAI\ValueObjects\Transporter\Payload;
-use OpenAI\ValueObjects\Transporter\Response;
+use RAGFlow\Contracts\Resources\FineTunesContract;
+use RAGFlow\Responses\FineTunes\ListEventsResponse;
+use RAGFlow\Responses\FineTunes\ListResponse;
+use RAGFlow\Responses\FineTunes\RetrieveResponse;
+use RAGFlow\Responses\FineTunes\RetrieveStreamedResponseEvent;
+use RAGFlow\Responses\StreamResponse;
+use RAGFlow\ValueObjects\Transporter\Payload;
+use RAGFlow\ValueObjects\Transporter\Response;
 
 final class FineTunes implements FineTunesContract
 {
@@ -22,7 +22,7 @@ final class FineTunes implements FineTunesContract
      *
      * Response includes details of the enqueued job including job status and the name of the fine-tuned models once complete.
      *
-     * @see https://platform.openai.com/docs/api-reference/fine-tunes/create
+     * @see https://ragflow-server/docs/api-reference/fine-tunes/create
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -39,7 +39,7 @@ final class FineTunes implements FineTunesContract
     /**
      * List your organization's fine-tuning jobs.
      *
-     * @see https://platform.openai.com/docs/api-reference/fine-tunes/list
+     * @see https://ragflow-server/docs/api-reference/fine-tunes/list
      */
     public function list(): ListResponse
     {
@@ -54,7 +54,7 @@ final class FineTunes implements FineTunesContract
     /**
      * Gets info about the fine-tune job.
      *
-     * @see https://platform.openai.com/docs/api-reference/fine-tunes/list
+     * @see https://ragflow-server/docs/api-reference/fine-tunes/list
      */
     public function retrieve(string $fineTuneId): RetrieveResponse
     {
@@ -69,7 +69,7 @@ final class FineTunes implements FineTunesContract
     /**
      * Immediately cancel a fine-tune job.
      *
-     * @see https://platform.openai.com/docs/api-reference/fine-tunes/cancel
+     * @see https://ragflow-server/docs/api-reference/fine-tunes/cancel
      */
     public function cancel(string $fineTuneId): RetrieveResponse
     {
@@ -84,7 +84,7 @@ final class FineTunes implements FineTunesContract
     /**
      * Get fine-grained status updates for a fine-tune job.
      *
-     * @see https://platform.openai.com/docs/api-reference/fine-tunes/events
+     * @see https://ragflow-server/docs/api-reference/fine-tunes/events
      */
     public function listEvents(string $fineTuneId): ListEventsResponse
     {
@@ -99,7 +99,7 @@ final class FineTunes implements FineTunesContract
     /**
      * Get streamed fine-grained status updates for a fine-tune job.
      *
-     * @see https://platform.openai.com/docs/api-reference/fine-tunes/events
+     * @see https://ragflow-server/docs/api-reference/fine-tunes/events
      *
      * @return StreamResponse<RetrieveStreamedResponseEvent>
      */

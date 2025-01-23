@@ -1,7 +1,7 @@
 <?php
 
-use OpenAI\Responses\Meta\MetaInformation;
-use OpenAI\Responses\Threads\ThreadDeleteResponse;
+use RAGFlow\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\Threads\ThreadDeleteResponse;
 
 test('from', function () {
     $result = ThreadDeleteResponse::from(threadDeleteResource(), meta());

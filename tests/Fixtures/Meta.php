@@ -1,14 +1,14 @@
 <?php
 
-use OpenAI\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\Meta\MetaInformation;
 
 function metaHeaders(): array
 {
     return [
-        'openai-model' => ['gpt-3.5-turbo-instruct'],
-        'openai-organization' => ['org-1234'],
-        'openai-processing-ms' => [410],
-        'openai-version' => ['2020-10-01'],
+        'ragflow-model' => ['gpt-3.5-turbo-instruct'],
+        'ragflow-organization' => ['org-1234'],
+        'ragflow-processing-ms' => [410],
+        'ragflow-version' => ['2020-10-01'],
         'x-ratelimit-limit-requests' => [3000],
         'x-ratelimit-limit-tokens' => [250000],
         'x-ratelimit-remaining-requests' => [2999],
@@ -22,8 +22,8 @@ function metaHeaders(): array
 function metaHeadersFromAzure(): array
 {
     return [
-        'openai-model' => ['gpt-3.5-turbo-instruct'],
-        'openai-processing-ms' => [3482.8264],
+        'ragflow-model' => ['gpt-3.5-turbo-instruct'],
+        'ragflow-processing-ms' => [3482.8264],
         'x-request-id' => ['3813fa4fa3f17bdf0d7654f0f49ebab4'],
         'x-ratelimit-remaining-requests' => ['119'],
         'x-ratelimit-remaining-tokens' => ['119968'],
@@ -35,8 +35,8 @@ function metaHeadersWithDifferentCases(): array
     return [
         'Openai-Model' => ['gpt-3.5-turbo-instruct'],
         'OPENAI-ORGANIZATION' => ['org-1234'],
-        'openai-processing-ms' => [410],
-        'openai-version' => ['2020-10-01'],
+        'ragflow-processing-ms' => [410],
+        'ragflow-version' => ['2020-10-01'],
         'x-request-id' => ['3813fa4fa3f17bdf0d7654f0f49ebab4'],
     ];
 }

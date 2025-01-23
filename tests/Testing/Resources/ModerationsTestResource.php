@@ -1,8 +1,8 @@
 <?php
 
-use OpenAI\Resources\Moderations;
-use OpenAI\Responses\Moderations\CreateResponse;
-use OpenAI\Testing\ClientFake;
+use RAGFlow\Resources\Moderations;
+use RAGFlow\Responses\Moderations\CreateResponse;
+use RAGFlow\Testing\ClientFake;
 
 it('records a moderations create request', function () {
     $fake = new ClientFake([

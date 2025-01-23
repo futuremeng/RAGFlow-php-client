@@ -1,7 +1,7 @@
 <?php
 
-use OpenAI\Responses\Meta\MetaInformation;
-use OpenAI\Responses\Threads\ThreadResponse;
+use RAGFlow\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\Threads\ThreadResponse;
 
 test('from', function () {
     $result = ThreadResponse::from(threadResource(), meta());

@@ -1,14 +1,14 @@
 <?php
 
-namespace OpenAI\Testing\Resources;
+namespace RAGFlow\Testing\Resources;
 
-use OpenAI\Contracts\Resources\FilesContract;
-use OpenAI\Resources\Files;
-use OpenAI\Responses\Files\CreateResponse;
-use OpenAI\Responses\Files\DeleteResponse;
-use OpenAI\Responses\Files\ListResponse;
-use OpenAI\Responses\Files\RetrieveResponse;
-use OpenAI\Testing\Resources\Concerns\Testable;
+use RAGFlow\Contracts\Resources\FilesContract;
+use RAGFlow\Resources\Files;
+use RAGFlow\Responses\Files\CreateResponse;
+use RAGFlow\Responses\Files\DeleteResponse;
+use RAGFlow\Responses\Files\ListResponse;
+use RAGFlow\Responses\Files\RetrieveResponse;
+use RAGFlow\Testing\Resources\Concerns\Testable;
 
 final class FilesTestResource implements FilesContract
 {

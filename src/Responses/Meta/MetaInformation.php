@@ -1,29 +1,29 @@
 <?php
 
-namespace OpenAI\Responses\Meta;
+namespace RAGFlow\Responses\Meta;
 
-use OpenAI\Contracts\MetaInformationContract;
-use OpenAI\Responses\Concerns\ArrayAccessible;
+use RAGFlow\Contracts\MetaInformationContract;
+use RAGFlow\Responses\Concerns\ArrayAccessible;
 
 /**
- * @implements MetaInformationContract<array{x-request-id?: string, openai-model?: string, openai-organization?: string, openai-processing-ms?: int, openai-version?: string, x-ratelimit-limit-requests?: int, x-ratelimit-limit-tokens?: int, x-ratelimit-remaining-requests?: int, x-ratelimit-remaining-tokens?: int, x-ratelimit-reset-requests?: string, x-ratelimit-reset-tokens?: string}>
+ * @implements MetaInformationContract<array{x-request-id?: string, ragflow-model?: string, ragflow-organization?: string, ragflow-processing-ms?: int, ragflow-version?: string, x-ratelimit-limit-requests?: int, x-ratelimit-limit-tokens?: int, x-ratelimit-remaining-requests?: int, x-ratelimit-remaining-tokens?: int, x-ratelimit-reset-requests?: string, x-ratelimit-reset-tokens?: string}>
  */
 final class MetaInformation implements MetaInformationContract
 {
     /**
-     * @use ArrayAccessible<array{x-request-id?: string, openai-model?: string, openai-organization?: string, openai-processing-ms?: int, openai-version?: string, x-ratelimit-limit-requests?: int, x-ratelimit-limit-tokens?: int, x-ratelimit-remaining-requests?: int, x-ratelimit-remaining-tokens?: int, x-ratelimit-reset-requests?: string, x-ratelimit-reset-tokens?: string}>
+     * @use ArrayAccessible<array{x-request-id?: string, ragflow-model?: string, ragflow-organization?: string, ragflow-processing-ms?: int, ragflow-version?: string, x-ratelimit-limit-requests?: int, x-ratelimit-limit-tokens?: int, x-ratelimit-remaining-requests?: int, x-ratelimit-remaining-tokens?: int, x-ratelimit-reset-requests?: string, x-ratelimit-reset-tokens?: string}>
      */
     use ArrayAccessible;
 
     private function __construct(
         public ?string $requestId,
-        public readonly MetaInformationOpenAI $openai,
+        public readonly MetaInformationRAGFlow $ragflow,
         public readonly ?MetaInformationRateLimit $requestLimit,
         public readonly ?MetaInformationRateLimit $tokenLimit,
     ) {}
 
     /**
-     * @param  array{x-request-id: string[], openai-model: string[], openai-organization: string[], openai-version: string[], openai-processing-ms: string[], x-ratelimit-limit-requests: string[], x-ratelimit-remaining-requests: string[], x-ratelimit-reset-requests: string[], x-ratelimit-limit-tokens: string[], x-ratelimit-remaining-tokens: string[], x-ratelimit-reset-tokens: string[]}  $headers
+     * @param  array{x-request-id: string[], ragflow-model: string[], ragflow-organization: string[], ragflow-version: string[], ragflow-processing-ms: string[], x-ratelimit-limit-requests: string[], x-ratelimit-remaining-requests: string[], x-ratelimit-reset-requests: string[], x-ratelimit-limit-tokens: string[], x-ratelimit-remaining-tokens: string[], x-ratelimit-reset-tokens: string[]}  $headers
      */
     public static function from(array $headers): self
     {
@@ -31,11 +31,11 @@ final class MetaInformation implements MetaInformationContract
 
         $requestId = $headers['x-request-id'][0] ?? null;
 
-        $openai = MetaInformationOpenAI::from([
-            'model' => $headers['openai-model'][0] ?? null,
-            'organization' => $headers['openai-organization'][0] ?? null,
-            'version' => $headers['openai-version'][0] ?? null,
-            'processingMs' => isset($headers['openai-processing-ms'][0]) ? (int) $headers['openai-processing-ms'][0] : null,
+        $ragflow = MetaInformationRAGFlow::from([
+            'model' => $headers['ragflow-model'][0] ?? null,
+            'organization' => $headers['ragflow-organization'][0] ?? null,
+            'version' => $headers['ragflow-version'][0] ?? null,
+            'processingMs' => isset($headers['ragflow-processing-ms'][0]) ? (int) $headers['ragflow-processing-ms'][0] : null,
         ]);
 
         if (isset($headers['x-ratelimit-remaining-requests'][0])) {
@@ -60,7 +60,7 @@ final class MetaInformation implements MetaInformationContract
 
         return new self(
             $requestId,
-            $openai,
+            $ragflow,
             $requestLimit,
             $tokenLimit,
         );
@@ -72,10 +72,10 @@ final class MetaInformation implements MetaInformationContract
     public function toArray(): array
     {
         return array_filter([
-            'openai-model' => $this->openai->model,
-            'openai-organization' => $this->openai->organization,
-            'openai-processing-ms' => $this->openai->processingMs,
-            'openai-version' => $this->openai->version,
+            'ragflow-model' => $this->ragflow->model,
+            'ragflow-organization' => $this->ragflow->organization,
+            'ragflow-processing-ms' => $this->ragflow->processingMs,
+            'ragflow-version' => $this->ragflow->version,
             'x-ratelimit-limit-requests' => $this->requestLimit->limit ?? null,
             'x-ratelimit-limit-tokens' => $this->tokenLimit->limit ?? null,
             'x-ratelimit-remaining-requests' => $this->requestLimit->remaining ?? null,

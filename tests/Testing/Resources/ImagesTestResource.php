@@ -1,10 +1,10 @@
 <?php
 
-use OpenAI\Resources\Images;
-use OpenAI\Responses\Images\CreateResponse;
-use OpenAI\Responses\Images\EditResponse;
-use OpenAI\Responses\Images\VariationResponse;
-use OpenAI\Testing\ClientFake;
+use RAGFlow\Resources\Images;
+use RAGFlow\Responses\Images\CreateResponse;
+use RAGFlow\Responses\Images\EditResponse;
+use RAGFlow\Responses\Images\VariationResponse;
+use RAGFlow\Testing\ClientFake;
 
 it('records a images create request', function () {
     $fake = new ClientFake([

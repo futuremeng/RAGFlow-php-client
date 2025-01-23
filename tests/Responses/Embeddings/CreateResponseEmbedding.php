@@ -1,6 +1,6 @@
 <?php
 
-use OpenAI\Responses\Embeddings\CreateResponseEmbedding;
+use RAGFlow\Responses\Embeddings\CreateResponseEmbedding;
 
 test('from', function () {
     $result = CreateResponseEmbedding::from(embedding());

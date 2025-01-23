@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace OpenAI\Resources;
+namespace RAGFlow\Resources;
 
-use OpenAI\Contracts\Resources\FilesContract;
-use OpenAI\Responses\Files\CreateResponse;
-use OpenAI\Responses\Files\DeleteResponse;
-use OpenAI\Responses\Files\ListResponse;
-use OpenAI\Responses\Files\RetrieveResponse;
-use OpenAI\ValueObjects\Transporter\Payload;
-use OpenAI\ValueObjects\Transporter\Response;
+use RAGFlow\Contracts\Resources\FilesContract;
+use RAGFlow\Responses\Files\CreateResponse;
+use RAGFlow\Responses\Files\DeleteResponse;
+use RAGFlow\Responses\Files\ListResponse;
+use RAGFlow\Responses\Files\RetrieveResponse;
+use RAGFlow\ValueObjects\Transporter\Payload;
+use RAGFlow\ValueObjects\Transporter\Response;
 
 final class Files implements FilesContract
 {
@@ -19,7 +19,7 @@ final class Files implements FilesContract
     /**
      * Returns a list of files that belong to the user's organization.
      *
-     * @see https://platform.openai.com/docs/api-reference/files/list
+     * @see https://ragflow-server/docs/api-reference/files/list
      */
     public function list(): ListResponse
     {
@@ -34,7 +34,7 @@ final class Files implements FilesContract
     /**
      * Returns information about a specific file.
      *
-     * @see https://platform.openai.com/docs/api-reference/files/retrieve
+     * @see https://ragflow-server/docs/api-reference/files/retrieve
      */
     public function retrieve(string $file): RetrieveResponse
     {
@@ -49,7 +49,7 @@ final class Files implements FilesContract
     /**
      * Returns the contents of the specified file.
      *
-     * @see https://platform.openai.com/docs/api-reference/files/retrieve-content
+     * @see https://ragflow-server/docs/api-reference/files/retrieve-content
      */
     public function download(string $file): string
     {
@@ -61,7 +61,7 @@ final class Files implements FilesContract
     /**
      * Upload a file that contains document(s) to be used across various endpoints/features.
      *
-     * @see https://platform.openai.com/docs/api-reference/files/upload
+     * @see https://ragflow-server/docs/api-reference/files/upload
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -78,7 +78,7 @@ final class Files implements FilesContract
     /**
      * Delete a file.
      *
-     * @see https://platform.openai.com/docs/api-reference/files/delete
+     * @see https://ragflow-server/docs/api-reference/files/delete
      */
     public function delete(string $file): DeleteResponse
     {

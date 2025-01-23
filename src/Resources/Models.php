@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace OpenAI\Resources;
+namespace RAGFlow\Resources;
 
-use OpenAI\Contracts\Resources\ModelsContract;
-use OpenAI\Responses\Models\DeleteResponse;
-use OpenAI\Responses\Models\ListResponse;
-use OpenAI\Responses\Models\RetrieveResponse;
-use OpenAI\ValueObjects\Transporter\Payload;
-use OpenAI\ValueObjects\Transporter\Response;
+use RAGFlow\Contracts\Resources\ModelsContract;
+use RAGFlow\Responses\Models\DeleteResponse;
+use RAGFlow\Responses\Models\ListResponse;
+use RAGFlow\Responses\Models\RetrieveResponse;
+use RAGFlow\ValueObjects\Transporter\Payload;
+use RAGFlow\ValueObjects\Transporter\Response;
 
 final class Models implements ModelsContract
 {
@@ -18,7 +18,7 @@ final class Models implements ModelsContract
     /**
      * Lists the currently available models, and provides basic information about each one such as the owner and availability.
      *
-     * @see https://platform.openai.com/docs/api-reference/models/list
+     * @see https://ragflow-server/docs/api-reference/models/list
      */
     public function list(): ListResponse
     {
@@ -33,7 +33,7 @@ final class Models implements ModelsContract
     /**
      * Retrieves a model instance, providing basic information about the model such as the owner and permissioning.
      *
-     * @see https://platform.openai.com/docs/api-reference/models/retrieve
+     * @see https://ragflow-server/docs/api-reference/models/retrieve
      */
     public function retrieve(string $model): RetrieveResponse
     {
@@ -48,7 +48,7 @@ final class Models implements ModelsContract
     /**
      * Delete a fine-tuned model. You must have the Owner role in your organization.
      *
-     * @see https://platform.openai.com/docs/api-reference/fine-tunes/delete-model
+     * @see https://ragflow-server/docs/api-reference/fine-tunes/delete-model
      */
     public function delete(string $model): DeleteResponse
     {

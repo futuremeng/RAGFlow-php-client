@@ -1,9 +1,9 @@
 <?php
 
-use OpenAI\Resources\Completions;
-use OpenAI\Responses\Completions\CreateResponse;
-use OpenAI\Responses\Completions\CreateStreamedResponse;
-use OpenAI\Testing\ClientFake;
+use RAGFlow\Resources\Completions;
+use RAGFlow\Responses\Completions\CreateResponse;
+use RAGFlow\Responses\Completions\CreateStreamedResponse;
+use RAGFlow\Testing\ClientFake;
 
 it('records a completions create request', function () {
     $fake = new ClientFake([

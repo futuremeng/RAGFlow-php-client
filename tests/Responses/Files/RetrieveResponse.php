@@ -1,7 +1,7 @@
 <?php
 
-use OpenAI\Responses\Files\RetrieveResponse;
-use OpenAI\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\Files\RetrieveResponse;
+use RAGFlow\Responses\Meta\MetaInformation;
 
 test('from', function () {
     $result = RetrieveResponse::from(fileResource(), meta());

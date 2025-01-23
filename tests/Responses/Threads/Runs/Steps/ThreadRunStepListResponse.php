@@ -1,8 +1,8 @@
 <?php
 
-use OpenAI\Responses\Meta\MetaInformation;
-use OpenAI\Responses\Threads\Runs\Steps\ThreadRunStepListResponse;
-use OpenAI\Responses\Threads\Runs\Steps\ThreadRunStepResponse;
+use RAGFlow\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\Threads\Runs\Steps\ThreadRunStepListResponse;
+use RAGFlow\Responses\Threads\Runs\Steps\ThreadRunStepResponse;
 
 test('from', function () {
     $response = ThreadRunStepListResponse::from(threadRunStepListResource(), meta());

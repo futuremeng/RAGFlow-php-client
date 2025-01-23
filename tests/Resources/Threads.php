@@ -1,11 +1,11 @@
 <?php
 
-use OpenAI\Responses\Meta\MetaInformation;
-use OpenAI\Responses\Threads\Runs\ThreadRunResponse;
-use OpenAI\Responses\Threads\Runs\ThreadRunResponseToolCodeInterpreter;
-use OpenAI\Responses\Threads\ThreadDeleteResponse;
-use OpenAI\Responses\Threads\ThreadResponse;
-use OpenAI\ValueObjects\Transporter\Response;
+use RAGFlow\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\Threads\Runs\ThreadRunResponse;
+use RAGFlow\Responses\Threads\Runs\ThreadRunResponseToolCodeInterpreter;
+use RAGFlow\Responses\Threads\ThreadDeleteResponse;
+use RAGFlow\Responses\Threads\ThreadResponse;
+use RAGFlow\ValueObjects\Transporter\Response;
 
 test('create', function () {
     $client = mockClient('POST', 'threads', [], Response::from(threadResource(), metaHeaders()));

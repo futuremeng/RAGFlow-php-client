@@ -1,28 +1,28 @@
 <?php
 
-namespace OpenAI\Testing;
+namespace RAGFlow\Testing;
 
-use OpenAI\Contracts\ClientContract;
-use OpenAI\Contracts\Resources\VectorStoresContract;
-use OpenAI\Contracts\ResponseContract;
-use OpenAI\Contracts\ResponseStreamContract;
-use OpenAI\Responses\StreamResponse;
-use OpenAI\Testing\Requests\TestRequest;
-use OpenAI\Testing\Resources\AssistantsTestResource;
-use OpenAI\Testing\Resources\AudioTestResource;
-use OpenAI\Testing\Resources\BatchesTestResource;
-use OpenAI\Testing\Resources\ChatTestResource;
-use OpenAI\Testing\Resources\CompletionsTestResource;
-use OpenAI\Testing\Resources\EditsTestResource;
-use OpenAI\Testing\Resources\EmbeddingsTestResource;
-use OpenAI\Testing\Resources\FilesTestResource;
-use OpenAI\Testing\Resources\FineTunesTestResource;
-use OpenAI\Testing\Resources\FineTuningTestResource;
-use OpenAI\Testing\Resources\ImagesTestResource;
-use OpenAI\Testing\Resources\ModelsTestResource;
-use OpenAI\Testing\Resources\ModerationsTestResource;
-use OpenAI\Testing\Resources\ThreadsTestResource;
-use OpenAI\Testing\Resources\VectorStoresTestResource;
+use RAGFlow\Contracts\ClientContract;
+use RAGFlow\Contracts\Resources\VectorStoresContract;
+use RAGFlow\Contracts\ResponseContract;
+use RAGFlow\Contracts\ResponseStreamContract;
+use RAGFlow\Responses\StreamResponse;
+use RAGFlow\Testing\Requests\TestRequest;
+use RAGFlow\Testing\Resources\AssistantsTestResource;
+use RAGFlow\Testing\Resources\AudioTestResource;
+use RAGFlow\Testing\Resources\BatchesTestResource;
+use RAGFlow\Testing\Resources\ChatTestResource;
+use RAGFlow\Testing\Resources\CompletionsTestResource;
+use RAGFlow\Testing\Resources\EditsTestResource;
+use RAGFlow\Testing\Resources\EmbeddingsTestResource;
+use RAGFlow\Testing\Resources\FilesTestResource;
+use RAGFlow\Testing\Resources\FineTunesTestResource;
+use RAGFlow\Testing\Resources\FineTuningTestResource;
+use RAGFlow\Testing\Resources\ImagesTestResource;
+use RAGFlow\Testing\Resources\ModelsTestResource;
+use RAGFlow\Testing\Resources\ModerationsTestResource;
+use RAGFlow\Testing\Resources\ThreadsTestResource;
+use RAGFlow\Testing\Resources\VectorStoresTestResource;
 use PHPUnit\Framework\Assert as PHPUnit;
 use Throwable;
 

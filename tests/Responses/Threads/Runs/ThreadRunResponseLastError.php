@@ -1,6 +1,6 @@
 <?php
 
-use OpenAI\Responses\Threads\Runs\ThreadRunResponseLastError;
+use RAGFlow\Responses\Threads\Runs\ThreadRunResponseLastError;
 
 test('from', function () {
     $result = ThreadRunResponseLastError::from(threadRunWithLasErrorResource()['last_error']);

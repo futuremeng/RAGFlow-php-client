@@ -1,10 +1,10 @@
 <?php
 
-use OpenAI\Responses\Meta\MetaInformation;
-use OpenAI\Responses\Threads\Runs\Steps\ThreadRunStepResponse;
-use OpenAI\Responses\Threads\Runs\Steps\ThreadRunStepResponseMessageCreationStepDetails;
-use OpenAI\Responses\Threads\Runs\Steps\ThreadRunStepResponseToolCallsStepDetails;
-use OpenAI\Responses\Threads\Runs\Steps\ThreadRunStepResponseUsage;
+use RAGFlow\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\Threads\Runs\Steps\ThreadRunStepResponse;
+use RAGFlow\Responses\Threads\Runs\Steps\ThreadRunStepResponseMessageCreationStepDetails;
+use RAGFlow\Responses\Threads\Runs\Steps\ThreadRunStepResponseToolCallsStepDetails;
+use RAGFlow\Responses\Threads\Runs\Steps\ThreadRunStepResponseUsage;
 
 test('from', function () {
     $result = ThreadRunStepResponse::from(threadRunStepResource(), meta());

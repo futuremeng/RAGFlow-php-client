@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace OpenAI\Resources;
+namespace RAGFlow\Resources;
 
-use OpenAI\Contracts\Resources\AssistantsContract;
-use OpenAI\Responses\Assistants\AssistantDeleteResponse;
-use OpenAI\Responses\Assistants\AssistantListResponse;
-use OpenAI\Responses\Assistants\AssistantResponse;
-use OpenAI\ValueObjects\Transporter\Payload;
-use OpenAI\ValueObjects\Transporter\Response;
+use RAGFlow\Contracts\Resources\AssistantsContract;
+use RAGFlow\Responses\Assistants\AssistantDeleteResponse;
+use RAGFlow\Responses\Assistants\AssistantListResponse;
+use RAGFlow\Responses\Assistants\AssistantResponse;
+use RAGFlow\ValueObjects\Transporter\Payload;
+use RAGFlow\ValueObjects\Transporter\Response;
 
 final class Assistants implements AssistantsContract
 {
@@ -18,7 +18,7 @@ final class Assistants implements AssistantsContract
     /**
      * Create an assistant with a model and instructions.
      *
-     * @see https://platform.openai.com/docs/api-reference/assistants/createAssistant
+     * @see https://ragflow-server/docs/api-reference/assistants/createAssistant
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -35,7 +35,7 @@ final class Assistants implements AssistantsContract
     /**
      * Retrieves an assistant.
      *
-     * @see https://platform.openai.com/docs/api-reference/assistants/getAssistant
+     * @see https://ragflow-server/docs/api-reference/assistants/getAssistant
      */
     public function retrieve(string $id): AssistantResponse
     {
@@ -50,7 +50,7 @@ final class Assistants implements AssistantsContract
     /**
      * Modifies an assistant.
      *
-     * @see https://platform.openai.com/docs/api-reference/assistants/modifyAssistant
+     * @see https://ragflow-server/docs/api-reference/assistants/modifyAssistant
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -67,7 +67,7 @@ final class Assistants implements AssistantsContract
     /**
      * Delete an assistant.
      *
-     * @see https://platform.openai.com/docs/api-reference/assistants/deleteAssistant
+     * @see https://ragflow-server/docs/api-reference/assistants/deleteAssistant
      */
     public function delete(string $id): AssistantDeleteResponse
     {
@@ -82,7 +82,7 @@ final class Assistants implements AssistantsContract
     /**
      * Returns a list of assistants.
      *
-     * @see https://platform.openai.com/docs/api-reference/assistants/listAssistants
+     * @see https://ragflow-server/docs/api-reference/assistants/listAssistants
      *
      * @param  array<string, mixed>  $parameters
      */

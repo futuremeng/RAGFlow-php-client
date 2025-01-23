@@ -1,7 +1,7 @@
 <?php
 
-use OpenAI\Responses\VectorStores\VectorStoreListResponse;
-use OpenAI\Responses\VectorStores\VectorStoreResponse;
+use RAGFlow\Responses\VectorStores\VectorStoreListResponse;
+use RAGFlow\Responses\VectorStores\VectorStoreResponse;
 
 test('from', function () {
     $result = VectorStoreListResponse::from(vectorStoreListResource(), meta());

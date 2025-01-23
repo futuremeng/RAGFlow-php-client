@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace OpenAI\Resources;
+namespace RAGFlow\Resources;
 
-use OpenAI\Contracts\Resources\VectorStoresContract;
-use OpenAI\Contracts\Resources\VectorStoresFileBatchesContract;
-use OpenAI\Contracts\Resources\VectorStoresFilesContract;
-use OpenAI\Responses\VectorStores\VectorStoreDeleteResponse;
-use OpenAI\Responses\VectorStores\VectorStoreListResponse;
-use OpenAI\Responses\VectorStores\VectorStoreResponse;
-use OpenAI\ValueObjects\Transporter\Payload;
-use OpenAI\ValueObjects\Transporter\Response;
+use RAGFlow\Contracts\Resources\VectorStoresContract;
+use RAGFlow\Contracts\Resources\VectorStoresFileBatchesContract;
+use RAGFlow\Contracts\Resources\VectorStoresFilesContract;
+use RAGFlow\Responses\VectorStores\VectorStoreDeleteResponse;
+use RAGFlow\Responses\VectorStores\VectorStoreListResponse;
+use RAGFlow\Responses\VectorStores\VectorStoreResponse;
+use RAGFlow\ValueObjects\Transporter\Payload;
+use RAGFlow\ValueObjects\Transporter\Response;
 
 final class VectorStores implements VectorStoresContract
 {
@@ -20,7 +20,7 @@ final class VectorStores implements VectorStoresContract
     /**
      * Create a vector store
      *
-     * @see https://platform.openai.com/docs/api-reference/vector-stores/create
+     * @see https://ragflow-server/docs/api-reference/vector-stores/create
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -37,7 +37,7 @@ final class VectorStores implements VectorStoresContract
     /**
      * Returns a list of vector stores.
      *
-     * @see https://platform.openai.com/docs/api-reference/vector-stores/list
+     * @see https://ragflow-server/docs/api-reference/vector-stores/list
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -54,7 +54,7 @@ final class VectorStores implements VectorStoresContract
     /**
      * Retrieves a vector store.
      *
-     * @see https://platform.openai.com/docs/api-reference/vector-stores/retrieve
+     * @see https://ragflow-server/docs/api-reference/vector-stores/retrieve
      */
     public function retrieve(string $vectorStoreId): VectorStoreResponse
     {
@@ -69,7 +69,7 @@ final class VectorStores implements VectorStoresContract
     /**
      * Modify a vector store
      *
-     * @see https://platform.openai.com/docs/api-reference/vector-stores/modify
+     * @see https://ragflow-server/docs/api-reference/vector-stores/modify
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -86,7 +86,7 @@ final class VectorStores implements VectorStoresContract
     /**
      * Delete a vector store.
      *
-     * https://platform.openai.com/docs/api-reference/vector-stores/delete
+     * https://ragflow-server/docs/api-reference/vector-stores/delete
      */
     public function delete(string $vectorStoreId): VectorStoreDeleteResponse
     {
@@ -101,7 +101,7 @@ final class VectorStores implements VectorStoresContract
     /**
      * Manage the files related to the vector store
      *
-     * @see https://platform.openai.com/docs/api-reference/vector-stores-files
+     * @see https://ragflow-server/docs/api-reference/vector-stores-files
      */
     public function files(): VectorStoresFilesContract
     {
@@ -111,7 +111,7 @@ final class VectorStores implements VectorStoresContract
     /**
      * Manage the file batches related to the vector store
      *
-     * @see https://platform.openai.com/docs/api-reference/vector-stores-file-batches
+     * @see https://ragflow-server/docs/api-reference/vector-stores-file-batches
      */
     public function batches(): VectorStoresFileBatchesContract
     {

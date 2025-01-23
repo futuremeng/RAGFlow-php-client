@@ -1,7 +1,7 @@
 <?php
 
-use OpenAI\Responses\Threads\Messages\ThreadMessageResponseContentImageFile;
-use OpenAI\Responses\Threads\Messages\ThreadMessageResponseContentImageFileObject;
+use RAGFlow\Responses\Threads\Messages\ThreadMessageResponseContentImageFile;
+use RAGFlow\Responses\Threads\Messages\ThreadMessageResponseContentImageFileObject;
 
 test('from', function () {
     $result = ThreadMessageResponseContentImageFileObject::from(threadMessageResource()['content'][1]);

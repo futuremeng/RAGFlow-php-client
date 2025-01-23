@@ -1,12 +1,12 @@
 <?php
 
-namespace OpenAI\Testing\Resources;
+namespace RAGFlow\Testing\Resources;
 
-use OpenAI\Contracts\Resources\ChatContract;
-use OpenAI\Resources\Chat;
-use OpenAI\Responses\Chat\CreateResponse;
-use OpenAI\Responses\StreamResponse;
-use OpenAI\Testing\Resources\Concerns\Testable;
+use RAGFlow\Contracts\Resources\ChatContract;
+use RAGFlow\Resources\Chat;
+use RAGFlow\Responses\Chat\CreateResponse;
+use RAGFlow\Responses\StreamResponse;
+use RAGFlow\Testing\Resources\Concerns\Testable;
 
 final class ChatTestResource implements ChatContract
 {

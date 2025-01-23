@@ -1,11 +1,11 @@
 <?php
 
-use OpenAI\Enums\Moderations\Category;
-use OpenAI\Responses\Meta\MetaInformation;
-use OpenAI\Responses\Moderations\CreateResponse;
-use OpenAI\Responses\Moderations\CreateResponseCategory;
-use OpenAI\Responses\Moderations\CreateResponseResult;
-use OpenAI\ValueObjects\Transporter\Response;
+use RAGFlow\Enums\Moderations\Category;
+use RAGFlow\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\Moderations\CreateResponse;
+use RAGFlow\Responses\Moderations\CreateResponseCategory;
+use RAGFlow\Responses\Moderations\CreateResponseResult;
+use RAGFlow\ValueObjects\Transporter\Response;
 
 test('create legacy', closure: function () {
     $client = mockClient('POST', 'moderations', [

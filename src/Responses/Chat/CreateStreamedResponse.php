@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace OpenAI\Responses\Chat;
+namespace RAGFlow\Responses\Chat;
 
-use OpenAI\Contracts\ResponseContract;
-use OpenAI\Responses\Concerns\ArrayAccessible;
-use OpenAI\Testing\Responses\Concerns\FakeableForStreamedResponse;
+use RAGFlow\Contracts\ResponseContract;
+use RAGFlow\Responses\Concerns\ArrayAccessible;
+use RAGFlow\Testing\Responses\Concerns\FakeableForStreamedResponse;
 
 /**
  * @implements ResponseContract<array{id: string, object: string, created: int, model: string, choices: array<int, array{index: int, delta: array{role?: string, content?: string}|array{role?: string, content: null, function_call: array{name?: string, arguments?: string}}, finish_reason: string|null}>, usage?: array{prompt_tokens: int, completion_tokens: int|null, total_tokens: int}}>
@@ -69,7 +69,7 @@ final class CreateStreamedResponse implements ResponseContract
             ),
         ];
 
-        if ($this->usage instanceof \OpenAI\Responses\Chat\CreateResponseUsage) {
+        if ($this->usage instanceof \RAGFlow\Responses\Chat\CreateResponseUsage) {
             $data['usage'] = $this->usage->toArray();
         }
 

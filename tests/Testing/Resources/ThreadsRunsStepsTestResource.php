@@ -1,9 +1,9 @@
 <?php
 
-use OpenAI\Resources\ThreadsRunsSteps;
-use OpenAI\Responses\Threads\Runs\Steps\ThreadRunStepListResponse;
-use OpenAI\Responses\Threads\Runs\Steps\ThreadRunStepResponse;
-use OpenAI\Testing\ClientFake;
+use RAGFlow\Resources\ThreadsRunsSteps;
+use RAGFlow\Responses\Threads\Runs\Steps\ThreadRunStepListResponse;
+use RAGFlow\Responses\Threads\Runs\Steps\ThreadRunStepResponse;
+use RAGFlow\Testing\ClientFake;
 
 it('records a thread run step retrieve request', function () {
     $fake = new ClientFake([

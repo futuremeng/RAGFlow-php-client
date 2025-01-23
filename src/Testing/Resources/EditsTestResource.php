@@ -1,11 +1,11 @@
 <?php
 
-namespace OpenAI\Testing\Resources;
+namespace RAGFlow\Testing\Resources;
 
-use OpenAI\Contracts\Resources\EditsContract;
-use OpenAI\Resources\Edits;
-use OpenAI\Responses\Edits\CreateResponse;
-use OpenAI\Testing\Resources\Concerns\Testable;
+use RAGFlow\Contracts\Resources\EditsContract;
+use RAGFlow\Resources\Edits;
+use RAGFlow\Responses\Edits\CreateResponse;
+use RAGFlow\Testing\Resources\Concerns\Testable;
 
 final class EditsTestResource implements EditsContract
 {

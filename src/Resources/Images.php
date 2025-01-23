@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace OpenAI\Resources;
+namespace RAGFlow\Resources;
 
-use OpenAI\Contracts\Resources\ImagesContract;
-use OpenAI\Responses\Images\CreateResponse;
-use OpenAI\Responses\Images\EditResponse;
-use OpenAI\Responses\Images\VariationResponse;
-use OpenAI\ValueObjects\Transporter\Payload;
-use OpenAI\ValueObjects\Transporter\Response;
+use RAGFlow\Contracts\Resources\ImagesContract;
+use RAGFlow\Responses\Images\CreateResponse;
+use RAGFlow\Responses\Images\EditResponse;
+use RAGFlow\Responses\Images\VariationResponse;
+use RAGFlow\ValueObjects\Transporter\Payload;
+use RAGFlow\ValueObjects\Transporter\Response;
 
 final class Images implements ImagesContract
 {
@@ -18,7 +18,7 @@ final class Images implements ImagesContract
     /**
      * Creates an image given a prompt.
      *
-     * @see https://platform.openai.com/docs/api-reference/images/create
+     * @see https://ragflow-server/docs/api-reference/images/create
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -35,7 +35,7 @@ final class Images implements ImagesContract
     /**
      * Creates an edited or extended image given an original image and a prompt.
      *
-     * @see https://platform.openai.com/docs/api-reference/images/create-edit
+     * @see https://ragflow-server/docs/api-reference/images/create-edit
      *
      * @param  array<string, mixed>  $parameters
      */
@@ -52,7 +52,7 @@ final class Images implements ImagesContract
     /**
      * Creates a variation of a given image.
      *
-     * @see https://platform.openai.com/docs/api-reference/images/create-variation
+     * @see https://ragflow-server/docs/api-reference/images/create-variation
      *
      * @param  array<string, mixed>  $parameters
      */

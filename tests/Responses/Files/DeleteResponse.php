@@ -1,7 +1,7 @@
 <?php
 
-use OpenAI\Responses\Files\DeleteResponse;
-use OpenAI\Responses\Meta\MetaInformation;
+use RAGFlow\Responses\Files\DeleteResponse;
+use RAGFlow\Responses\Meta\MetaInformation;
 
 test('from', function () {
     $result = DeleteResponse::from(fileDeleteResource(), meta());
