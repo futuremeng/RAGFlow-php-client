@@ -1,6 +1,15 @@
 <?php
+/*
+ * @Author: FutureMeng futuremeng@gmail.com
+ * @Date: 2025-01-23 13:04:37
+ * @LastEditors: FutureMeng futuremeng@gmail.com
+ * @LastEditTime: 2025-01-24 16:09:59
+ * @FilePath: /RAGFlow-php-client/src/Responses/Chat/CreateStreamedResponse.php
+ * @Description:
+ * Copyright (c) 2025 by Jiulu.ltd, All Rights Reserved.
+ */
 
-declare(strict_types=1);
+declare (strict_types = 1);
 
 namespace RAGFlow\Responses\Chat;
 
@@ -24,32 +33,31 @@ final class CreateStreamedResponse implements ResponseContract
      * @param  array<int, CreateStreamedResponseChoice>  $choices
      */
     private function __construct(
-        public readonly string $id,
-        public readonly string $object,
-        public readonly int $created,
-        public readonly string $model,
-        public readonly array $choices,
-        public readonly ?CreateResponseUsage $usage,
+        public readonly int $code,
+        public readonly array $data,
+        // public readonly ?CreateResponseUsage $usage,
     ) {}
 
     /**
      * Acts as static factory, and returns a new Response instance.
-     *
+     * $artibutes = {
+     *  "code": 0,
+     *  "data": {
+     *      "answer": "I am an intelligent assistant designed to help answer questions by summarizing content from a",
+     *      "reference": {},
+     *      "audio_binary": null,
+     *      "id": "a84c5dd4-97b4-4624-8c3b-974012c8000d",
+     *     "session_id": "82b0ab2a9c1911ef9d870242ac120006"
+     *   }
+     * }
      * @param  array{id: string, object: string, created: int, model: string, choices: array<int, array{index: int, delta: array{role?: string, content?: string}, finish_reason: string|null}>, usage?: array{prompt_tokens: int, completion_tokens: int|null, total_tokens: int}}  $attributes
      */
     public static function from(array $attributes): self
     {
-        $choices = array_map(fn (array $result): CreateStreamedResponseChoice => CreateStreamedResponseChoice::from(
-            $result
-        ), $attributes['choices']);
 
         return new self(
-            $attributes['id'],
-            $attributes['object'],
-            $attributes['created'],
-            $attributes['model'],
-            $choices,
-            isset($attributes['usage']) ? CreateResponseUsage::from($attributes['usage']) : null,
+            $attributes['code'],
+            $attributes['data'],
         );
     }
 
@@ -59,20 +67,10 @@ final class CreateStreamedResponse implements ResponseContract
     public function toArray(): array
     {
         $data = [
-            'id' => $this->id,
-            'object' => $this->object,
-            'created' => $this->created,
-            'model' => $this->model,
-            'choices' => array_map(
-                static fn (CreateStreamedResponseChoice $result): array => $result->toArray(),
-                $this->choices,
-            ),
+            'code'      => $this->code,
+            'data'  => $this->data,
         ];
-
-        if ($this->usage instanceof \RAGFlow\Responses\Chat\CreateResponseUsage) {
-            $data['usage'] = $this->usage->toArray();
-        }
-
+        
         return $data;
     }
 }

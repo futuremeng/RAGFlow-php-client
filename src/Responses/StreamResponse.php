@@ -37,6 +37,17 @@ final class StreamResponse implements ResponseHasMetaInformationContract, Respon
         while (! $this->response->getBody()->eof()) {
             $line = $this->readLine($this->response->getBody());
 
+            // data:{
+            //     "code": 0,
+            //     "data": {
+            //         "answer": "I am an intelligent assistant designed to help answer questions by summarizing content from a",
+            //         "reference": {},
+            //         "audio_binary": null,
+            //         "id": "a84c5dd4-97b4-4624-8c3b-974012c8000d",
+            //         "session_id": "82b0ab2a9c1911ef9d870242ac120006"
+            //     }
+            // }
+
             $event = null;
             if (str_starts_with($line, 'event:')) {
                 $event = trim(substr($line, strlen('event:')));
@@ -49,12 +60,21 @@ final class StreamResponse implements ResponseHasMetaInformationContract, Respon
 
             $data = trim(substr($line, strlen('data:')));
 
-            if ($data === '[DONE]') {
-                break;
-            }
+            
 
             /** @var array{error?: array{message: string|array<int, string>, type: string, code: string}} $response */
             $response = json_decode($data, true, flags: JSON_THROW_ON_ERROR);
+
+
+            // ragflow返回的流数据，最后一行是结束标记
+            // data:{
+            //     "code": 0,
+            //     "message": "",
+            //     "data": true
+            // }
+            if ($response['data']===true) {
+                break;
+            }
 
             if (isset($response['error'])) {
                 throw new ErrorException($response['error'], $this->response->getStatusCode());

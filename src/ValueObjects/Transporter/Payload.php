@@ -68,7 +68,7 @@ final class Payload
     public static function modify(string $resource, string $id, array $parameters = []): self
     {
         $contentType = ContentType::JSON;
-        $method = Method::POST;
+        $method = Method::PUT;
         $uri = ResourceUri::modify($resource, $id);
 
         return new self($contentType, $method, $uri, $parameters);

@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types=1);
+declare (strict_types = 1);
 
 namespace RAGFlow;
 
@@ -9,6 +9,7 @@ use RAGFlow\Contracts\Resources\ThreadsContract;
 use RAGFlow\Contracts\Resources\VectorStoresContract;
 use RAGFlow\Contracts\TransporterContract;
 use RAGFlow\Resources\Assistants;
+use RAGFlow\Resources\Sessions;
 use RAGFlow\Resources\Audio;
 use RAGFlow\Resources\Batches;
 use RAGFlow\Resources\Chat;
@@ -35,6 +36,30 @@ final class Client implements ClientContract
     }
 
     /**
+     * CHAT ASSISTANT MANAGEMENT
+     * 
+     * Build assistants that can call models and use tools to perform tasks.
+     *
+     * @see https://ragflow.server/user-setting/api#create-chat-assistant
+     */
+    public function assistants(): Assistants
+    {
+        return new Assistants($this->transporter);
+    }
+
+    /**
+     * SESSION MANAGEMENT
+     *
+     */
+    public function sessions(): Sessions
+    {
+        return new Sessions($this->transporter);
+    }
+
+
+    /**
+     * Converse with chat assistant
+     * 
      * Given a prompt, the model will return one or more predicted completions, and can also return the probabilities
      * of alternative tokens at each position.
      *
@@ -145,16 +170,6 @@ final class Client implements ClientContract
     public function images(): Images
     {
         return new Images($this->transporter);
-    }
-
-    /**
-     * Build assistants that can call models and use tools to perform tasks.
-     *
-     * @see https://ragflow.server/docs/api-reference/assistants
-     */
-    public function assistants(): Assistants
-    {
-        return new Assistants($this->transporter);
     }
 
     /**

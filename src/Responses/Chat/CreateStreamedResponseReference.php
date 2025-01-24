@@ -1,10 +1,19 @@
 <?php
+/*
+ * @Author: FutureMeng futuremeng@gmail.com
+ * @Date: 2025-01-23 13:04:37
+ * @LastEditors: FutureMeng futuremeng@gmail.com
+ * @LastEditTime: 2025-01-24 09:58:18
+ * @FilePath: /RAGFlow-php-client/src/Responses/Chat/CreateStreamedResponseReference.php
+ * @Description: 
+ * Copyright (c) 2025 by Jiulu.ltd, All Rights Reserved.
+ */
 
 declare(strict_types=1);
 
 namespace RAGFlow\Responses\Chat;
 
-final class CreateStreamedResponseDelta
+final class CreateStreamedResponseReference
 {
     /**
      * @param  array<int, CreateStreamedResponseToolCall>  $toolCalls

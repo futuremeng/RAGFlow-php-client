@@ -1,4 +1,13 @@
 <?php
+/*
+ * @Author: FutureMeng futuremeng@gmail.com
+ * @Date: 2025-01-23 13:04:37
+ * @LastEditors: FutureMeng futuremeng@gmail.com
+ * @LastEditTime: 2025-01-23 18:06:30
+ * @FilePath: /one-api-plus/Users/mengfanyong/github/RAGFlow-php-client/src/Resources/Completions.php
+ * @Description: 
+ * Copyright (c) 2025 by Jiulu.ltd, All Rights Reserved.
+ */
 
 declare(strict_types=1);
 
@@ -47,7 +56,7 @@ final class Completions implements CompletionsContract
     {
         $parameters = $this->setStreamParameter($parameters);
 
-        $payload = Payload::create('completions', $parameters);
+        $payload = Payload::create('/chats/'.$parameters['chat_id'].'/completions', $parameters);
 
         $response = $this->transporter->requestStream($payload);
 
